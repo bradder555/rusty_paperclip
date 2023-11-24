@@ -1,3 +1,5 @@
+use std::{ops::Rem, hint::black_box};
+
 /// We derive Deserialize/Serialize so we can persist app state on shutdown.
 #[derive(serde::Deserialize, serde::Serialize)]
 #[serde(default)] // if we add new fields, give them default values when deserializing old state
@@ -24,6 +26,7 @@ impl TemplateApp {
     pub fn new(cc: &eframe::CreationContext<'_>) -> Self {
         // This is also where you can customize the look and feel of egui using
         // `cc.egui_ctx.set_visuals` and `cc.egui_ctx.set_fonts`.
+        egui_extras::install_image_loaders(&cc.egui_ctx);
 
         // Load previous app state (if any).
         // Note that you must enable the `persistence` feature for this to work.
@@ -33,6 +36,43 @@ impl TemplateApp {
 
         Default::default()
     }
+}
+
+fn get_image_block(
+    im: &image::DynamicImage, 
+    block_size: &[usize; 2],
+    offset_x: usize, 
+    offset_y: usize
+) -> Vec<u8>{
+    let im = im.clone();
+    let block_size = block_size.clone();
+    let offset_x = offset_x * 4;
+    let offset_y = offset_y * 4;
+    
+    let block_width = block_size[0];
+    let block_height = block_size[1];
+    
+    let actual_width = im.width();
+    let width_byte_count: usize = actual_width as usize * 4;
+    // let actual_height = im.height();
+
+    let image_buffer = im.to_rgba8();
+    let pixels = image_buffer.as_flat_samples();
+    let pixels = &pixels.as_slice();
+
+    let mut r_buffer: Vec<u8> =  vec![0; 4 * block_height * block_width];
+    let mut r_buffer_off : usize;
+    let mut i_buffer_off : usize;
+
+    for by in 0..block_height{
+        for bx in 0..block_width{
+            r_buffer_off = by * block_width * 4 + bx;
+            i_buffer_off = (by + offset_y) * width_byte_count + (bx + offset_x);
+            r_buffer[r_buffer_off] = pixels[i_buffer_off];
+        }
+    }
+
+    r_buffer.clone()
 }
 
 impl eframe::App for TemplateApp {
@@ -47,7 +87,6 @@ impl eframe::App for TemplateApp {
         // For inspiration and more examples, go to https://emilk.github.io/egui
 
         egui::TopBottomPanel::top("top_panel").show(ctx, |ui| {
-            // The top panel is often a good place for a menu bar:
 
             egui::menu::bar(ui, |ui| {
                 // NOTE: no File->Quit on web pages!
@@ -66,6 +105,17 @@ impl eframe::App for TemplateApp {
         });
 
         egui::CentralPanel::default().show(ctx, |ui| {
+            // The top panel is often a good place for a menu bar:
+            let image = image::io::Reader::open("./assets/clippy spritesheet.png")
+            .expect("oops!")
+            .decode()
+            .expect("oops!");
+
+            let block_size = [480 as _, 96 as _];
+            let imblock = get_image_block(&image, &block_size, 100, 100);
+            let ci = egui::ColorImage::from_rgba_unmultiplied(block_size, &imblock);
+            let t = ui.ctx().load_texture("clippy_spritesheet", ci, Default::default());
+            ui.add(egui::Image::from_texture(&t.clone()));
             // The central panel the region left after adding TopPanel's and SidePanel's
             ui.heading("eframe template");
 
