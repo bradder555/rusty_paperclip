@@ -9,8 +9,7 @@ pub struct TemplateApp {
 
     #[serde(skip)] // This how you opt-out of serialization of a field
     value: f32,
-    offset_x: usize,
-    offset_y: usize
+    increment: usize,
 }
 
 impl Default for TemplateApp {
@@ -19,8 +18,7 @@ impl Default for TemplateApp {
             // Example stuff:
             label: "Hello World!".to_owned(),
             value: 2.7,
-            offset_x: 0,
-            offset_y: 0
+            increment: 0
         }
     }
 }
@@ -71,11 +69,9 @@ fn get_image_block(
     let mut i_buffer_off : usize;
 
     for by in 0..block_height{
-        for bx in 0..block_width{
-            r_buffer_off = by * block_width * 4 + bx;
-            i_buffer_off = (by + offset_y) * width_byte_count + (bx + offset_x);
-            r_buffer[r_buffer_off] = pixels[i_buffer_off];
-        }
+        r_buffer_off = by * block_width * 4;
+        i_buffer_off = (by + offset_y) * width_byte_count + offset_x;
+        r_buffer[r_buffer_off..][..block_width].copy_from_slice(&pixels[i_buffer_off..(i_buffer_off + block_width)]);
     }
 
     r_buffer.clone()
@@ -119,8 +115,12 @@ impl eframe::App for TemplateApp {
 
             let block_size = [496 as _, 93 as _];
 
-            let imblock = get_image_block(&image, &block_size, self.offset_x, 0);
-            self.offset_x+=124;
+            let increment_adj = self.increment.rem_euclid(902);
+            let offset_y = increment_adj / 22;
+            let offset_x = increment_adj.rem_euclid(22);
+
+            let imblock = get_image_block(&image, &block_size, offset_x * 124, offset_y * 93 / 4);
+            self.increment += 1;
             ui.ctx().request_repaint();
             let ci = egui::ColorImage::from_rgba_unmultiplied(block_size, &imblock);
             let t = ui.ctx().load_texture("clippy_spritesheet", ci, Default::default());
