@@ -1,4 +1,4 @@
-use std::{ops::Rem, hint::black_box};
+use std::{ops::Rem, hint::black_box, time::Duration};
 
 /// We derive Deserialize/Serialize so we can persist app state on shutdown.
 #[derive(serde::Deserialize, serde::Serialize)]
@@ -9,6 +9,8 @@ pub struct TemplateApp {
 
     #[serde(skip)] // This how you opt-out of serialization of a field
     value: f32,
+    offset_x: usize,
+    offset_y: usize
 }
 
 impl Default for TemplateApp {
@@ -17,6 +19,8 @@ impl Default for TemplateApp {
             // Example stuff:
             label: "Hello World!".to_owned(),
             value: 2.7,
+            offset_x: 0,
+            offset_y: 0
         }
     }
 }
@@ -27,12 +31,15 @@ impl TemplateApp {
         // This is also where you can customize the look and feel of egui using
         // `cc.egui_ctx.set_visuals` and `cc.egui_ctx.set_fonts`.
         egui_extras::install_image_loaders(&cc.egui_ctx);
+        
 
         // Load previous app state (if any).
         // Note that you must enable the `persistence` feature for this to work.
+        /*
         if let Some(storage) = cc.storage {
             return eframe::get_value(storage, eframe::APP_KEY).unwrap_or_default();
         }
+        */
 
         Default::default()
     }
@@ -54,7 +61,6 @@ fn get_image_block(
     
     let actual_width = im.width();
     let width_byte_count: usize = actual_width as usize * 4;
-    // let actual_height = im.height();
 
     let image_buffer = im.to_rgba8();
     let pixels = image_buffer.as_flat_samples();
@@ -111,8 +117,11 @@ impl eframe::App for TemplateApp {
             .decode()
             .expect("oops!");
 
-            let block_size = [480 as _, 96 as _];
-            let imblock = get_image_block(&image, &block_size, 100, 100);
+            let block_size = [496 as _, 93 as _];
+
+            let imblock = get_image_block(&image, &block_size, self.offset_x, 0);
+            self.offset_x+=124;
+            ui.ctx().request_repaint();
             let ci = egui::ColorImage::from_rgba_unmultiplied(block_size, &imblock);
             let t = ui.ctx().load_texture("clippy_spritesheet", ci, Default::default());
             ui.add(egui::Image::from_texture(&t.clone()));
