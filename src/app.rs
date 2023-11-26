@@ -131,20 +131,31 @@ impl eframe::App for TemplateApp {
                 egui::widgets::global_dark_light_mode_buttons(ui);
             });
         });
-
+        
+        let total_cycle : usize = self.increment.rem_euclid(902);
+        let hoz_pos = self.increment.rem_euclid(22);
+        let vert_pos = total_cycle / 41;
+        
         egui::CentralPanel::default().show(ctx, |ui| {
             if self.sprite_sheet.is_some(){
                 let sprite_sheet = &self.sprite_sheet.as_ref().unwrap();
+                let ss = sprite_sheet.size();
+                let clippy_width = ss[0] / 22;
+                let clippy_height = ss[1] / 41;
+
                 egui::ScrollArea::both()
                     .max_height(100.0)
                     .max_width(134.0)
                     .scroll_bar_visibility(egui::scroll_area::ScrollBarVisibility::AlwaysHidden)
                     .enable_scrolling(false)
+                    .auto_shrink(false)
+                    .vertical_scroll_offset((vert_pos * clippy_height) as f32)
+                    .horizontal_scroll_offset((hoz_pos * clippy_width) as f32)
                     .show(ui, |ui|{
                     ui.add(egui::Image::from_texture(*sprite_sheet));
                 });
             }
-
+            self.increment += 1;
 
             // The central panel the region left after adding TopPanel's and SidePanel's
             ui.heading("eframe template");
