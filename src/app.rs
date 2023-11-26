@@ -121,7 +121,7 @@ impl eframe::App for TemplateApp {
 
             let imblock = get_image_block(&image, &block_size, offset_x * 124, offset_y * 93 / 4);
             self.increment += 1;
-            ui.ctx().request_repaint();
+            
             let ci = egui::ColorImage::from_rgba_unmultiplied(block_size, &imblock);
             let t = ui.ctx().load_texture("clippy_spritesheet", ci, Default::default());
             ui.add(egui::Image::from_texture(&t.clone()));
@@ -149,7 +149,9 @@ impl eframe::App for TemplateApp {
                 powered_by_egui_and_eframe(ui);
                 egui::warn_if_debug_build(ui);
             });
+            ui.ctx().request_repaint();
         });
+        
     }
 }
 
