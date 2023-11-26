@@ -37,22 +37,14 @@ impl TemplateApp {
         .expect("oops!")
         .decode()
         .expect("oops!");
-
-        /*
-        let block_size = [496 as _, 93 as _];
-
-        let increment_adj = self.increment.rem_euclid(902);
-        let offset_y = increment_adj / 22;
-        let offset_x = increment_adj.rem_euclid(22);
-
-        let imblock = get_image_block(&image, &block_size, offset_x * 124, offset_y * 93 / 4);
-        self.increment += 1;
-        
-        let ci = egui::ColorImage::from_rgba_unmultiplied(block_size, &imblock);
-        let t = ui.ctx().load_texture("clippy_spritesheet", ci, Default::default());
-        */
-
-        let ci = egui::ColorImage::from_rgba_unmultiplied([image.width() as _, image.height() as _ ], image.as_bytes());
+        let mut image_bytes = image.as_bytes().to_vec().clone();
+        for x in 0..(image_bytes.len()/4) {
+            let x = x * 4;
+            if image_bytes[x + 0] == 255 && image_bytes[x + 2] == 255 {
+                image_bytes[x + 3] = 0;
+            }
+        }
+        let ci = egui::ColorImage::from_rgba_unmultiplied([image.width() as _, image.height() as _ ], &image_bytes);
         let t = cc.egui_ctx.load_texture("clippy_sprite_sheet", ci, Default::default());
         
         // Load previous app state (if any).
@@ -132,9 +124,12 @@ impl eframe::App for TemplateApp {
             });
         });
         
-        let total_cycle : usize = self.increment.rem_euclid(902);
-        let hoz_pos = self.increment.rem_euclid(22);
-        let vert_pos = total_cycle / 41;
+        let increment = self.increment / 10;
+        let total_cycle : usize = increment.rem_euclid(902);
+        let hoz_pos = increment.rem_euclid(22);
+        let vert_pos = total_cycle / 22;
+        dbg!(hoz_pos);
+        dbg!(vert_pos);
         
         egui::CentralPanel::default().show(ctx, |ui| {
             if self.sprite_sheet.is_some(){
@@ -144,8 +139,8 @@ impl eframe::App for TemplateApp {
                 let clippy_height = ss[1] / 41;
 
                 egui::ScrollArea::both()
-                    .max_height(100.0)
-                    .max_width(134.0)
+                    .max_height(clippy_height as f32 )
+                    .max_width(clippy_width as f32 )
                     .scroll_bar_visibility(egui::scroll_area::ScrollBarVisibility::AlwaysHidden)
                     .enable_scrolling(false)
                     .auto_shrink(false)
