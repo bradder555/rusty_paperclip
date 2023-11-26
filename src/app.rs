@@ -135,7 +135,12 @@ impl eframe::App for TemplateApp {
         egui::CentralPanel::default().show(ctx, |ui| {
             if self.sprite_sheet.is_some(){
                 let sprite_sheet = &self.sprite_sheet.as_ref().unwrap();
-                egui::ScrollArea::both().show(ui, |ui|{
+                egui::ScrollArea::both()
+                    .max_height(100.0)
+                    .max_width(134.0)
+                    .scroll_bar_visibility(egui::scroll_area::ScrollBarVisibility::AlwaysHidden)
+                    .enable_scrolling(false)
+                    .show(ui, |ui|{
                     ui.add(egui::Image::from_texture(*sprite_sheet));
                 });
             }
