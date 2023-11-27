@@ -131,7 +131,6 @@ impl eframe::App for TemplateApp {
         let total_cycle : usize = increment.rem_euclid(902);
         let hoz_pos = increment.rem_euclid(22);
         let vert_pos = total_cycle / 22;
-        //dbg!(hoz_pos + (vert_pos * 22));
         
         egui::CentralPanel::default().show(ctx, |ui| {
             if self.sprite_sheet.is_some(){
