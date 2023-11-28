@@ -64,18 +64,22 @@ fn get_image_block(
     
     let block_width = block_size[0];
     let block_height = block_size[1];
+    let bytes_per_row = block_width * 4;
+    let bytes_per_orig_row = (im.width() * 4) as usize;
 
     let image_buffer = im.to_rgba8();
+
     let pixels = image_buffer.as_flat_samples();
+
     let pixels = pixels.as_slice();
 
-    let mut r_buffer: Vec<u8> =  vec![0; 4 * block_height * block_width];
+    let mut r_buffer: Vec<u8> =  vec![0; bytes_per_row * block_height];
 
-    for by in 0..block_height{
-        let r_start = by * block_width;
+    for row in 0..block_height{
+        let r_start = row * bytes_per_row;
         let r_end = r_start + block_width;
 
-        let i_start = by * offset_y + offset_x;
+        let i_start = ((row + offset_y) * bytes_per_orig_row) + offset_x;
         let i_end = i_start + block_width;
 
         r_buffer[r_start..r_end].copy_from_slice(&pixels[i_start..i_end]);
@@ -115,26 +119,27 @@ impl eframe::App for TemplateApp {
 
         egui::CentralPanel::default().show(ctx, |ui| {
             // The top panel is often a good place for a menu bar
-
-            let block_size = [124usize, 93usize];
             if self.image.is_some() {
                 let t_inc = (
-                    std::time::Instant::now()
-
+                    std::time::SystemTime::now()
+                        .duration_since(UNIX_EPOCH)
                         .unwrap()
                         .as_millis() / 100
                 ) as usize;
-                let max_cycle = (22usize * 41usize).rem_euclid(t_inc) as usize;
-                let vert_i = max_cycle / 41;
-                let hoz_i = (22usize).rem_euclid(max_cycle);
+
+                let max_cycle = (t_inc).rem_euclid(22 * 41) as usize;
+                let vert_i = max_cycle / 22;
+                let hoz_i = (max_cycle).rem_euclid(22);
+                //dbg!(max_cycle, vert_i, hoz_i);
                 let image = self.image.as_ref().unwrap();
+                let block_size = [124usize * 4, 93usize];
                 let imblock = get_image_block(
                     &image,
                     &block_size,
                     hoz_i * 124,
                     vert_i * 93
                 );
-                ui.ctx().request_repaint();
+
                 let ci = egui::ColorImage::from_rgba_unmultiplied(block_size, &imblock);
                 let t = ui.ctx().load_texture("clippy_spritesheet", ci, Default::default());
                 ui.add(egui::Image::from_texture(&t.clone()));
@@ -163,6 +168,8 @@ impl eframe::App for TemplateApp {
                 powered_by_egui_and_eframe(ui);
                 egui::warn_if_debug_build(ui);
             });
+
+            ui.ctx().request_repaint();
         });
     }
 }
