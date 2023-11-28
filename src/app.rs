@@ -1,6 +1,6 @@
 use std::{ops::Rem, hint::black_box, time::Duration};
 use std::time::UNIX_EPOCH;
-use image::DynamicImage;
+use image::{DynamicImage, Pixel};
 
 /// We derive Deserialize/Serialize so we can persist app state on shutdown.
 //#[derive(serde::Deserialize, serde::Serialize)]
@@ -42,12 +42,22 @@ impl TemplateApp {
         */
 
         let mut this:TemplateApp = Default::default();
+        let im = image::io::Reader::open("./assets/clippy spritesheet.png")
+            .unwrap()
+            .decode()
+            .unwrap();
+
+        let image_buffer = im.to_rgba8();
+        let mut out_buffer = image_buffer.clone();
+        for p in out_buffer.pixels_mut(){
+            let mut chans = p.channels_mut();
+            if (chans[0] == 255) && (chans[2] == 255) {
+                chans[3] = 0
+            }
+        }
 
         this.image = Some(
-            image::io::Reader::open("./assets/clippy spritesheet.png")
-                .unwrap()
-                .decode()
-                .unwrap()
+            DynamicImage::from(out_buffer)
         );
         this
     }
