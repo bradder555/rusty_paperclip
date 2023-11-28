@@ -1,16 +1,17 @@
 use std::{ops::Rem, hint::black_box, time::Duration};
+use std::time::UNIX_EPOCH;
+use image::DynamicImage;
 
 /// We derive Deserialize/Serialize so we can persist app state on shutdown.
-#[derive(serde::Deserialize, serde::Serialize)]
-#[serde(default)] // if we add new fields, give them default values when deserializing old state
+//#[derive(serde::Deserialize, serde::Serialize)]
+//#[serde(default)] // if we add new fields, give them default values when deserializing old state
 pub struct TemplateApp {
     // Example stuff:
     label: String,
 
-    #[serde(skip)] // This how you opt-out of serialization of a field
+    //#[serde(skip)] // This how you opt-out of serialization of a field
     value: f32,
-    offset_x: usize,
-    offset_y: usize
+    image: Option<DynamicImage>
 }
 
 impl Default for TemplateApp {
@@ -19,8 +20,7 @@ impl Default for TemplateApp {
             // Example stuff:
             label: "Hello World!".to_owned(),
             value: 2.7,
-            offset_x: 0,
-            offset_y: 0
+            image: None
         }
     }
 }
@@ -41,7 +41,15 @@ impl TemplateApp {
         }
         */
 
-        Default::default()
+        let mut this:TemplateApp = Default::default();
+
+        this.image = Some(
+            image::io::Reader::open("./assets/clippy spritesheet.png")
+                .unwrap()
+                .decode()
+                .unwrap()
+        );
+        this
     }
 }
 
@@ -51,40 +59,35 @@ fn get_image_block(
     offset_x: usize, 
     offset_y: usize
 ) -> Vec<u8>{
-    let im = im.clone();
-    let block_size = block_size.clone();
-    let offset_x = offset_x * 4;
-    let offset_y = offset_y * 4;
+    let offset_x = offset_x * 4; // offset is in pixels
+    let offset_y = offset_y;
     
     let block_width = block_size[0];
     let block_height = block_size[1];
-    
-    let actual_width = im.width();
-    let width_byte_count: usize = actual_width as usize * 4;
 
     let image_buffer = im.to_rgba8();
     let pixels = image_buffer.as_flat_samples();
-    let pixels = &pixels.as_slice();
+    let pixels = pixels.as_slice();
 
     let mut r_buffer: Vec<u8> =  vec![0; 4 * block_height * block_width];
-    let mut r_buffer_off : usize;
-    let mut i_buffer_off : usize;
 
     for by in 0..block_height{
-        for bx in 0..block_width{
-            r_buffer_off = by * block_width * 4 + bx;
-            i_buffer_off = (by + offset_y) * width_byte_count + (bx + offset_x);
-            r_buffer[r_buffer_off] = pixels[i_buffer_off];
-        }
+        let r_start = by * block_width;
+        let r_end = r_start + block_width;
+
+        let i_start = by * offset_y + offset_x;
+        let i_end = i_start + block_width;
+
+        r_buffer[r_start..r_end].copy_from_slice(&pixels[i_start..i_end]);
     }
 
-    r_buffer.clone()
+    r_buffer
 }
 
 impl eframe::App for TemplateApp {
     /// Called by the frame work to save state before shutdown.
     fn save(&mut self, storage: &mut dyn eframe::Storage) {
-        eframe::set_value(storage, eframe::APP_KEY, self);
+        //eframe::set_value(storage, eframe::APP_KEY, self);
     }
 
     /// Called each time the UI needs repainting, which may be many times per second.
@@ -111,20 +114,31 @@ impl eframe::App for TemplateApp {
         });
 
         egui::CentralPanel::default().show(ctx, |ui| {
-            // The top panel is often a good place for a menu bar:
-            let image = image::io::Reader::open("./assets/clippy spritesheet.png")
-            .expect("oops!")
-            .decode()
-            .expect("oops!");
+            // The top panel is often a good place for a menu bar
 
-            let block_size = [496 as _, 93 as _];
+            let block_size = [124usize, 93usize];
+            if self.image.is_some() {
+                let t_inc = (
+                    std::time::Instant::now()
 
-            let imblock = get_image_block(&image, &block_size, self.offset_x, 0);
-            self.offset_x+=124;
-            ui.ctx().request_repaint();
-            let ci = egui::ColorImage::from_rgba_unmultiplied(block_size, &imblock);
-            let t = ui.ctx().load_texture("clippy_spritesheet", ci, Default::default());
-            ui.add(egui::Image::from_texture(&t.clone()));
+                        .unwrap()
+                        .as_millis() / 100
+                ) as usize;
+                let max_cycle = (22usize * 41usize).rem_euclid(t_inc) as usize;
+                let vert_i = max_cycle / 41;
+                let hoz_i = (22usize).rem_euclid(max_cycle);
+                let image = self.image.as_ref().unwrap();
+                let imblock = get_image_block(
+                    &image,
+                    &block_size,
+                    hoz_i * 124,
+                    vert_i * 93
+                );
+                ui.ctx().request_repaint();
+                let ci = egui::ColorImage::from_rgba_unmultiplied(block_size, &imblock);
+                let t = ui.ctx().load_texture("clippy_spritesheet", ci, Default::default());
+                ui.add(egui::Image::from_texture(&t.clone()));
+            }
             // The central panel the region left after adding TopPanel's and SidePanel's
             ui.heading("eframe template");
 
