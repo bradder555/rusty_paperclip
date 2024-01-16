@@ -5,7 +5,24 @@ with (
 ):
     animations = jl(jin)
 
+
+idle = []
+action = []
+
+out = {
+    "idle": idle,
+    "action": action
+}
+
+for animation in animations:
+    if "Idle" in animation["Name"]:
+        animation = dict(animation) #clone
+        animation["Name"] = animation["Name"].replace("Idle", "")
+        idle.append(animation)
+    else:
+        action.append(animation)
+
 with (
     open("animations_.json", "w") as jout
 ):
-    jd(dict((x["Name"].replace("Idle", ""), {"frames": x["Frames"], "is_idle": x["Name"].startswith("Idle")}) for x in animations), jout, indent=2)
+    jd (out, jout, indent=2)
