@@ -110,7 +110,7 @@ impl eframe::App for TemplateApp {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         // Put your widgets into a `SidePanel`, `TopPanel`, `CentralPanel`, `Window` or `Area`.
         // For inspiration and more examples, go to https://emilk.github.io/egui
-
+        ctx.request_repaint_after(std::time::Duration::from_millis(20));
         egui::TopBottomPanel::top("top_panel").show(ctx, |ui| {
             egui::menu::bar(ui, |ui| {
                 // NOTE: no File->Quit on web pages!
@@ -168,7 +168,7 @@ impl eframe::App for TemplateApp {
                 self.value += 1.0;
             }
 
-            ui.ctx().request_repaint();
+            
         });
     }
 }
