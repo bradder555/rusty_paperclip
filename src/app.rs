@@ -1,6 +1,6 @@
-use std::time::SystemTime;
+use std::time::{SystemTime, Duration};
 
-use egui::TextureHandle;
+use egui::{ColorImage, TextureHandle};
 
 /// We derive Deserialize/Serialize so we can persist app state on shutdown.
 //#[derive(serde::Deserialize, serde::Serialize)]
@@ -12,7 +12,9 @@ pub struct TemplateApp {
     //#[serde(skip)] // This how you opt-out of serialization of a field
     value: f32,
     increment: usize,
-    sprite_sheet: Option<TextureHandle>
+    no_sprite_cols: usize,
+    no_sprite_rows: usize,
+    image: Option<TextureHandle>
 }
 
 impl Default for TemplateApp {
@@ -22,7 +24,9 @@ impl Default for TemplateApp {
             label: "Hello World!".to_owned(),
             value: 2.7,
             increment: 0,
-            sprite_sheet: None
+            no_sprite_cols: 27,
+            no_sprite_rows: 34,
+            image: Option::None
         }
     }
 }
@@ -33,22 +37,7 @@ impl TemplateApp {
         // This is also where you can customize the look and feel of egui using
         // `cc.egui_ctx.set_visuals` and `cc.egui_ctx.set_fonts`.
         //egui_extras::install_image_loaders(&cc.egui_ctx);
-        
-        // The top panel is often a good place for a menu bar:
-        let image = image::io::Reader::open("./assets/clippy spritesheet.png")
-        .expect("oops!")
-        .decode()
-        .expect("oops!");
-        let mut image_bytes = image.as_bytes().to_vec().clone();
-        for x in 0..(image_bytes.len()/4) {
-            let x = x * 4;
-            if image_bytes[x + 0] == 255 && image_bytes[x + 2] == 255 {
-                image_bytes[x + 3] = 0;
-            }
-        }
-        let ci = egui::ColorImage::from_rgba_unmultiplied([image.width() as _, image.height() as _ ], &image_bytes);
-        let t = cc.egui_ctx.load_texture("clippy_sprite_sheet", ci, Default::default());
-        
+
         // Load previous app state (if any).
         // Note that you must enable the `persistence` feature for this to work.
         /*
@@ -58,43 +47,18 @@ impl TemplateApp {
         */
 
         let mut this:TemplateApp = Default::default();
-        this.sprite_sheet = Some(t);
+        let image = image::io::Reader::open("./assets/clippy.png")
+            .expect("problem loading image")
+            .decode()
+            .expect("problem decoding image, panic");
+
+        let im_buff = image.to_rgba8();
+        let pix = im_buff.as_flat_samples();
+        let ci = ColorImage::from_rgba_unmultiplied([im_buff.width() as _, im_buff.height() as _], pix.as_slice());
+        let tex = cc.egui_ctx.load_texture("clippit_sprite_sheet", ci, Default::default());
+        this.image = Some(tex);
         this
     }
-}
-
-fn get_image_block(
-    im: &image::DynamicImage, 
-    block_size: &[usize; 2],
-    offset_x: usize, 
-    offset_y: usize
-) -> Vec<u8>{
-    let im = im.clone();
-    let block_size = block_size.clone();
-    let offset_x = offset_x * 4;
-    let offset_y = offset_y * 4;
-    
-    let block_width = block_size[0];
-    let block_height = block_size[1];
-    
-    let actual_width = im.width();
-    let width_byte_count: usize = actual_width as usize * 4;
-
-    let image_buffer = im.to_rgba8();
-    let pixels = image_buffer.as_flat_samples();
-    let pixels = &pixels.as_slice();
-
-    let mut r_buffer: Vec<u8> =  vec![0; 4 * block_height * block_width];
-    let mut r_buffer_off : usize;
-    let mut i_buffer_off : usize;
-
-    for by in 0..block_height{
-        r_buffer_off = by * block_width * 4;
-        i_buffer_off = (by + offset_y) * width_byte_count + offset_x;
-        r_buffer[r_buffer_off..][..block_width].copy_from_slice(&pixels[i_buffer_off..(i_buffer_off + block_width)]);
-    }
-
-    r_buffer.clone()
 }
 
 impl eframe::App for TemplateApp {
@@ -127,18 +91,18 @@ impl eframe::App for TemplateApp {
         });
         
         let increment = std::time::SystemTime::now().duration_since(SystemTime::UNIX_EPOCH).unwrap().as_millis() as usize ;
-        let increment = increment / 1000;
+        let increment = increment / 200;
         let total_cycle : usize = increment.rem_euclid(902);
         let hoz_pos = increment.rem_euclid(22);
         let vert_pos = total_cycle / 22;
         //dbg!(hoz_pos + (vert_pos * 22));
         
         egui::CentralPanel::default().show(ctx, |ui| {
-            if self.sprite_sheet.is_some(){
-                let sprite_sheet = &self.sprite_sheet.as_ref().unwrap();
-                let ss = sprite_sheet.size();
-                let clippy_width = ss[0] / 22;
-                let clippy_height = ss[1] / 41;
+                let im = self.image.as_ref().expect("failed to load texture");
+                let im_size = im.size_vec2();
+
+                let clippy_width = (im_size.x as usize) / self.no_sprite_cols;
+                let clippy_height = (im_size.y as usize) / self.no_sprite_rows;
                 let vert_scroll_off = 1.0 + (vert_pos * clippy_height) as f32;
                 let hoz_scroll_off = 1.0 + (hoz_pos * clippy_width) as f32;
                 //dbg!(hoz_scroll_off);
@@ -152,9 +116,10 @@ impl eframe::App for TemplateApp {
                     .vertical_scroll_offset(vert_scroll_off)
                     .horizontal_scroll_offset(hoz_scroll_off)
                     .show(ui, |ui|{
-                    ui.add(egui::Image::from_texture(*sprite_sheet));
+                    ui.add(
+                        egui::Image::from_texture(im)
+                    );
                 });
-            }
             self.increment += 1;
 
             // The central panel the region left after adding TopPanel's and SidePanel's
@@ -181,7 +146,7 @@ impl eframe::App for TemplateApp {
                 powered_by_egui_and_eframe(ui);
                 egui::warn_if_debug_build(ui);
             });
-            ui.ctx().request_repaint();
+            ui.ctx().request_repaint_after(Duration::from_millis(50));
         });
         
     }
