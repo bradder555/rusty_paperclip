@@ -1,7 +1,6 @@
-[
-  {
-    "Name": "Congratulate",
-    "Frames": [
+{
+  "Congratulate": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -112,11 +111,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "LookRight",
-    "Frames": [
+  "LookRight": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -152,11 +151,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "SendMail",
-    "Frames": [
+  "SendMail": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -467,11 +466,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "Thinking",
-    "Frames": [
+  "Thinking": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -697,11 +696,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "Explain",
-    "Frames": [
+  "Explain": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -737,11 +736,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "IdleRopePile",
-    "Frames": [
+  "RopePile": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -1117,11 +1116,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": true
   },
-  {
-    "Name": "IdleAtom",
-    "Frames": [
+  "Atom": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -1347,11 +1346,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": true
   },
-  {
-    "Name": "Print",
-    "Frames": [
+  "Print": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -1647,11 +1646,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "Hide",
-    "Frames": [
+  "Hide": {
+    "frames": [
       {
         "dur": 10,
         "col": 0,
@@ -1676,11 +1675,11 @@
         "dur": 10,
         "ImagesOffsets": null
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "GetAttention",
-    "Frames": [
+  "GetAttention": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -1801,11 +1800,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "Save",
-    "Frames": [
+  "Save": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -2016,11 +2015,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "GetTechy",
-    "Frames": [
+  "GetTechy": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -2246,11 +2245,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "GestureUp",
-    "Frames": [
+  "GestureUp": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -2336,11 +2335,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "IdleLoiter",
-    "Frames": [
+  "Loiter": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -2556,11 +2555,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": true
   },
-  {
-    "Name": "Processing",
-    "Frames": [
+  "Processing": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -2751,11 +2750,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "Alert",
-    "Frames": [
+  "Alert": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -2856,11 +2855,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "LookUpRight",
-    "Frames": [
+  "LookUpRight": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -2896,11 +2895,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "IdleSideToSide",
-    "Frames": [
+  "SideToSide": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -3086,11 +3085,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": true
   },
-  {
-    "Name": "GoodBye",
-    "Frames": [
+  "GoodBye": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -3280,11 +3279,11 @@
         "dur": 100,
         "ImagesOffsets": null
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "LookLeft",
-    "Frames": [
+  "LookLeft": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -3320,11 +3319,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "IdleHeadScratch",
-    "Frames": [
+  "HeadScratch": {
+    "frames": [
       {
         "dur": 100,
         "col": 16,
@@ -3420,11 +3419,11 @@
         "col": 7,
         "row": 27
       }
-    ]
+    ],
+    "is_idle": true
   },
-  {
-    "Name": "LookUpLeft",
-    "Frames": [
+  "LookUpLeft": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -3460,11 +3459,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "CheckingSomething",
-    "Frames": [
+  "CheckingSomething": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -3740,11 +3739,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "Hearing_1",
-    "Frames": [
+  "Hearing_1": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -3940,11 +3939,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "GetWizardy",
-    "Frames": [
+  "GetWizardy": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -4055,11 +4054,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "IdleFingerTap",
-    "Frames": [
+  "FingerTap": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -4115,11 +4114,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": true
   },
-  {
-    "Name": "GestureLeft",
-    "Frames": [
+  "GestureLeft": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -4200,11 +4199,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "Wave",
-    "Frames": [
+  "Wave": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -4340,11 +4339,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "GestureRight",
-    "Frames": [
+  "GestureRight": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -4430,11 +4429,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "Writing",
-    "Frames": [
+  "Writing": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -4740,11 +4739,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "IdleSnooze",
-    "Frames": [
+  "Snooze": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -5185,11 +5184,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": true
   },
-  {
-    "Name": "LookDownRight",
-    "Frames": [
+  "LookDownRight": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -5225,11 +5224,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "GetArtsy",
-    "Frames": [
+  "GetArtsy": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -5345,11 +5344,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "Show",
-    "Frames": [
+  "Show": {
+    "frames": [
       {
         "dur": 10,
         "col": 22,
@@ -5370,11 +5369,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "LookDown",
-    "Frames": [
+  "LookDown": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -5410,11 +5409,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "Searching",
-    "Frames": [
+  "Searching": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -5720,11 +5719,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "EmptyTrash",
-    "Frames": [
+  "EmptyTrash": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -5930,11 +5929,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "Greeting",
-    "Frames": [
+  "Greeting": {
+    "frames": [
       {
         "dur": 100,
         "col": 13,
@@ -6125,11 +6124,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "LookUp",
-    "Frames": [
+  "LookUp": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -6165,11 +6164,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "GestureDown",
-    "Frames": [
+  "GestureDown": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -6265,21 +6264,21 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "RestPose",
-    "Frames": [
+  "RestPose": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   },
-  {
-    "Name": "IdleEyeBrowRaise",
-    "Frames": [
+  "EyeBrowRaise": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -6315,11 +6314,11 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": true
   },
-  {
-    "Name": "LookDownLeft",
-    "Frames": [
+  "LookDownLeft": {
+    "frames": [
       {
         "dur": 100,
         "col": 0,
@@ -6355,6 +6354,7 @@
         "col": 0,
         "row": 0
       }
-    ]
+    ],
+    "is_idle": false
   }
-]
+}
