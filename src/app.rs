@@ -1,3 +1,5 @@
+use std::time::SystemTime;
+
 use egui::TextureHandle;
 
 /// We derive Deserialize/Serialize so we can persist app state on shutdown.
@@ -124,7 +126,8 @@ impl eframe::App for TemplateApp {
             });
         });
         
-        let increment = self.increment / 10;
+        let increment = std::time::SystemTime::now().duration_since(SystemTime::UNIX_EPOCH).unwrap().as_millis() as usize ;
+        let increment = increment / 1000;
         let total_cycle : usize = increment.rem_euclid(902);
         let hoz_pos = increment.rem_euclid(22);
         let vert_pos = total_cycle / 22;
@@ -135,15 +138,18 @@ impl eframe::App for TemplateApp {
                 let ss = sprite_sheet.size();
                 let clippy_width = ss[0] / 22;
                 let clippy_height = ss[1] / 41;
+                let vert_scroll_off = 1.0 + (vert_pos * clippy_height) as f32;
+                let hoz_scroll_off = 1.0 + (hoz_pos * clippy_width) as f32;
+                //dbg!(hoz_scroll_off);
 
                 egui::ScrollArea::both()
-                    .max_height(clippy_height as f32 )
-                    .max_width(clippy_width as f32 )
+                    .max_height((clippy_height - 5) as f32 )
+                    .max_width((clippy_width - 5) as f32 )
                     .scroll_bar_visibility(egui::scroll_area::ScrollBarVisibility::AlwaysHidden)
                     .enable_scrolling(false)
                     .auto_shrink(false)
-                    .vertical_scroll_offset((vert_pos * clippy_height) as f32)
-                    .horizontal_scroll_offset((hoz_pos * clippy_width) as f32)
+                    .vertical_scroll_offset(vert_scroll_off)
+                    .horizontal_scroll_offset(hoz_scroll_off)
                     .show(ui, |ui|{
                     ui.add(egui::Image::from_texture(*sprite_sheet));
                 });
