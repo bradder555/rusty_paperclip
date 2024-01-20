@@ -21,9 +21,20 @@ pub struct AnimationInfo{
 }
 
 #[derive(serde::Deserialize, serde::Serialize)]
-pub struct AnimationConfig{
+pub strict AnimationSets{
     idle_animations: Vec<AnimationInfo>,
     action_animations: Vec<AnimationInfo>
+}
+
+pub struct SpriteSheetInfo{
+    columns: usize,
+    rows: usize
+}
+
+#[derive(serde::Deserialize, serde::Serialize)]
+pub struct AnimationConfig{
+    animations: AnimationSets,
+    sprite_sheet_info: SpriteSheetInfo
 }
 
 enum AnimationServiceMode{
