@@ -26,7 +26,7 @@ pub struct AnimationSets{
     action_animations: Vec<AnimationInfo>
 }
 
-#[derive(serde::Deserialize, serde::Serialize)]
+#[derive(serde::Deserialize, serde::Serialize, Clone)]
 pub struct SpriteSheetInfo{
     pub columns: usize,
     pub rows: usize

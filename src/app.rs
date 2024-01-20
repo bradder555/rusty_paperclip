@@ -1,9 +1,11 @@
+use std::ops::DerefMut;
 use std::time::{SystemTime, Duration};
 use std::sync::Arc;
 use std::sync::Mutex;
 use egui::{ColorImage, TextureHandle};
 use crate::animation::models::SpriteSheetInfo;
 
+#[derive(Clone)]
 pub struct TemplateAppShared{
     label: String,
     value: f32,
@@ -87,7 +89,7 @@ impl eframe::App for TemplateApp {
         // Put your widgets into a `SidePanel`, `TopPanel`, `CentralPanel`, `Window` or `Area`.
         // For inspiration and more examples, go to https://emilk.github.io/egui
 
-        let mut state = self.state.lock().unwrap();
+        let mut state = self.state.lock().unwrap().deref_mut().clone();
         
         egui::TopBottomPanel::top("top_panel").show(ctx, |ui| {
 
