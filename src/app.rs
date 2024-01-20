@@ -1,64 +1,37 @@
 use std::time::{SystemTime, Duration};
-
 use egui::{ColorImage, TextureHandle};
+use crate::animation::models::SpriteSheetInfo;
 
-
-/// We derive Deserialize/Serialize so we can persist app state on shutdown.
-//#[derive(serde::Deserialize, serde::Serialize)]
-//#[serde(default)] // if we add new fields, give them default values when deserializing old state
 pub struct TemplateApp {
-    // Example stuff:
     label: String,
-
-    //#[serde(skip)] // This how you opt-out of serialization of a field
     value: f32,
-    increment: usize,
-    no_sprite_cols: usize,
-    no_sprite_rows: usize,
-    image: Option<TextureHandle>
-}
-
-impl Default for TemplateApp {
-    fn default() -> Self {
-        Self {
-            // Example stuff:
-            label: "Hello World!".to_owned(),
-            value: 2.7,
-            increment: 0,
-            no_sprite_cols: 27,
-            no_sprite_rows: 34,
-            image: Option::None
-        }
-    }
+    sprite_sheet_info: SpriteSheetInfo,
+    image: TextureHandle
 }
 
 impl TemplateApp {
     /// Called once before the first frame.
     pub fn new(cc: &eframe::CreationContext<'_>) -> Self {
-        // This is also where you can customize the look and feel of egui using
-        // `cc.egui_ctx.set_visuals` and `cc.egui_ctx.set_fonts`.
-        //egui_extras::install_image_loaders(&cc.egui_ctx);
 
-        // Load previous app state (if any).
-        // Note that you must enable the `persistence` feature for this to work.
-        /*
-        if let Some(storage) = cc.storage {
-            return eframe::get_value(storage, eframe::APP_KEY).unwrap_or_default();
-        }
-        */
-
-        let mut this:TemplateApp = Default::default();
         let image = image::io::Reader::open("./assets/clippy.png")
-            .expect("problem loading image")
-            .decode()
-            .expect("problem decoding image, panic");
+        .expect("problem loading image")
+        .decode()
+        .expect("problem decoding image, panic");
 
         let im_buff = image.to_rgba8();
         let pix = im_buff.as_flat_samples();
         let ci = ColorImage::from_rgba_unmultiplied([im_buff.width() as _, im_buff.height() as _], pix.as_slice());
         let tex = cc.egui_ctx.load_texture("clippit_sprite_sheet", ci, Default::default());
-        this.image = Some(tex);
-        this
+
+        TemplateApp{
+            label: "hello is label".to_owned(),
+            value: 3.0,
+            sprite_sheet_info: SpriteSheetInfo{
+                columns: 27,
+                rows: 34
+            },
+            image: tex
+        }
     }
 }
 
@@ -92,18 +65,17 @@ impl eframe::App for TemplateApp {
         });
         
         let increment = std::time::SystemTime::now().duration_since(SystemTime::UNIX_EPOCH).unwrap().as_millis() as usize ;
-        let increment = increment / 200;
+        let increment = increment / 100;
         let total_cycle : usize = increment.rem_euclid(902);
         let hoz_pos = increment.rem_euclid(22);
         let vert_pos = total_cycle / 22;
         //dbg!(hoz_pos + (vert_pos * 22));
         
         egui::CentralPanel::default().show(ctx, |ui| {
-                let im = self.image.as_ref().expect("failed to load texture");
-                let im_size = im.size_vec2();
+                let im_size = self.image.size_vec2();
 
-                let clippy_width = (im_size.x as usize) / self.no_sprite_cols;
-                let clippy_height = (im_size.y as usize) / self.no_sprite_rows;
+                let clippy_width = (im_size.x as usize) / self.sprite_sheet_info.columns;
+                let clippy_height = (im_size.y as usize) / self.sprite_sheet_info.rows;
                 let vert_scroll_off = 1.0 + (vert_pos * clippy_height) as f32;
                 let hoz_scroll_off = 1.0 + (hoz_pos * clippy_width) as f32;
                 //dbg!(hoz_scroll_off);
@@ -118,10 +90,9 @@ impl eframe::App for TemplateApp {
                     .horizontal_scroll_offset(hoz_scroll_off)
                     .show(ui, |ui|{
                     ui.add(
-                        egui::Image::from_texture(im)
+                        egui::Image::from_texture(&self.image)
                     );
                 });
-            self.increment += 1;
 
             // The central panel the region left after adding TopPanel's and SidePanel's
             ui.heading("eframe template");
@@ -147,7 +118,7 @@ impl eframe::App for TemplateApp {
                 powered_by_egui_and_eframe(ui);
                 egui::warn_if_debug_build(ui);
             });
-            ui.ctx().request_repaint_after(Duration::from_millis(50));
+            ui.ctx().request_repaint_after(Duration::from_millis(10));
         });
         
     }
