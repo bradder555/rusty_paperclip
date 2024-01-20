@@ -1,9 +1,12 @@
 use std::ops::DerefMut;
+use std::sync::mpsc::Receiver;
 use std::time::{SystemTime, Duration};
 use std::sync::Arc;
 use std::sync::Mutex;
 use egui::{ColorImage, TextureHandle};
+use crate::actions::DispatchActions;
 use crate::animation::models::SpriteSheetInfo;
+use tokio::sync::broadcast;
 
 #[derive(Clone)]
 pub struct TemplateAppShared{
@@ -33,6 +36,26 @@ fn load_image_as_color_image(filepath:&str) -> ColorImage {
 impl TemplateApp {
     /// Called once before the first frame.
     pub fn new(cc: &eframe::CreationContext<'_>) -> Self {
+
+        let (sndr, _) = broadcast::channel::<DispatchActions>(50);
+        let mut receiver = sndr.subscribe();
+
+        tokio::spawn(
+            async move {
+                let v = receiver.recv().await.unwrap();
+                dbg!(v);
+            }
+        );
+
+        let more_senders = sndr.clone();
+        tokio::spawn(
+            async move {
+                tokio::time::sleep(Duration::from_millis(5000)).await;
+                let _ = more_senders.send(
+                    DispatchActions::AskQuestion("What is my purpose?".to_owned())
+                );
+            }
+        );
 
         let shared = Arc::new(
             Mutex::new(

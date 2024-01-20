@@ -1,8 +1,4 @@
-use crate::actions::DispatchActions;
-use tokio::sync::broadcast::Sender;
-use tokio::sync::broadcast::Receiver;
-
-#[derive(serde::Deserialize, serde::Serialize)]
+#[derive(serde::Deserialize, serde::Serialize, Clone, Debug)]
 pub struct FrameInfo{
     column: usize,
     row: usize
