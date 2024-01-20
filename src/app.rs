@@ -9,19 +9,20 @@ pub struct TemplateApp {
     image: TextureHandle
 }
 
+fn load_image_as_color_image(filepath:&str) -> ColorImage {
+    let image = image::io::Reader::open(filepath)
+    .expect("problem loading image")
+    .decode()
+    .expect("problem decoding image, panic");
+
+    let im_buff = image.to_rgba8();
+    let pix = im_buff.as_flat_samples();
+    ColorImage::from_rgba_unmultiplied([im_buff.width() as _, im_buff.height() as _], pix.as_slice())
+}
+
 impl TemplateApp {
     /// Called once before the first frame.
     pub fn new(cc: &eframe::CreationContext<'_>) -> Self {
-
-        let image = image::io::Reader::open("./assets/clippy.png")
-        .expect("problem loading image")
-        .decode()
-        .expect("problem decoding image, panic");
-
-        let im_buff = image.to_rgba8();
-        let pix = im_buff.as_flat_samples();
-        let ci = ColorImage::from_rgba_unmultiplied([im_buff.width() as _, im_buff.height() as _], pix.as_slice());
-        let tex = cc.egui_ctx.load_texture("clippit_sprite_sheet", ci, Default::default());
 
         TemplateApp{
             label: "hello is label".to_owned(),
@@ -30,7 +31,11 @@ impl TemplateApp {
                 columns: 27,
                 rows: 34
             },
-            image: tex
+            image: cc.egui_ctx.load_texture(
+                "clippit_sprite_sheet", 
+                load_image_as_color_image("./assets/clippy.png"), 
+                Default::default()
+            )
         }
     }
 }
