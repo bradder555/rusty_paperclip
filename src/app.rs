@@ -24,6 +24,16 @@ impl TemplateApp {
     /// Called once before the first frame.
     pub fn new(cc: &eframe::CreationContext<'_>) -> Self {
 
+        let ctx_rp = cc.egui_ctx.clone();
+        tokio::spawn(
+            async move {
+                loop {
+                    tokio::time::sleep(Duration::from_millis(50)).await;
+                    ctx_rp.request_repaint();
+                }
+            }
+        );
+
         TemplateApp{
             label: "hello is label".to_owned(),
             value: 3.0,
@@ -123,7 +133,7 @@ impl eframe::App for TemplateApp {
                 powered_by_egui_and_eframe(ui);
                 egui::warn_if_debug_build(ui);
             });
-            ui.ctx().request_repaint_after(Duration::from_millis(10));
+            //ui.ctx().request_repaint_after(Duration::from_millis(10));
         });
         
     }
