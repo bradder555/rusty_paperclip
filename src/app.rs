@@ -1,11 +1,17 @@
 use std::time::{SystemTime, Duration};
+use std::sync::Arc;
+use std::sync::Mutex;
 use egui::{ColorImage, TextureHandle};
 use crate::animation::models::SpriteSheetInfo;
 
-pub struct TemplateApp {
+pub struct TemplateAppShared{
     label: String,
     value: f32,
-    sprite_sheet_info: SpriteSheetInfo,
+    sprite_sheet_info: SpriteSheetInfo
+}
+
+pub struct TemplateApp {
+    state: Arc<Mutex<TemplateAppShared>>,
     image: TextureHandle
 }
 
@@ -20,9 +26,33 @@ fn load_image_as_color_image(filepath:&str) -> ColorImage {
     ColorImage::from_rgba_unmultiplied([im_buff.width() as _, im_buff.height() as _], pix.as_slice())
 }
 
+
+
 impl TemplateApp {
     /// Called once before the first frame.
     pub fn new(cc: &eframe::CreationContext<'_>) -> Self {
+
+        let shared = Arc::new(
+            Mutex::new(
+                TemplateAppShared {
+                    label: "hello is label".to_owned(),
+                    value: 3.0,
+                    sprite_sheet_info: SpriteSheetInfo{
+                        columns: 27,
+                        rows: 34
+                    },
+                }
+            )
+        );
+
+        let app = TemplateApp{
+            state: shared.clone(),
+            image: cc.egui_ctx.load_texture(
+                "clippit_sprite_sheet", 
+                load_image_as_color_image("./assets/clippy.png"), 
+                Default::default()
+            )
+        };
 
         let ctx_rp = cc.egui_ctx.clone();
         tokio::spawn(
@@ -34,33 +64,31 @@ impl TemplateApp {
             }
         );
 
-        TemplateApp{
-            label: "hello is label".to_owned(),
-            value: 3.0,
-            sprite_sheet_info: SpriteSheetInfo{
-                columns: 27,
-                rows: 34
-            },
-            image: cc.egui_ctx.load_texture(
-                "clippit_sprite_sheet", 
-                load_image_as_color_image("./assets/clippy.png"), 
-                Default::default()
-            )
-        }
+        let ctx_rp = cc.egui_ctx.clone();
+        let _shared = shared.clone();
+        tokio::spawn(
+            async move {
+                loop {
+                    tokio::time::sleep(Duration::from_millis(2000)).await;
+                    let mut _shared = _shared.lock().unwrap();
+                    _shared.value += 1.0;
+                    ctx_rp.request_repaint();
+                }
+            }
+        );
+
+        app
     }
 }
 
 impl eframe::App for TemplateApp {
-    /// Called by the frame work to save state before shutdown.
-    fn save(&mut self, storage: &mut dyn eframe::Storage) {
-        //eframe::set_value(storage, eframe::APP_KEY, self);
-    }
-
     /// Called each time the UI needs repainting, which may be many times per second.
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         // Put your widgets into a `SidePanel`, `TopPanel`, `CentralPanel`, `Window` or `Area`.
         // For inspiration and more examples, go to https://emilk.github.io/egui
 
+        let mut state = self.state.lock().unwrap();
+        
         egui::TopBottomPanel::top("top_panel").show(ctx, |ui| {
 
             egui::menu::bar(ui, |ui| {
@@ -79,18 +107,20 @@ impl eframe::App for TemplateApp {
             });
         });
         
+
         let increment = std::time::SystemTime::now().duration_since(SystemTime::UNIX_EPOCH).unwrap().as_millis() as usize ;
         let increment = increment / 100;
-        let total_cycle : usize = increment.rem_euclid(902);
-        let hoz_pos = increment.rem_euclid(22);
-        let vert_pos = total_cycle / 22;
-        //dbg!(hoz_pos + (vert_pos * 22));
+        
+        let im_size = self.image.size_vec2();
+        let total_cycle : usize = increment.rem_euclid(state.sprite_sheet_info.columns * state.sprite_sheet_info.rows);
+        let hoz_pos = increment.rem_euclid(state.sprite_sheet_info.columns);
+        let vert_pos = total_cycle / state.sprite_sheet_info.columns;
         
         egui::CentralPanel::default().show(ctx, |ui| {
-                let im_size = self.image.size_vec2();
+                
 
-                let clippy_width = (im_size.x as usize) / self.sprite_sheet_info.columns;
-                let clippy_height = (im_size.y as usize) / self.sprite_sheet_info.rows;
+                let clippy_width = (im_size.x as usize) / state.sprite_sheet_info.columns;
+                let clippy_height = (im_size.y as usize) / state.sprite_sheet_info.rows;
                 let vert_scroll_off = 1.0 + (vert_pos * clippy_height) as f32;
                 let hoz_scroll_off = 1.0 + (hoz_pos * clippy_width) as f32;
                 //dbg!(hoz_scroll_off);
@@ -114,13 +144,16 @@ impl eframe::App for TemplateApp {
 
             ui.horizontal(|ui| {
                 ui.label("Write something: ");
-                ui.text_edit_singleline(&mut self.label);
+                ui.text_edit_singleline(&mut state.label);
             });
 
-            ui.add(egui::Slider::new(&mut self.value, 0.0..=10.0).text("value"));
+            
+            ui.add(egui::Slider::new(&mut state.value, 0.0..=10.0).text("value"));
+            /*
             if ui.button("Increment").clicked() {
                 self.value += 1.0;
             }
+            */
 
             ui.separator();
 
