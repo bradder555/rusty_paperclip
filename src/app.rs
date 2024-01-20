@@ -2,6 +2,22 @@ use std::time::{SystemTime, Duration};
 
 use egui::{ColorImage, TextureHandle};
 
+pub struct AnimationFrame{
+    duration: usize,
+    column: usize,
+    row: usize
+}
+
+pub struct AnimationInfo{
+    name: String,
+    frames: Vec<AnimationFrame>
+}
+
+pub struct AnimationConfig{
+    idle_animations: Vec<AnimationInfo>,
+    action_animations: Vec<AnimationInfo>
+}
+
 /// We derive Deserialize/Serialize so we can persist app state on shutdown.
 //#[derive(serde::Deserialize, serde::Serialize)]
 //#[serde(default)] // if we add new fields, give them default values when deserializing old state
