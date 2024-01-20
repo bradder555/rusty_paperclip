@@ -10,11 +10,6 @@ with (
 idle = []
 action = []
 
-out = {
-    "idle": idle,
-    "action": action
-}
-
 for animation in animations:
     animation["Frames"] = [
         {
@@ -29,6 +24,16 @@ for animation in animations:
         idle.append(animation)
     else:
         action.append(animation)
+
+aout = {
+    "idle": idle,
+    "action": action
+}
+
+out = {
+    "animations": aout,
+    "sprite_sheet_info": {"columns": 27, "rows": 34}
+}
 
 with (
     open("animations.yaml", "w") as yf
