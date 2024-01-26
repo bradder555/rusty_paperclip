@@ -18,8 +18,8 @@ pub struct AnimationInfo{
 
 #[derive(serde::Deserialize, serde::Serialize)]
 pub struct AnimationSets{
-    idle_animations: Vec<AnimationInfo>,
-    action_animations: Vec<AnimationInfo>
+    idle: Vec<AnimationInfo>,
+    action: Vec<AnimationInfo>
 }
 
 #[derive(serde::Deserialize, serde::Serialize, Clone)]

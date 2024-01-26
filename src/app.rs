@@ -6,6 +6,7 @@ use std::sync::Mutex;
 use egui::{ColorImage, TextureHandle};
 use crate::actions::DispatchActions;
 use crate::animation::models::SpriteSheetInfo;
+use crate::animation::service::AnimationService;
 use tokio::sync::broadcast;
 
 #[derive(Clone)]
@@ -45,6 +46,12 @@ impl TemplateApp {
                 let v = receiver.recv().await.unwrap();
                 dbg!(v);
             }
+        );
+        
+        let clippit_animation = AnimationService::new(
+            "./assets/animations.yaml", 
+            sndr.subscribe(), 
+            sndr.clone()
         );
 
         let more_senders = sndr.clone();

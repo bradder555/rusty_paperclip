@@ -11,19 +11,24 @@ idle = []
 action = []
 
 for animation in animations:
-    animation["Frames"] = [
+    name = animation.pop("Name")
+    frames = animation.pop("Frames")
+
+    animation["frames"] = [
         {
             "duration": x.get("dur", 0), 
-            "column": x.get("col", 0), 
-            "row": x.get("row", 0)
-        } for x in animation["Frames"]
+            "info": {
+                "column": x.get("col", 0), 
+                "row": x.get("row", 0)
+            }
+        } for x in frames
     ]
-    if "Idle" in animation["Name"]:
-        animation = dict(animation) #clone
-        animation["Name"] = animation["Name"].replace("Idle", "")
+    if "Idle" in name:
+        name = name.replace("Idle", "")
         idle.append(animation)
     else:
         action.append(animation)
+    animation["name"] = name
 
 aout = {
     "idle": idle,

@@ -1,3779 +1,5008 @@
 animations:
   action:
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 1
-      duration: 10
-      row: 0
-    - column: 2
-      duration: 10
-      row: 0
-    - column: 3
-      duration: 10
-      row: 0
-    - column: 4
-      duration: 10
-      row: 0
-    - column: 5
-      duration: 10
-      row: 0
-    - column: 6
-      duration: 10
-      row: 0
-    - column: 7
-      duration: 10
-      row: 0
-    - column: 8
-      duration: 10
-      row: 0
-    - column: 9
-      duration: 100
-      row: 0
-    - column: 10
-      duration: 100
-      row: 0
-    - column: 11
-      duration: 100
-      row: 0
-    - column: 12
-      duration: 1200
-      row: 0
-    - column: 13
-      duration: 100
-      row: 0
-    - column: 14
-      duration: 100
-      row: 0
-    - column: 12
-      duration: 1200
-      row: 0
-    - column: 15
-      duration: 100
-      row: 0
-    - column: 16
-      duration: 100
-      row: 0
-    - column: 17
-      duration: 100
-      row: 0
-    - column: 18
-      duration: 100
-      row: 0
-    - column: 19
-      duration: 100
-      row: 0
-    - column: 0
-      duration: 100
-      row: 0
-    Name: Congratulate
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 5
-      duration: 100
-      row: 7
-    - column: 6
-      duration: 100
-      row: 7
-    - column: 7
-      duration: 1200
-      row: 7
-    - column: 8
-      duration: 100
-      row: 7
-    - column: 9
-      duration: 100
-      row: 7
-    - column: 0
-      duration: 100
-      row: 0
-    Name: LookRight
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 10
-      duration: 100
-      row: 13
-    - column: 11
-      duration: 100
-      row: 13
-    - column: 12
-      duration: 100
-      row: 13
-    - column: 13
-      duration: 100
-      row: 13
-    - column: 14
-      duration: 100
-      row: 13
-    - column: 15
-      duration: 100
-      row: 13
-    - column: 16
-      duration: 100
-      row: 13
-    - column: 17
-      duration: 100
-      row: 13
-    - column: 18
-      duration: 100
-      row: 13
-    - column: 19
-      duration: 100
-      row: 13
-    - column: 20
-      duration: 100
-      row: 13
-    - column: 21
-      duration: 100
-      row: 13
-    - column: 22
-      duration: 100
-      row: 13
-    - column: 23
-      duration: 100
-      row: 13
-    - column: 24
-      duration: 100
-      row: 13
-    - column: 25
-      duration: 100
-      row: 13
-    - column: 26
-      duration: 100
-      row: 13
-    - column: 0
-      duration: 100
-      row: 14
-    - column: 1
-      duration: 100
-      row: 14
-    - column: 2
-      duration: 100
-      row: 14
-    - column: 3
-      duration: 100
-      row: 14
-    - column: 4
-      duration: 100
-      row: 14
-    - column: 5
-      duration: 100
-      row: 14
-    - column: 6
-      duration: 100
-      row: 14
-    - column: 7
-      duration: 100
-      row: 14
-    - column: 8
-      duration: 100
-      row: 14
-    - column: 9
-      duration: 100
-      row: 14
-    - column: 10
-      duration: 100
-      row: 14
-    - column: 11
-      duration: 100
-      row: 14
-    - column: 12
-      duration: 100
-      row: 14
-    - column: 13
-      duration: 100
-      row: 14
-    - column: 14
-      duration: 100
-      row: 14
-    - column: 15
-      duration: 100
-      row: 14
-    - column: 16
-      duration: 100
-      row: 14
-    - column: 17
-      duration: 100
-      row: 14
-    - column: 18
-      duration: 100
-      row: 14
-    - column: 19
-      duration: 100
-      row: 14
-    - column: 20
-      duration: 100
-      row: 14
-    - column: 21
-      duration: 100
-      row: 14
-    - column: 22
-      duration: 100
-      row: 14
-    - column: 23
-      duration: 100
-      row: 14
-    - column: 24
-      duration: 100
-      row: 14
-    - column: 25
-      duration: 100
-      row: 14
-    - column: 26
-      duration: 100
-      row: 14
-    - column: 0
-      duration: 100
-      row: 15
-    - column: 1
-      duration: 100
-      row: 15
-    - column: 2
-      duration: 100
-      row: 15
-    - column: 3
-      duration: 100
-      row: 15
-    - column: 4
-      duration: 100
-      row: 15
-    - column: 5
-      duration: 100
-      row: 15
-    - column: 6
-      duration: 100
-      row: 15
-    - column: 7
-      duration: 100
-      row: 15
-    - column: 8
-      duration: 100
-      row: 15
-    - column: 9
-      duration: 100
-      row: 15
-    - column: 10
-      duration: 100
-      row: 15
-    - column: 11
-      duration: 100
-      row: 15
-    - column: 12
-      duration: 100
-      row: 15
-    - column: 13
-      duration: 100
-      row: 15
-    - column: 14
-      duration: 100
-      row: 15
-    - column: 15
-      duration: 100
-      row: 15
-    - column: 0
-      duration: 100
-      row: 0
-    Name: SendMail
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 1
-      duration: 100
-      row: 1
-    - column: 2
-      duration: 100
-      row: 1
-    - column: 3
-      duration: 100
-      row: 1
-    - column: 4
-      duration: 100
-      row: 1
-    - column: 5
-      duration: 100
-      row: 1
-    - column: 6
-      duration: 100
-      row: 1
-    - column: 7
-      duration: 100
-      row: 1
-    - column: 8
-      duration: 100
-      row: 1
-    - column: 9
-      duration: 100
-      row: 1
-    - column: 10
-      duration: 100
-      row: 1
-    - column: 11
-      duration: 100
-      row: 1
-    - column: 12
-      duration: 100
-      row: 1
-    - column: 13
-      duration: 100
-      row: 1
-    - column: 14
-      duration: 100
-      row: 1
-    - column: 15
-      duration: 100
-      row: 1
-    - column: 16
-      duration: 100
-      row: 1
-    - column: 17
-      duration: 100
-      row: 1
-    - column: 18
-      duration: 100
-      row: 1
-    - column: 19
-      duration: 100
-      row: 1
-    - column: 20
-      duration: 100
-      row: 1
-    - column: 21
-      duration: 100
-      row: 1
-    - column: 22
-      duration: 100
-      row: 1
-    - column: 23
-      duration: 100
-      row: 1
-    - column: 24
-      duration: 100
-      row: 1
-    - column: 25
-      duration: 100
-      row: 1
-    - column: 26
-      duration: 100
-      row: 1
-    - column: 0
-      duration: 100
-      row: 2
-    - column: 1
-      duration: 100
-      row: 2
-    - column: 2
-      duration: 100
-      row: 2
-    - column: 3
-      duration: 100
-      row: 2
-    - column: 4
-      duration: 100
-      row: 2
-    - column: 5
-      duration: 100
-      row: 2
-    - column: 6
-      duration: 100
-      row: 2
-    - column: 7
-      duration: 100
-      row: 2
-    - column: 8
-      duration: 100
-      row: 2
-    - column: 8
-      duration: 100
-      row: 1
-    - column: 7
-      duration: 100
-      row: 1
-    - column: 6
-      duration: 100
-      row: 1
-    - column: 5
-      duration: 100
-      row: 1
-    - column: 4
-      duration: 100
-      row: 1
-    - column: 3
-      duration: 100
-      row: 1
-    - column: 2
-      duration: 100
-      row: 1
-    - column: 1
-      duration: 100
-      row: 1
-    - column: 0
-      duration: 100
-      row: 0
-    Name: Thinking
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 9
-      duration: 100
-      row: 2
-    - column: 10
-      duration: 100
-      row: 2
-    - column: 11
-      duration: 900
-      row: 2
-    - column: 10
-      duration: 100
-      row: 2
-    - column: 9
-      duration: 100
-      row: 2
-    - column: 0
-      duration: 100
-      row: 0
-    Name: Explain
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 2
-      duration: 100
-      row: 5
-    - column: 3
-      duration: 100
-      row: 5
-    - column: 4
-      duration: 100
-      row: 5
-    - column: 5
-      duration: 100
-      row: 5
-    - column: 6
-      duration: 100
-      row: 5
-    - column: 7
-      duration: 100
-      row: 5
-    - column: 8
-      duration: 100
-      row: 5
-    - column: 9
-      duration: 100
-      row: 5
-    - column: 10
-      duration: 100
-      row: 5
-    - column: 11
-      duration: 100
-      row: 5
-    - column: 12
-      duration: 150
-      row: 5
-    - column: 13
-      duration: 100
-      row: 5
-    - column: 14
-      duration: 100
-      row: 5
-    - column: 15
-      duration: 100
-      row: 5
-    - column: 16
-      duration: 100
-      row: 5
-    - column: 17
-      duration: 100
-      row: 5
-    - column: 18
-      duration: 100
-      row: 5
-    - column: 19
-      duration: 100
-      row: 5
-    - column: 20
-      duration: 100
-      row: 5
-    - column: 21
-      duration: 100
-      row: 5
-    - column: 22
-      duration: 100
-      row: 5
-    - column: 23
-      duration: 450
-      row: 5
-    - column: 24
-      duration: 200
-      row: 5
-    - column: 25
-      duration: 100
-      row: 5
-    - column: 26
-      duration: 100
-      row: 5
-    - column: 0
-      duration: 100
-      row: 6
-    - column: 1
-      duration: 100
-      row: 6
-    - column: 2
-      duration: 100
-      row: 6
-    - column: 3
-      duration: 100
-      row: 6
-    - column: 4
-      duration: 600
-      row: 6
-    - column: 5
-      duration: 100
-      row: 6
-    - column: 6
-      duration: 100
-      row: 6
-    - column: 7
-      duration: 100
-      row: 6
-    - column: 8
-      duration: 100
-      row: 6
-    - column: 9
-      duration: 100
-      row: 6
-    - column: 10
-      duration: 600
-      row: 6
-    - column: 11
-      duration: 100
-      row: 6
-    - column: 12
-      duration: 100
-      row: 6
-    - column: 13
-      duration: 100
-      row: 6
-    - column: 14
-      duration: 100
-      row: 6
-    - column: 15
-      duration: 600
-      row: 6
-    - column: 16
-      duration: 100
-      row: 6
-    - column: 17
-      duration: 100
-      row: 6
-    - column: 18
-      duration: 100
-      row: 6
-    - column: 19
-      duration: 100
-      row: 6
-    - column: 20
-      duration: 100
-      row: 6
-    - column: 21
-      duration: 100
-      row: 6
-    - column: 22
-      duration: 100
-      row: 6
-    - column: 23
-      duration: 600
-      row: 6
-    - column: 24
-      duration: 100
-      row: 6
-    - column: 25
-      duration: 100
-      row: 6
-    - column: 26
-      duration: 100
-      row: 6
-    - column: 0
-      duration: 100
-      row: 7
-    - column: 1
-      duration: 100
-      row: 7
-    - column: 2
-      duration: 100
-      row: 7
-    - column: 3
-      duration: 100
-      row: 7
-    - column: 4
-      duration: 100
-      row: 7
-    - column: 0
-      duration: 100
-      row: 0
-    Name: Print
-  - Frames:
-    - column: 0
-      duration: 10
-      row: 0
-    - column: 20
-      duration: 10
-      row: 0
-    - column: 21
-      duration: 10
-      row: 0
-    - column: 22
-      duration: 10
-      row: 0
-    - column: 0
-      duration: 10
-      row: 0
-    Name: Hide
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 10
-      duration: 100
-      row: 7
-    - column: 11
-      duration: 100
-      row: 7
-    - column: 12
-      duration: 100
-      row: 7
-    - column: 13
-      duration: 100
-      row: 7
-    - column: 14
-      duration: 100
-      row: 7
-    - column: 15
-      duration: 100
-      row: 7
-    - column: 16
-      duration: 100
-      row: 7
-    - column: 17
-      duration: 100
-      row: 7
-    - column: 18
-      duration: 100
-      row: 7
-    - column: 19
-      duration: 150
-      row: 7
-    - column: 18
-      duration: 150
-      row: 7
-    - column: 19
-      duration: 150
-      row: 7
-    - column: 18
-      duration: 150
-      row: 7
-    - column: 20
-      duration: 150
-      row: 7
-    - column: 21
-      duration: 100
-      row: 7
-    - column: 22
-      duration: 100
-      row: 7
-    - column: 23
-      duration: 100
-      row: 7
-    - column: 24
-      duration: 100
-      row: 7
-    - column: 25
-      duration: 100
-      row: 7
-    - column: 26
-      duration: 100
-      row: 7
-    - column: 0
-      duration: 100
-      row: 8
-    - column: 1
-      duration: 100
-      row: 8
-    - column: 0
-      duration: 100
-      row: 0
-    Name: GetAttention
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 25
-      duration: 100
-      row: 9
-    - column: 26
-      duration: 130
-      row: 9
-    - column: 0
-      duration: 130
-      row: 10
-    - column: 1
-      duration: 100
-      row: 10
-    - column: 2
-      duration: 100
-      row: 10
-    - column: 3
-      duration: 100
-      row: 10
-    - column: 4
-      duration: 100
-      row: 10
-    - column: 5
-      duration: 450
-      row: 10
-    - column: 4
-      duration: 100
-      row: 10
-    - column: 6
-      duration: 100
-      row: 10
-    - column: 7
-      duration: 100
-      row: 10
-    - column: 8
-      duration: 100
-      row: 10
-    - column: 9
-      duration: 130
-      row: 10
-    - column: 10
-      duration: 130
-      row: 10
-    - column: 11
-      duration: 130
-      row: 10
-    - column: 12
-      duration: 130
-      row: 10
-    - column: 13
-      duration: 130
-      row: 10
-    - column: 14
-      duration: 130
-      row: 10
-    - column: 15
-      duration: 130
-      row: 10
-    - column: 16
-      duration: 100
-      row: 10
-    - column: 17
-      duration: 100
-      row: 10
-    - column: 18
-      duration: 160
-      row: 10
-    - column: 19
-      duration: 100
-      row: 10
-    - column: 20
-      duration: 100
-      row: 10
-    - column: 21
-      duration: 100
-      row: 10
-    - column: 22
-      duration: 100
-      row: 10
-    - column: 23
-      duration: 450
-      row: 10
-    - column: 24
-      duration: 100
-      row: 10
-    - column: 25
-      duration: 400
-      row: 10
-    - column: 26
-      duration: 100
-      row: 10
-    - column: 0
-      duration: 100
-      row: 11
-    - column: 1
-      duration: 100
-      row: 11
-    - column: 2
-      duration: 100
-      row: 11
-    - column: 3
-      duration: 100
-      row: 11
-    - column: 4
-      duration: 100
-      row: 11
-    - column: 5
-      duration: 100
-      row: 11
-    - column: 6
-      duration: 100
-      row: 11
-    - column: 7
-      duration: 100
-      row: 11
-    - column: 8
-      duration: 100
-      row: 11
-    - column: 9
-      duration: 100
-      row: 11
-    - column: 0
-      duration: 100
-      row: 0
-    Name: Save
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 1
-      duration: 100
-      row: 1
-    - column: 2
-      duration: 100
-      row: 1
-    - column: 3
-      duration: 100
-      row: 1
-    - column: 4
-      duration: 100
-      row: 1
-    - column: 5
-      duration: 100
-      row: 1
-    - column: 6
-      duration: 100
-      row: 1
-    - column: 7
-      duration: 100
-      row: 1
-    - column: 8
-      duration: 100
-      row: 1
-    - column: 9
-      duration: 100
-      row: 1
-    - column: 10
-      duration: 100
-      row: 1
-    - column: 11
-      duration: 100
-      row: 1
-    - column: 12
-      duration: 100
-      row: 1
-    - column: 13
-      duration: 100
-      row: 1
-    - column: 14
-      duration: 100
-      row: 1
-    - column: 15
-      duration: 100
-      row: 1
-    - column: 16
-      duration: 100
-      row: 1
-    - column: 17
-      duration: 100
-      row: 1
-    - column: 18
-      duration: 100
-      row: 1
-    - column: 19
-      duration: 100
-      row: 1
-    - column: 20
-      duration: 100
-      row: 1
-    - column: 21
-      duration: 100
-      row: 1
-    - column: 22
-      duration: 100
-      row: 1
-    - column: 23
-      duration: 100
-      row: 1
-    - column: 24
-      duration: 100
-      row: 1
-    - column: 25
-      duration: 100
-      row: 1
-    - column: 26
-      duration: 100
-      row: 1
-    - column: 0
-      duration: 100
-      row: 2
-    - column: 1
-      duration: 100
-      row: 2
-    - column: 2
-      duration: 100
-      row: 2
-    - column: 3
-      duration: 100
-      row: 2
-    - column: 4
-      duration: 100
-      row: 2
-    - column: 5
-      duration: 100
-      row: 2
-    - column: 6
-      duration: 100
-      row: 2
-    - column: 7
-      duration: 100
-      row: 2
-    - column: 8
-      duration: 100
-      row: 2
-    - column: 8
-      duration: 100
-      row: 1
-    - column: 7
-      duration: 100
-      row: 1
-    - column: 6
-      duration: 100
-      row: 1
-    - column: 5
-      duration: 100
-      row: 1
-    - column: 4
-      duration: 100
-      row: 1
-    - column: 3
-      duration: 100
-      row: 1
-    - column: 2
-      duration: 100
-      row: 1
-    - column: 1
-      duration: 100
-      row: 1
-    - column: 0
-      duration: 100
-      row: 0
-    Name: GetTechy
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 7
-      duration: 100
-      row: 8
-    - column: 8
-      duration: 100
-      row: 8
-    - column: 9
-      duration: 100
-      row: 8
-    - column: 10
-      duration: 100
-      row: 8
-    - column: 11
-      duration: 100
-      row: 8
-    - column: 12
-      duration: 100
-      row: 8
-    - column: 13
-      duration: 100
-      row: 8
-    - column: 14
-      duration: 100
-      row: 8
-    - column: 15
-      duration: 1200
-      row: 8
-    - column: 16
-      duration: 100
-      row: 8
-    - column: 11
-      duration: 100
-      row: 8
-    - column: 10
-      duration: 100
-      row: 8
-    - column: 9
-      duration: 100
-      row: 8
-    - column: 8
-      duration: 100
-      row: 8
-    - column: 7
-      duration: 100
-      row: 8
-    - column: 0
-      duration: 100
-      row: 0
-    Name: GestureUp
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 10
-      duration: 100
-      row: 11
-    - column: 11
-      duration: 100
-      row: 11
-    - column: 12
-      duration: 100
-      row: 11
-    - column: 13
-      duration: 100
-      row: 11
-    - column: 14
-      duration: 100
-      row: 11
-    - column: 15
-      duration: 100
-      row: 11
-    - column: 16
-      duration: 100
-      row: 11
-    - column: 17
-      duration: 100
-      row: 11
-    - column: 18
-      duration: 100
-      row: 11
-    - column: 19
-      duration: 100
-      row: 11
-    - column: 20
-      duration: 100
-      row: 11
-    - column: 21
-      duration: 100
-      row: 11
-    - column: 22
-      duration: 100
-      row: 11
-    - column: 23
-      duration: 100
-      row: 11
-    - column: 24
-      duration: 100
-      row: 11
-    - column: 25
-      duration: 100
-      row: 11
-    - column: 26
-      duration: 100
-      row: 11
-    - column: 0
-      duration: 100
-      row: 12
-    - column: 1
-      duration: 100
-      row: 12
-    - column: 2
-      duration: 100
-      row: 12
-    - column: 3
-      duration: 100
-      row: 12
-    - column: 4
-      duration: 100
-      row: 12
-    - column: 5
-      duration: 100
-      row: 12
-    - column: 6
-      duration: 100
-      row: 12
-    - column: 7
-      duration: 100
-      row: 12
-    - column: 8
-      duration: 100
-      row: 12
-    - column: 9
-      duration: 100
-      row: 12
-    - column: 10
-      duration: 100
-      row: 12
-    - column: 11
-      duration: 100
-      row: 12
-    - column: 12
-      duration: 100
-      row: 12
-    - column: 13
-      duration: 100
-      row: 12
-    - column: 14
-      duration: 100
-      row: 12
-    - column: 15
-      duration: 100
-      row: 12
-    - column: 16
-      duration: 100
-      row: 12
-    - column: 17
-      duration: 100
-      row: 12
-    - column: 18
-      duration: 100
-      row: 12
-    - column: 0
-      duration: 100
-      row: 0
-    Name: Processing
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 19
-      duration: 100
-      row: 12
-    - column: 20
-      duration: 100
-      row: 12
-    - column: 21
-      duration: 100
-      row: 12
-    - column: 22
-      duration: 100
-      row: 12
-    - column: 23
-      duration: 100
-      row: 12
-    - column: 24
-      duration: 100
-      row: 12
-    - column: 25
-      duration: 100
-      row: 12
-    - column: 26
-      duration: 100
-      row: 12
-    - column: 0
-      duration: 100
-      row: 13
-    - column: 1
-      duration: 500
-      row: 13
-    - column: 2
-      duration: 100
-      row: 13
-    - column: 3
-      duration: 100
-      row: 13
-    - column: 4
-      duration: 100
-      row: 13
-    - column: 5
-      duration: 100
-      row: 13
-    - column: 6
-      duration: 100
-      row: 13
-    - column: 7
-      duration: 100
-      row: 13
-    - column: 8
-      duration: 100
-      row: 13
-    - column: 9
-      duration: 100
-      row: 13
-    - column: 0
-      duration: 100
-      row: 0
-    Name: Alert
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 2
-      duration: 100
-      row: 8
-    - column: 3
-      duration: 100
-      row: 8
-    - column: 4
-      duration: 1200
-      row: 8
-    - column: 5
-      duration: 100
-      row: 8
-    - column: 6
-      duration: 100
-      row: 8
-    - column: 0
-      duration: 100
-      row: 0
-    Name: LookUpRight
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 19
-      duration: 100
-      row: 31
-    - column: 20
-      duration: 250
-      row: 31
-    - column: 21
-      duration: 100
-      row: 31
-    - column: 22
-      duration: 100
-      row: 31
-    - column: 23
-      duration: 100
-      row: 31
-    - column: 24
-      duration: 100
-      row: 31
-    - column: 25
-      duration: 100
-      row: 31
-    - column: 26
-      duration: 100
-      row: 31
-    - column: 0
-      duration: 100
-      row: 32
-    - column: 1
-      duration: 100
-      row: 32
-    - column: 2
-      duration: 100
-      row: 32
-    - column: 3
-      duration: 100
-      row: 32
-    - column: 4
-      duration: 100
-      row: 32
-    - column: 5
-      duration: 200
-      row: 32
-    - column: 6
-      duration: 200
-      row: 32
-    - column: 5
-      duration: 200
-      row: 32
-    - column: 7
-      duration: 200
-      row: 32
-    - column: 8
-      duration: 100
-      row: 32
-    - column: 9
-      duration: 100
-      row: 32
-    - column: 10
-      duration: 200
-      row: 32
-    - column: 11
-      duration: 100
-      row: 32
-    - column: 12
-      duration: 100
-      row: 32
-    - column: 13
-      duration: 100
-      row: 32
-    - column: 14
-      duration: 100
-      row: 32
-    - column: 15
-      duration: 100
-      row: 32
-    - column: 16
-      duration: 100
-      row: 32
-    - column: 17
-      duration: 100
-      row: 32
-    - column: 18
-      duration: 100
-      row: 32
-    - column: 19
-      duration: 100
-      row: 32
-    - column: 20
-      duration: 100
-      row: 32
-    - column: 21
-      duration: 100
-      row: 32
-    - column: 22
-      duration: 100
-      row: 32
-    - column: 23
-      duration: 100
-      row: 32
-    - column: 10
-      duration: 100
-      row: 15
-    - column: 9
-      duration: 100
-      row: 15
-    - column: 8
-      duration: 100
-      row: 15
-    - column: 0
-      duration: 100
-      row: 0
-    Name: GoodBye
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 2
-      duration: 100
-      row: 16
-    - column: 3
-      duration: 100
-      row: 16
-    - column: 4
-      duration: 1200
-      row: 16
-    - column: 5
-      duration: 100
-      row: 16
-    - column: 6
-      duration: 100
-      row: 16
-    - column: 0
-      duration: 100
-      row: 0
-    Name: LookLeft
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 7
-      duration: 100
-      row: 16
-    - column: 8
-      duration: 100
-      row: 16
-    - column: 9
-      duration: 1200
-      row: 16
-    - column: 10
-      duration: 100
-      row: 16
-    - column: 11
-      duration: 100
-      row: 16
-    - column: 0
-      duration: 100
-      row: 0
-    Name: LookUpLeft
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 12
-      duration: 100
-      row: 16
-    - column: 13
-      duration: 100
-      row: 16
-    - column: 14
-      duration: 100
-      row: 16
-    - column: 15
-      duration: 100
-      row: 16
-    - column: 16
-      duration: 100
-      row: 16
-    - column: 17
-      duration: 100
-      row: 16
-    - column: 18
-      duration: 100
-      row: 16
-    - column: 19
-      duration: 200
-      row: 16
-    - column: 20
-      duration: 200
-      row: 16
-    - column: 21
-      duration: 200
-      row: 16
-    - column: 22
-      duration: 100
-      row: 16
-    - column: 23
-      duration: 100
-      row: 16
-    - column: 24
-      duration: 140
-      row: 16
-    - column: 25
-      duration: 100
-      row: 16
-    - column: 26
-      duration: 100
-      row: 16
-    - column: 0
-      duration: 100
-      row: 17
-    - column: 1
-      duration: 200
-      row: 17
-    - column: 2
-      duration: 100
-      row: 17
-    - column: 3
-      duration: 100
-      row: 17
-    - column: 4
-      duration: 100
-      row: 17
-    - column: 5
-      duration: 200
-      row: 17
-    - column: 6
-      duration: 100
-      row: 17
-    - column: 7
-      duration: 100
-      row: 17
-    - column: 8
-      duration: 200
-      row: 17
-    - column: 9
-      duration: 100
-      row: 17
-    - column: 10
-      duration: 100
-      row: 17
-    - column: 11
-      duration: 100
-      row: 17
-    - column: 12
-      duration: 200
-      row: 17
-    - column: 13
-      duration: 100
-      row: 17
-    - column: 14
-      duration: 100
-      row: 17
-    - column: 15
-      duration: 200
-      row: 17
-    - column: 16
-      duration: 100
-      row: 17
-    - column: 17
-      duration: 100
-      row: 17
-    - column: 18
-      duration: 100
-      row: 17
-    - column: 19
-      duration: 100
-      row: 17
-    - column: 20
-      duration: 200
-      row: 17
-    - column: 21
-      duration: 100
-      row: 17
-    - column: 22
-      duration: 100
-      row: 17
-    - column: 23
-      duration: 200
-      row: 17
-    - column: 24
-      duration: 100
-      row: 17
-    - column: 25
-      duration: 100
-      row: 17
-    - column: 26
-      duration: 100
-      row: 17
-    - column: 0
-      duration: 100
-      row: 18
-    - column: 1
-      duration: 200
-      row: 18
-    - column: 2
-      duration: 100
-      row: 18
-    - column: 3
-      duration: 100
-      row: 18
-    - column: 4
-      duration: 100
-      row: 18
-    - column: 5
-      duration: 100
-      row: 18
-    - column: 6
-      duration: 100
-      row: 18
-    - column: 7
-      duration: 100
-      row: 18
-    - column: 8
-      duration: 100
-      row: 18
-    - column: 9
-      duration: 100
-      row: 18
-    - column: 10
-      duration: 100
-      row: 18
-    - column: 0
-      duration: 100
-      row: 0
-    Name: CheckingSomething
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 19
-      duration: 100
-      row: 12
-    - column: 20
-      duration: 100
-      row: 12
-    - column: 21
-      duration: 100
-      row: 12
-    - column: 22
-      duration: 100
-      row: 12
-    - column: 23
-      duration: 100
-      row: 12
-    - column: 24
-      duration: 100
-      row: 12
-    - column: 25
-      duration: 100
-      row: 12
-    - column: 26
-      duration: 100
-      row: 12
-    - column: 0
-      duration: 100
-      row: 13
-    - column: 1
-      duration: 500
-      row: 13
-    - column: 11
-      duration: 100
-      row: 18
-    - column: 24
-      duration: 100
-      row: 12
-    - column: 25
-      duration: 100
-      row: 12
-    - column: 26
-      duration: 100
-      row: 12
-    - column: 0
-      duration: 100
-      row: 13
-    - column: 11
-      duration: 500
-      row: 18
-    - column: 12
-      duration: 100
-      row: 18
-    - column: 13
-      duration: 100
-      row: 18
-    - column: 14
-      duration: 100
-      row: 18
-    - column: 15
-      duration: 100
-      row: 18
-    - column: 16
-      duration: 400
-      row: 18
-    - column: 17
-      duration: 100
-      row: 18
-    - column: 18
-      duration: 100
-      row: 18
-    - column: 19
-      duration: 100
-      row: 18
-    - column: 20
-      duration: 100
-      row: 18
-    - column: 21
-      duration: 500
-      row: 18
-    - column: 22
-      duration: 100
-      row: 18
-    - column: 23
-      duration: 100
-      row: 18
-    - column: 24
-      duration: 100
-      row: 18
-    - column: 2
-      duration: 100
-      row: 13
-    - column: 3
-      duration: 100
-      row: 13
-    - column: 4
-      duration: 100
-      row: 13
-    - column: 5
-      duration: 100
-      row: 13
-    - column: 6
-      duration: 100
-      row: 13
-    - column: 7
-      duration: 100
-      row: 13
-    - column: 8
-      duration: 100
-      row: 13
-    - column: 9
-      duration: 100
-      row: 13
-    - column: 0
-      duration: 100
-      row: 0
-    Name: Hearing_1
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 1
-      duration: 10
-      row: 0
-    - column: 2
-      duration: 10
-      row: 0
-    - column: 3
-      duration: 10
-      row: 0
-    - column: 4
-      duration: 10
-      row: 0
-    - column: 5
-      duration: 10
-      row: 0
-    - column: 6
-      duration: 10
-      row: 0
-    - column: 7
-      duration: 10
-      row: 0
-    - column: 8
-      duration: 10
-      row: 0
-    - column: 9
-      duration: 100
-      row: 0
-    - column: 10
-      duration: 100
-      row: 0
-    - column: 11
-      duration: 100
-      row: 0
-    - column: 12
-      duration: 1200
-      row: 0
-    - column: 13
-      duration: 100
-      row: 0
-    - column: 14
-      duration: 100
-      row: 0
-    - column: 12
-      duration: 1200
-      row: 0
-    - column: 15
-      duration: 100
-      row: 0
-    - column: 16
-      duration: 100
-      row: 0
-    - column: 17
-      duration: 100
-      row: 0
-    - column: 18
-      duration: 100
-      row: 0
-    - column: 19
-      duration: 100
-      row: 0
-    - column: 0
-      duration: 100
-      row: 0
-    Name: GetWizardy
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 25
-      duration: 100
-      row: 18
-    - column: 26
-      duration: 100
-      row: 18
-    - column: 0
-      duration: 100
-      row: 19
-    - column: 1
-      duration: 100
-      row: 19
-    - column: 2
-      duration: 100
-      row: 19
-    - column: 3
-      duration: 100
-      row: 19
-    - column: 4
-      duration: 100
-      row: 19
-    - column: 5
-      duration: 100
-      row: 19
-    - column: 6
-      duration: 1200
-      row: 19
-    - column: 7
-      duration: 100
-      row: 19
-    - column: 8
-      duration: 450
-      row: 19
-    - column: 0
-      duration: 100
-      row: 19
-    - column: 26
-      duration: 100
-      row: 18
-    - column: 25
-      duration: 100
-      row: 18
-    - column: 0
-      duration: 100
-      row: 0
-    Name: GestureLeft
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 9
-      duration: 100
-      row: 19
-    - column: 10
-      duration: 100
-      row: 19
-    - column: 11
-      duration: 100
-      row: 19
-    - column: 12
-      duration: 100
-      row: 19
-    - column: 13
-      duration: 100
-      row: 19
-    - column: 14
-      duration: 100
-      row: 19
-    - column: 15
-      duration: 100
-      row: 19
-    - column: 16
-      duration: 100
-      row: 19
-    - column: 17
-      duration: 100
-      row: 19
-    - column: 18
-      duration: 100
-      row: 19
-    - column: 19
-      duration: 100
-      row: 19
-    - column: 20
-      duration: 100
-      row: 19
-    - column: 21
-      duration: 100
-      row: 19
-    - column: 22
-      duration: 100
-      row: 19
-    - column: 23
-      duration: 100
-      row: 19
-    - column: 24
-      duration: 100
-      row: 19
-    - column: 25
-      duration: 100
-      row: 19
-    - column: 26
-      duration: 100
-      row: 19
-    - column: 0
-      duration: 100
-      row: 20
-    - column: 1
-      duration: 100
-      row: 20
-    - column: 2
-      duration: 1200
-      row: 20
-    - column: 3
-      duration: 100
-      row: 20
-    - column: 2
-      duration: 1300
-      row: 20
-    - column: 4
-      duration: 50
-      row: 20
-    - column: 24
-      duration: 50
-      row: 19
-    - column: 0
-      duration: 100
-      row: 0
-    Name: Wave
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 5
-      duration: 100
-      row: 20
-    - column: 6
-      duration: 100
-      row: 20
-    - column: 7
-      duration: 100
-      row: 20
-    - column: 8
-      duration: 100
-      row: 20
-    - column: 9
-      duration: 100
-      row: 20
-    - column: 10
-      duration: 100
-      row: 20
-    - column: 11
-      duration: 100
-      row: 20
-    - column: 12
-      duration: 100
-      row: 20
-    - column: 13
-      duration: 1200
-      row: 20
-    - column: 14
-      duration: 100
-      row: 20
-    - column: 9
-      duration: 550
-      row: 20
-    - column: 8
-      duration: 100
-      row: 20
-    - column: 7
-      duration: 100
-      row: 20
-    - column: 6
-      duration: 100
-      row: 20
-    - column: 5
-      duration: 100
-      row: 20
-    - column: 0
-      duration: 100
-      row: 0
-    Name: GestureRight
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 15
-      duration: 100
-      row: 20
-    - column: 16
-      duration: 100
-      row: 20
-    - column: 17
-      duration: 100
-      row: 20
-    - column: 18
-      duration: 100
-      row: 20
-    - column: 19
-      duration: 100
-      row: 20
-    - column: 20
-      duration: 100
-      row: 20
-    - column: 21
-      duration: 100
-      row: 20
-    - column: 22
-      duration: 100
-      row: 20
-    - column: 23
-      duration: 100
-      row: 20
-    - column: 24
-      duration: 100
-      row: 20
-    - column: 25
-      duration: 100
-      row: 20
-    - column: 26
-      duration: 100
-      row: 20
-    - column: 0
-      duration: 100
-      row: 21
-    - column: 1
-      duration: 100
-      row: 21
-    - column: 2
-      duration: 100
-      row: 21
-    - column: 3
-      duration: 200
-      row: 21
-    - column: 4
-      duration: 200
-      row: 21
-    - column: 5
-      duration: 200
-      row: 21
-    - column: 6
-      duration: 200
-      row: 21
-    - column: 7
-      duration: 200
-      row: 21
-    - column: 8
-      duration: 200
-      row: 21
-    - column: 9
-      duration: 200
-      row: 21
-    - column: 10
-      duration: 200
-      row: 21
-    - column: 11
-      duration: 200
-      row: 21
-    - column: 12
-      duration: 200
-      row: 21
-    - column: 13
-      duration: 100
-      row: 21
-    - column: 14
-      duration: 100
-      row: 21
-    - column: 15
-      duration: 400
-      row: 21
-    - column: 16
-      duration: 100
-      row: 21
-    - column: 17
-      duration: 400
-      row: 21
-    - column: 18
-      duration: 100
-      row: 21
-    - column: 19
-      duration: 100
-      row: 21
-    - column: 20
-      duration: 100
-      row: 21
-    - column: 21
-      duration: 200
-      row: 21
-    - column: 22
-      duration: 200
-      row: 21
-    - column: 23
-      duration: 200
-      row: 21
-    - column: 24
-      duration: 200
-      row: 21
-    - column: 25
-      duration: 100
-      row: 21
-    - column: 26
-      duration: 200
-      row: 21
-    - column: 0
-      duration: 200
-      row: 22
-    - column: 1
-      duration: 200
-      row: 22
-    - column: 2
-      duration: 100
-      row: 22
-    - column: 3
-      duration: 100
-      row: 22
-    - column: 4
-      duration: 100
-      row: 22
-    - column: 5
-      duration: 100
-      row: 22
-    - column: 6
-      duration: 100
-      row: 22
-    - column: 7
-      duration: 100
-      row: 22
-    - column: 8
-      duration: 100
-      row: 22
-    - column: 9
-      duration: 100
-      row: 22
-    - column: 10
-      duration: 100
-      row: 22
-    - column: 11
-      duration: 100
-      row: 22
-    - column: 12
-      duration: 100
-      row: 22
-    - column: 13
-      duration: 100
-      row: 22
-    - column: 14
-      duration: 100
-      row: 22
-    - column: 15
-      duration: 100
-      row: 22
-    - column: 16
-      duration: 100
-      row: 22
-    - column: 17
-      duration: 100
-      row: 22
-    - column: 18
-      duration: 100
-      row: 22
-    - column: 19
-      duration: 100
-      row: 22
-    - column: 0
-      duration: 100
-      row: 0
-    Name: Writing
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 25
-      duration: 100
-      row: 25
-    - column: 26
-      duration: 100
-      row: 25
-    - column: 0
-      duration: 1200
-      row: 26
-    - column: 1
-      duration: 100
-      row: 26
-    - column: 2
-      duration: 100
-      row: 26
-    - column: 0
-      duration: 100
-      row: 0
-    Name: LookDownRight
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 3
-      duration: 100
-      row: 26
-    - column: 4
-      duration: 100
-      row: 26
-    - column: 5
-      duration: 100
-      row: 26
-    - column: 6
-      duration: 100
-      row: 26
-    - column: 7
-      duration: 100
-      row: 26
-    - column: 8
-      duration: 100
-      row: 26
-    - column: 9
-      duration: 100
-      row: 26
-    - column: 10
-      duration: 100
-      row: 26
-    - column: 11
-      duration: 100
-      row: 26
-    - column: 12
-      duration: 100
-      row: 26
-    - column: 13
-      duration: 400
-      row: 26
-    - column: 14
-      duration: 100
-      row: 26
-    - column: 15
-      duration: 100
-      row: 26
-    - column: 13
-      duration: 100
-      row: 26
-    - column: 14
-      duration: 100
-      row: 26
-    - column: 15
-      duration: 100
-      row: 26
-    - column: 13
-      duration: 2400
-      row: 26
-    - column: 6
-      duration: 100
-      row: 26
-    - column: 5
-      duration: 100
-      row: 26
-    - column: 4
-      duration: 100
-      row: 26
-    - column: 3
-      duration: 100
-      row: 26
-    - column: 0
-      duration: 100
-      row: 0
-    Name: GetArtsy
-  - Frames:
-    - column: 22
-      duration: 10
-      row: 0
-    - column: 21
-      duration: 10
-      row: 0
-    - column: 20
-      duration: 10
-      row: 0
-    - column: 0
-      duration: 10
-      row: 0
-    Name: Show
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 23
-      duration: 100
-      row: 0
-    - column: 24
-      duration: 100
-      row: 0
-    - column: 25
-      duration: 1200
-      row: 0
-    - column: 26
-      duration: 100
-      row: 0
-    - column: 0
-      duration: 100
-      row: 1
-    - column: 0
-      duration: 100
-      row: 0
-    Name: LookDown
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 8
-      duration: 100
-      row: 27
-    - column: 9
-      duration: 100
-      row: 27
-    - column: 10
-      duration: 100
-      row: 27
-    - column: 11
-      duration: 100
-      row: 27
-    - column: 12
-      duration: 100
-      row: 27
-    - column: 13
-      duration: 100
-      row: 27
-    - column: 14
-      duration: 100
-      row: 27
-    - column: 15
-      duration: 100
-      row: 27
-    - column: 16
-      duration: 100
-      row: 27
-    - column: 17
-      duration: 100
-      row: 27
-    - column: 18
-      duration: 100
-      row: 27
-    - column: 19
-      duration: 100
-      row: 27
-    - column: 20
-      duration: 100
-      row: 27
-    - column: 21
-      duration: 100
-      row: 27
-    - column: 22
-      duration: 100
-      row: 27
-    - column: 23
-      duration: 100
-      row: 27
-    - column: 24
-      duration: 100
-      row: 27
-    - column: 25
-      duration: 100
-      row: 27
-    - column: 26
-      duration: 800
-      row: 27
-    - column: 0
-      duration: 100
-      row: 28
-    - column: 26
-      duration: 100
-      row: 27
-    - column: 1
-      duration: 100
-      row: 28
-    - column: 2
-      duration: 100
-      row: 28
-    - column: 3
-      duration: 100
-      row: 28
-    - column: 4
-      duration: 100
-      row: 28
-    - column: 5
-      duration: 100
-      row: 28
-    - column: 6
-      duration: 1000
-      row: 28
-    - column: 7
-      duration: 100
-      row: 28
-    - column: 8
-      duration: 100
-      row: 28
-    - column: 9
-      duration: 100
-      row: 28
-    - column: 10
-      duration: 100
-      row: 28
-    - column: 11
-      duration: 500
-      row: 28
-    - column: 12
-      duration: 100
-      row: 28
-    - column: 11
-      duration: 100
-      row: 28
-    - column: 13
-      duration: 100
-      row: 28
-    - column: 14
-      duration: 100
-      row: 28
-    - column: 15
-      duration: 100
-      row: 28
-    - column: 16
-      duration: 100
-      row: 28
-    - column: 17
-      duration: 100
-      row: 28
-    - column: 18
-      duration: 100
-      row: 28
-    - column: 19
-      duration: 100
-      row: 28
-    - column: 20
-      duration: 100
-      row: 28
-    - column: 21
-      duration: 100
-      row: 28
-    - column: 22
-      duration: 100
-      row: 28
-    - column: 23
-      duration: 100
-      row: 28
-    - column: 24
-      duration: 100
-      row: 28
-    - column: 25
-      duration: 100
-      row: 28
-    - column: 26
-      duration: 100
-      row: 28
-    - column: 0
-      duration: 100
-      row: 29
-    - column: 1
-      duration: 100
-      row: 29
-    - column: 0
-      duration: 100
-      row: 29
-    - column: 26
-      duration: 100
-      row: 28
-    - column: 2
-      duration: 100
-      row: 29
-    - column: 3
-      duration: 100
-      row: 29
-    - column: 4
-      duration: 100
-      row: 29
-    - column: 5
-      duration: 100
-      row: 29
-    - column: 6
-      duration: 100
-      row: 29
-    - column: 7
-      duration: 100
-      row: 29
-    - column: 8
-      duration: 100
-      row: 29
-    - column: 0
-      duration: 100
-      row: 0
-    Name: Searching
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 9
-      duration: 100
-      row: 29
-    - column: 10
-      duration: 100
-      row: 29
-    - column: 11
-      duration: 100
-      row: 29
-    - column: 12
-      duration: 100
-      row: 29
-    - column: 13
-      duration: 100
-      row: 29
-    - column: 14
-      duration: 100
-      row: 29
-    - column: 15
-      duration: 100
-      row: 29
-    - column: 16
-      duration: 100
-      row: 29
-    - column: 17
-      duration: 100
-      row: 29
-    - column: 18
-      duration: 100
-      row: 29
-    - column: 19
-      duration: 100
-      row: 29
-    - column: 20
-      duration: 100
-      row: 29
-    - column: 21
-      duration: 100
-      row: 29
-    - column: 22
-      duration: 100
-      row: 29
-    - column: 23
-      duration: 100
-      row: 29
-    - column: 24
-      duration: 100
-      row: 29
-    - column: 25
-      duration: 100
-      row: 29
-    - column: 26
-      duration: 100
-      row: 29
-    - column: 0
-      duration: 100
-      row: 30
-    - column: 1
-      duration: 100
-      row: 30
-    - column: 2
-      duration: 100
-      row: 30
-    - column: 3
-      duration: 100
-      row: 30
-    - column: 4
-      duration: 100
-      row: 30
-    - column: 5
-      duration: 100
-      row: 30
-    - column: 6
-      duration: 100
-      row: 30
-    - column: 7
-      duration: 100
-      row: 30
-    - column: 8
-      duration: 100
-      row: 30
-    - column: 9
-      duration: 100
-      row: 30
-    - column: 10
-      duration: 100
-      row: 30
-    - column: 11
-      duration: 100
-      row: 30
-    - column: 12
-      duration: 100
-      row: 30
-    - column: 8
-      duration: 100
-      row: 15
-    - column: 9
-      duration: 100
-      row: 15
-    - column: 10
-      duration: 100
-      row: 15
-    - column: 11
-      duration: 100
-      row: 15
-    - column: 12
-      duration: 100
-      row: 15
-    - column: 13
-      duration: 100
-      row: 15
-    - column: 14
-      duration: 100
-      row: 15
-    - column: 15
-      duration: 100
-      row: 15
-    - column: 0
-      duration: 100
-      row: 0
-    Name: EmptyTrash
-  - Frames:
-    - column: 13
-      duration: 100
-      row: 30
-    - column: 14
-      duration: 100
-      row: 30
-    - column: 15
-      duration: 100
-      row: 30
-    - column: 16
-      duration: 100
-      row: 30
-    - column: 17
-      duration: 100
-      row: 30
-    - column: 18
-      duration: 100
-      row: 30
-    - column: 19
-      duration: 100
-      row: 30
-    - column: 20
-      duration: 100
-      row: 30
-    - column: 21
-      duration: 100
-      row: 30
-    - column: 22
-      duration: 100
-      row: 30
-    - column: 23
-      duration: 100
-      row: 30
-    - column: 24
-      duration: 100
-      row: 30
-    - column: 25
-      duration: 100
-      row: 30
-    - column: 26
-      duration: 100
-      row: 30
-    - column: 0
-      duration: 100
-      row: 31
-    - column: 1
-      duration: 100
-      row: 31
-    - column: 2
-      duration: 100
-      row: 31
-    - column: 3
-      duration: 300
-      row: 31
-    - column: 4
-      duration: 100
-      row: 31
-    - column: 3
-      duration: 450
-      row: 31
-    - column: 5
-      duration: 100
-      row: 31
-    - column: 6
-      duration: 100
-      row: 31
-    - column: 7
-      duration: 100
-      row: 31
-    - column: 8
-      duration: 100
-      row: 31
-    - column: 9
-      duration: 100
-      row: 31
-    - column: 10
-      duration: 100
-      row: 31
-    - column: 11
-      duration: 100
-      row: 31
-    - column: 12
-      duration: 100
-      row: 31
-    - column: 13
-      duration: 100
-      row: 31
-    - column: 8
-      duration: 100
-      row: 15
-    - column: 9
-      duration: 100
-      row: 15
-    - column: 10
-      duration: 100
-      row: 15
-    - column: 11
-      duration: 100
-      row: 15
-    - column: 12
-      duration: 100
-      row: 15
-    - column: 13
-      duration: 100
-      row: 15
-    - column: 14
-      duration: 100
-      row: 15
-    - column: 15
-      duration: 100
-      row: 15
-    - column: 0
-      duration: 100
-      row: 0
-    Name: Greeting
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 14
-      duration: 100
-      row: 31
-    - column: 15
-      duration: 100
-      row: 31
-    - column: 16
-      duration: 1200
-      row: 31
-    - column: 17
-      duration: 100
-      row: 31
-    - column: 18
-      duration: 100
-      row: 31
-    - column: 0
-      duration: 100
-      row: 0
-    Name: LookUp
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 16
-      duration: 100
-      row: 15
-    - column: 17
-      duration: 100
-      row: 15
-    - column: 18
-      duration: 100
-      row: 15
-    - column: 19
-      duration: 100
-      row: 15
-    - column: 20
-      duration: 100
-      row: 15
-    - column: 21
-      duration: 100
-      row: 15
-    - column: 22
-      duration: 100
-      row: 15
-    - column: 23
-      duration: 100
-      row: 15
-    - column: 24
-      duration: 100
-      row: 15
-    - column: 25
-      duration: 100
-      row: 15
-    - column: 26
-      duration: 100
-      row: 15
-    - column: 0
-      duration: 100
-      row: 16
-    - column: 1
-      duration: 450
-      row: 16
-    - column: 19
-      duration: 100
-      row: 15
-    - column: 18
-      duration: 100
-      row: 15
-    - column: 17
-      duration: 100
-      row: 15
-    - column: 16
-      duration: 100
-      row: 15
-    - column: 0
-      duration: 100
-      row: 0
-    Name: GestureDown
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    Name: RestPose
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 6
-      duration: 100
-      row: 33
-    - column: 7
-      duration: 100
-      row: 33
-    - column: 8
-      duration: 1200
-      row: 33
-    - column: 9
-      duration: 100
-      row: 33
-    - column: 10
-      duration: 100
-      row: 33
-    - column: 0
-      duration: 100
-      row: 0
-    Name: LookDownLeft
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 10
+      info:
+        column: 1
+        row: 0
+    - duration: 10
+      info:
+        column: 2
+        row: 0
+    - duration: 10
+      info:
+        column: 3
+        row: 0
+    - duration: 10
+      info:
+        column: 4
+        row: 0
+    - duration: 10
+      info:
+        column: 5
+        row: 0
+    - duration: 10
+      info:
+        column: 6
+        row: 0
+    - duration: 10
+      info:
+        column: 7
+        row: 0
+    - duration: 10
+      info:
+        column: 8
+        row: 0
+    - duration: 100
+      info:
+        column: 9
+        row: 0
+    - duration: 100
+      info:
+        column: 10
+        row: 0
+    - duration: 100
+      info:
+        column: 11
+        row: 0
+    - duration: 1200
+      info:
+        column: 12
+        row: 0
+    - duration: 100
+      info:
+        column: 13
+        row: 0
+    - duration: 100
+      info:
+        column: 14
+        row: 0
+    - duration: 1200
+      info:
+        column: 12
+        row: 0
+    - duration: 100
+      info:
+        column: 15
+        row: 0
+    - duration: 100
+      info:
+        column: 16
+        row: 0
+    - duration: 100
+      info:
+        column: 17
+        row: 0
+    - duration: 100
+      info:
+        column: 18
+        row: 0
+    - duration: 100
+      info:
+        column: 19
+        row: 0
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: Congratulate
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 5
+        row: 7
+    - duration: 100
+      info:
+        column: 6
+        row: 7
+    - duration: 1200
+      info:
+        column: 7
+        row: 7
+    - duration: 100
+      info:
+        column: 8
+        row: 7
+    - duration: 100
+      info:
+        column: 9
+        row: 7
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: LookRight
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 10
+        row: 13
+    - duration: 100
+      info:
+        column: 11
+        row: 13
+    - duration: 100
+      info:
+        column: 12
+        row: 13
+    - duration: 100
+      info:
+        column: 13
+        row: 13
+    - duration: 100
+      info:
+        column: 14
+        row: 13
+    - duration: 100
+      info:
+        column: 15
+        row: 13
+    - duration: 100
+      info:
+        column: 16
+        row: 13
+    - duration: 100
+      info:
+        column: 17
+        row: 13
+    - duration: 100
+      info:
+        column: 18
+        row: 13
+    - duration: 100
+      info:
+        column: 19
+        row: 13
+    - duration: 100
+      info:
+        column: 20
+        row: 13
+    - duration: 100
+      info:
+        column: 21
+        row: 13
+    - duration: 100
+      info:
+        column: 22
+        row: 13
+    - duration: 100
+      info:
+        column: 23
+        row: 13
+    - duration: 100
+      info:
+        column: 24
+        row: 13
+    - duration: 100
+      info:
+        column: 25
+        row: 13
+    - duration: 100
+      info:
+        column: 26
+        row: 13
+    - duration: 100
+      info:
+        column: 0
+        row: 14
+    - duration: 100
+      info:
+        column: 1
+        row: 14
+    - duration: 100
+      info:
+        column: 2
+        row: 14
+    - duration: 100
+      info:
+        column: 3
+        row: 14
+    - duration: 100
+      info:
+        column: 4
+        row: 14
+    - duration: 100
+      info:
+        column: 5
+        row: 14
+    - duration: 100
+      info:
+        column: 6
+        row: 14
+    - duration: 100
+      info:
+        column: 7
+        row: 14
+    - duration: 100
+      info:
+        column: 8
+        row: 14
+    - duration: 100
+      info:
+        column: 9
+        row: 14
+    - duration: 100
+      info:
+        column: 10
+        row: 14
+    - duration: 100
+      info:
+        column: 11
+        row: 14
+    - duration: 100
+      info:
+        column: 12
+        row: 14
+    - duration: 100
+      info:
+        column: 13
+        row: 14
+    - duration: 100
+      info:
+        column: 14
+        row: 14
+    - duration: 100
+      info:
+        column: 15
+        row: 14
+    - duration: 100
+      info:
+        column: 16
+        row: 14
+    - duration: 100
+      info:
+        column: 17
+        row: 14
+    - duration: 100
+      info:
+        column: 18
+        row: 14
+    - duration: 100
+      info:
+        column: 19
+        row: 14
+    - duration: 100
+      info:
+        column: 20
+        row: 14
+    - duration: 100
+      info:
+        column: 21
+        row: 14
+    - duration: 100
+      info:
+        column: 22
+        row: 14
+    - duration: 100
+      info:
+        column: 23
+        row: 14
+    - duration: 100
+      info:
+        column: 24
+        row: 14
+    - duration: 100
+      info:
+        column: 25
+        row: 14
+    - duration: 100
+      info:
+        column: 26
+        row: 14
+    - duration: 100
+      info:
+        column: 0
+        row: 15
+    - duration: 100
+      info:
+        column: 1
+        row: 15
+    - duration: 100
+      info:
+        column: 2
+        row: 15
+    - duration: 100
+      info:
+        column: 3
+        row: 15
+    - duration: 100
+      info:
+        column: 4
+        row: 15
+    - duration: 100
+      info:
+        column: 5
+        row: 15
+    - duration: 100
+      info:
+        column: 6
+        row: 15
+    - duration: 100
+      info:
+        column: 7
+        row: 15
+    - duration: 100
+      info:
+        column: 8
+        row: 15
+    - duration: 100
+      info:
+        column: 9
+        row: 15
+    - duration: 100
+      info:
+        column: 10
+        row: 15
+    - duration: 100
+      info:
+        column: 11
+        row: 15
+    - duration: 100
+      info:
+        column: 12
+        row: 15
+    - duration: 100
+      info:
+        column: 13
+        row: 15
+    - duration: 100
+      info:
+        column: 14
+        row: 15
+    - duration: 100
+      info:
+        column: 15
+        row: 15
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: SendMail
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 1
+        row: 1
+    - duration: 100
+      info:
+        column: 2
+        row: 1
+    - duration: 100
+      info:
+        column: 3
+        row: 1
+    - duration: 100
+      info:
+        column: 4
+        row: 1
+    - duration: 100
+      info:
+        column: 5
+        row: 1
+    - duration: 100
+      info:
+        column: 6
+        row: 1
+    - duration: 100
+      info:
+        column: 7
+        row: 1
+    - duration: 100
+      info:
+        column: 8
+        row: 1
+    - duration: 100
+      info:
+        column: 9
+        row: 1
+    - duration: 100
+      info:
+        column: 10
+        row: 1
+    - duration: 100
+      info:
+        column: 11
+        row: 1
+    - duration: 100
+      info:
+        column: 12
+        row: 1
+    - duration: 100
+      info:
+        column: 13
+        row: 1
+    - duration: 100
+      info:
+        column: 14
+        row: 1
+    - duration: 100
+      info:
+        column: 15
+        row: 1
+    - duration: 100
+      info:
+        column: 16
+        row: 1
+    - duration: 100
+      info:
+        column: 17
+        row: 1
+    - duration: 100
+      info:
+        column: 18
+        row: 1
+    - duration: 100
+      info:
+        column: 19
+        row: 1
+    - duration: 100
+      info:
+        column: 20
+        row: 1
+    - duration: 100
+      info:
+        column: 21
+        row: 1
+    - duration: 100
+      info:
+        column: 22
+        row: 1
+    - duration: 100
+      info:
+        column: 23
+        row: 1
+    - duration: 100
+      info:
+        column: 24
+        row: 1
+    - duration: 100
+      info:
+        column: 25
+        row: 1
+    - duration: 100
+      info:
+        column: 26
+        row: 1
+    - duration: 100
+      info:
+        column: 0
+        row: 2
+    - duration: 100
+      info:
+        column: 1
+        row: 2
+    - duration: 100
+      info:
+        column: 2
+        row: 2
+    - duration: 100
+      info:
+        column: 3
+        row: 2
+    - duration: 100
+      info:
+        column: 4
+        row: 2
+    - duration: 100
+      info:
+        column: 5
+        row: 2
+    - duration: 100
+      info:
+        column: 6
+        row: 2
+    - duration: 100
+      info:
+        column: 7
+        row: 2
+    - duration: 100
+      info:
+        column: 8
+        row: 2
+    - duration: 100
+      info:
+        column: 8
+        row: 1
+    - duration: 100
+      info:
+        column: 7
+        row: 1
+    - duration: 100
+      info:
+        column: 6
+        row: 1
+    - duration: 100
+      info:
+        column: 5
+        row: 1
+    - duration: 100
+      info:
+        column: 4
+        row: 1
+    - duration: 100
+      info:
+        column: 3
+        row: 1
+    - duration: 100
+      info:
+        column: 2
+        row: 1
+    - duration: 100
+      info:
+        column: 1
+        row: 1
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: Thinking
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 9
+        row: 2
+    - duration: 100
+      info:
+        column: 10
+        row: 2
+    - duration: 900
+      info:
+        column: 11
+        row: 2
+    - duration: 100
+      info:
+        column: 10
+        row: 2
+    - duration: 100
+      info:
+        column: 9
+        row: 2
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: Explain
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 2
+        row: 5
+    - duration: 100
+      info:
+        column: 3
+        row: 5
+    - duration: 100
+      info:
+        column: 4
+        row: 5
+    - duration: 100
+      info:
+        column: 5
+        row: 5
+    - duration: 100
+      info:
+        column: 6
+        row: 5
+    - duration: 100
+      info:
+        column: 7
+        row: 5
+    - duration: 100
+      info:
+        column: 8
+        row: 5
+    - duration: 100
+      info:
+        column: 9
+        row: 5
+    - duration: 100
+      info:
+        column: 10
+        row: 5
+    - duration: 100
+      info:
+        column: 11
+        row: 5
+    - duration: 150
+      info:
+        column: 12
+        row: 5
+    - duration: 100
+      info:
+        column: 13
+        row: 5
+    - duration: 100
+      info:
+        column: 14
+        row: 5
+    - duration: 100
+      info:
+        column: 15
+        row: 5
+    - duration: 100
+      info:
+        column: 16
+        row: 5
+    - duration: 100
+      info:
+        column: 17
+        row: 5
+    - duration: 100
+      info:
+        column: 18
+        row: 5
+    - duration: 100
+      info:
+        column: 19
+        row: 5
+    - duration: 100
+      info:
+        column: 20
+        row: 5
+    - duration: 100
+      info:
+        column: 21
+        row: 5
+    - duration: 100
+      info:
+        column: 22
+        row: 5
+    - duration: 450
+      info:
+        column: 23
+        row: 5
+    - duration: 200
+      info:
+        column: 24
+        row: 5
+    - duration: 100
+      info:
+        column: 25
+        row: 5
+    - duration: 100
+      info:
+        column: 26
+        row: 5
+    - duration: 100
+      info:
+        column: 0
+        row: 6
+    - duration: 100
+      info:
+        column: 1
+        row: 6
+    - duration: 100
+      info:
+        column: 2
+        row: 6
+    - duration: 100
+      info:
+        column: 3
+        row: 6
+    - duration: 600
+      info:
+        column: 4
+        row: 6
+    - duration: 100
+      info:
+        column: 5
+        row: 6
+    - duration: 100
+      info:
+        column: 6
+        row: 6
+    - duration: 100
+      info:
+        column: 7
+        row: 6
+    - duration: 100
+      info:
+        column: 8
+        row: 6
+    - duration: 100
+      info:
+        column: 9
+        row: 6
+    - duration: 600
+      info:
+        column: 10
+        row: 6
+    - duration: 100
+      info:
+        column: 11
+        row: 6
+    - duration: 100
+      info:
+        column: 12
+        row: 6
+    - duration: 100
+      info:
+        column: 13
+        row: 6
+    - duration: 100
+      info:
+        column: 14
+        row: 6
+    - duration: 600
+      info:
+        column: 15
+        row: 6
+    - duration: 100
+      info:
+        column: 16
+        row: 6
+    - duration: 100
+      info:
+        column: 17
+        row: 6
+    - duration: 100
+      info:
+        column: 18
+        row: 6
+    - duration: 100
+      info:
+        column: 19
+        row: 6
+    - duration: 100
+      info:
+        column: 20
+        row: 6
+    - duration: 100
+      info:
+        column: 21
+        row: 6
+    - duration: 100
+      info:
+        column: 22
+        row: 6
+    - duration: 600
+      info:
+        column: 23
+        row: 6
+    - duration: 100
+      info:
+        column: 24
+        row: 6
+    - duration: 100
+      info:
+        column: 25
+        row: 6
+    - duration: 100
+      info:
+        column: 26
+        row: 6
+    - duration: 100
+      info:
+        column: 0
+        row: 7
+    - duration: 100
+      info:
+        column: 1
+        row: 7
+    - duration: 100
+      info:
+        column: 2
+        row: 7
+    - duration: 100
+      info:
+        column: 3
+        row: 7
+    - duration: 100
+      info:
+        column: 4
+        row: 7
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: Print
+  - frames:
+    - duration: 10
+      info:
+        column: 0
+        row: 0
+    - duration: 10
+      info:
+        column: 20
+        row: 0
+    - duration: 10
+      info:
+        column: 21
+        row: 0
+    - duration: 10
+      info:
+        column: 22
+        row: 0
+    - duration: 10
+      info:
+        column: 0
+        row: 0
+    name: Hide
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 10
+        row: 7
+    - duration: 100
+      info:
+        column: 11
+        row: 7
+    - duration: 100
+      info:
+        column: 12
+        row: 7
+    - duration: 100
+      info:
+        column: 13
+        row: 7
+    - duration: 100
+      info:
+        column: 14
+        row: 7
+    - duration: 100
+      info:
+        column: 15
+        row: 7
+    - duration: 100
+      info:
+        column: 16
+        row: 7
+    - duration: 100
+      info:
+        column: 17
+        row: 7
+    - duration: 100
+      info:
+        column: 18
+        row: 7
+    - duration: 150
+      info:
+        column: 19
+        row: 7
+    - duration: 150
+      info:
+        column: 18
+        row: 7
+    - duration: 150
+      info:
+        column: 19
+        row: 7
+    - duration: 150
+      info:
+        column: 18
+        row: 7
+    - duration: 150
+      info:
+        column: 20
+        row: 7
+    - duration: 100
+      info:
+        column: 21
+        row: 7
+    - duration: 100
+      info:
+        column: 22
+        row: 7
+    - duration: 100
+      info:
+        column: 23
+        row: 7
+    - duration: 100
+      info:
+        column: 24
+        row: 7
+    - duration: 100
+      info:
+        column: 25
+        row: 7
+    - duration: 100
+      info:
+        column: 26
+        row: 7
+    - duration: 100
+      info:
+        column: 0
+        row: 8
+    - duration: 100
+      info:
+        column: 1
+        row: 8
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: GetAttention
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 25
+        row: 9
+    - duration: 130
+      info:
+        column: 26
+        row: 9
+    - duration: 130
+      info:
+        column: 0
+        row: 10
+    - duration: 100
+      info:
+        column: 1
+        row: 10
+    - duration: 100
+      info:
+        column: 2
+        row: 10
+    - duration: 100
+      info:
+        column: 3
+        row: 10
+    - duration: 100
+      info:
+        column: 4
+        row: 10
+    - duration: 450
+      info:
+        column: 5
+        row: 10
+    - duration: 100
+      info:
+        column: 4
+        row: 10
+    - duration: 100
+      info:
+        column: 6
+        row: 10
+    - duration: 100
+      info:
+        column: 7
+        row: 10
+    - duration: 100
+      info:
+        column: 8
+        row: 10
+    - duration: 130
+      info:
+        column: 9
+        row: 10
+    - duration: 130
+      info:
+        column: 10
+        row: 10
+    - duration: 130
+      info:
+        column: 11
+        row: 10
+    - duration: 130
+      info:
+        column: 12
+        row: 10
+    - duration: 130
+      info:
+        column: 13
+        row: 10
+    - duration: 130
+      info:
+        column: 14
+        row: 10
+    - duration: 130
+      info:
+        column: 15
+        row: 10
+    - duration: 100
+      info:
+        column: 16
+        row: 10
+    - duration: 100
+      info:
+        column: 17
+        row: 10
+    - duration: 160
+      info:
+        column: 18
+        row: 10
+    - duration: 100
+      info:
+        column: 19
+        row: 10
+    - duration: 100
+      info:
+        column: 20
+        row: 10
+    - duration: 100
+      info:
+        column: 21
+        row: 10
+    - duration: 100
+      info:
+        column: 22
+        row: 10
+    - duration: 450
+      info:
+        column: 23
+        row: 10
+    - duration: 100
+      info:
+        column: 24
+        row: 10
+    - duration: 400
+      info:
+        column: 25
+        row: 10
+    - duration: 100
+      info:
+        column: 26
+        row: 10
+    - duration: 100
+      info:
+        column: 0
+        row: 11
+    - duration: 100
+      info:
+        column: 1
+        row: 11
+    - duration: 100
+      info:
+        column: 2
+        row: 11
+    - duration: 100
+      info:
+        column: 3
+        row: 11
+    - duration: 100
+      info:
+        column: 4
+        row: 11
+    - duration: 100
+      info:
+        column: 5
+        row: 11
+    - duration: 100
+      info:
+        column: 6
+        row: 11
+    - duration: 100
+      info:
+        column: 7
+        row: 11
+    - duration: 100
+      info:
+        column: 8
+        row: 11
+    - duration: 100
+      info:
+        column: 9
+        row: 11
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: Save
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 1
+        row: 1
+    - duration: 100
+      info:
+        column: 2
+        row: 1
+    - duration: 100
+      info:
+        column: 3
+        row: 1
+    - duration: 100
+      info:
+        column: 4
+        row: 1
+    - duration: 100
+      info:
+        column: 5
+        row: 1
+    - duration: 100
+      info:
+        column: 6
+        row: 1
+    - duration: 100
+      info:
+        column: 7
+        row: 1
+    - duration: 100
+      info:
+        column: 8
+        row: 1
+    - duration: 100
+      info:
+        column: 9
+        row: 1
+    - duration: 100
+      info:
+        column: 10
+        row: 1
+    - duration: 100
+      info:
+        column: 11
+        row: 1
+    - duration: 100
+      info:
+        column: 12
+        row: 1
+    - duration: 100
+      info:
+        column: 13
+        row: 1
+    - duration: 100
+      info:
+        column: 14
+        row: 1
+    - duration: 100
+      info:
+        column: 15
+        row: 1
+    - duration: 100
+      info:
+        column: 16
+        row: 1
+    - duration: 100
+      info:
+        column: 17
+        row: 1
+    - duration: 100
+      info:
+        column: 18
+        row: 1
+    - duration: 100
+      info:
+        column: 19
+        row: 1
+    - duration: 100
+      info:
+        column: 20
+        row: 1
+    - duration: 100
+      info:
+        column: 21
+        row: 1
+    - duration: 100
+      info:
+        column: 22
+        row: 1
+    - duration: 100
+      info:
+        column: 23
+        row: 1
+    - duration: 100
+      info:
+        column: 24
+        row: 1
+    - duration: 100
+      info:
+        column: 25
+        row: 1
+    - duration: 100
+      info:
+        column: 26
+        row: 1
+    - duration: 100
+      info:
+        column: 0
+        row: 2
+    - duration: 100
+      info:
+        column: 1
+        row: 2
+    - duration: 100
+      info:
+        column: 2
+        row: 2
+    - duration: 100
+      info:
+        column: 3
+        row: 2
+    - duration: 100
+      info:
+        column: 4
+        row: 2
+    - duration: 100
+      info:
+        column: 5
+        row: 2
+    - duration: 100
+      info:
+        column: 6
+        row: 2
+    - duration: 100
+      info:
+        column: 7
+        row: 2
+    - duration: 100
+      info:
+        column: 8
+        row: 2
+    - duration: 100
+      info:
+        column: 8
+        row: 1
+    - duration: 100
+      info:
+        column: 7
+        row: 1
+    - duration: 100
+      info:
+        column: 6
+        row: 1
+    - duration: 100
+      info:
+        column: 5
+        row: 1
+    - duration: 100
+      info:
+        column: 4
+        row: 1
+    - duration: 100
+      info:
+        column: 3
+        row: 1
+    - duration: 100
+      info:
+        column: 2
+        row: 1
+    - duration: 100
+      info:
+        column: 1
+        row: 1
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: GetTechy
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 7
+        row: 8
+    - duration: 100
+      info:
+        column: 8
+        row: 8
+    - duration: 100
+      info:
+        column: 9
+        row: 8
+    - duration: 100
+      info:
+        column: 10
+        row: 8
+    - duration: 100
+      info:
+        column: 11
+        row: 8
+    - duration: 100
+      info:
+        column: 12
+        row: 8
+    - duration: 100
+      info:
+        column: 13
+        row: 8
+    - duration: 100
+      info:
+        column: 14
+        row: 8
+    - duration: 1200
+      info:
+        column: 15
+        row: 8
+    - duration: 100
+      info:
+        column: 16
+        row: 8
+    - duration: 100
+      info:
+        column: 11
+        row: 8
+    - duration: 100
+      info:
+        column: 10
+        row: 8
+    - duration: 100
+      info:
+        column: 9
+        row: 8
+    - duration: 100
+      info:
+        column: 8
+        row: 8
+    - duration: 100
+      info:
+        column: 7
+        row: 8
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: GestureUp
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 10
+        row: 11
+    - duration: 100
+      info:
+        column: 11
+        row: 11
+    - duration: 100
+      info:
+        column: 12
+        row: 11
+    - duration: 100
+      info:
+        column: 13
+        row: 11
+    - duration: 100
+      info:
+        column: 14
+        row: 11
+    - duration: 100
+      info:
+        column: 15
+        row: 11
+    - duration: 100
+      info:
+        column: 16
+        row: 11
+    - duration: 100
+      info:
+        column: 17
+        row: 11
+    - duration: 100
+      info:
+        column: 18
+        row: 11
+    - duration: 100
+      info:
+        column: 19
+        row: 11
+    - duration: 100
+      info:
+        column: 20
+        row: 11
+    - duration: 100
+      info:
+        column: 21
+        row: 11
+    - duration: 100
+      info:
+        column: 22
+        row: 11
+    - duration: 100
+      info:
+        column: 23
+        row: 11
+    - duration: 100
+      info:
+        column: 24
+        row: 11
+    - duration: 100
+      info:
+        column: 25
+        row: 11
+    - duration: 100
+      info:
+        column: 26
+        row: 11
+    - duration: 100
+      info:
+        column: 0
+        row: 12
+    - duration: 100
+      info:
+        column: 1
+        row: 12
+    - duration: 100
+      info:
+        column: 2
+        row: 12
+    - duration: 100
+      info:
+        column: 3
+        row: 12
+    - duration: 100
+      info:
+        column: 4
+        row: 12
+    - duration: 100
+      info:
+        column: 5
+        row: 12
+    - duration: 100
+      info:
+        column: 6
+        row: 12
+    - duration: 100
+      info:
+        column: 7
+        row: 12
+    - duration: 100
+      info:
+        column: 8
+        row: 12
+    - duration: 100
+      info:
+        column: 9
+        row: 12
+    - duration: 100
+      info:
+        column: 10
+        row: 12
+    - duration: 100
+      info:
+        column: 11
+        row: 12
+    - duration: 100
+      info:
+        column: 12
+        row: 12
+    - duration: 100
+      info:
+        column: 13
+        row: 12
+    - duration: 100
+      info:
+        column: 14
+        row: 12
+    - duration: 100
+      info:
+        column: 15
+        row: 12
+    - duration: 100
+      info:
+        column: 16
+        row: 12
+    - duration: 100
+      info:
+        column: 17
+        row: 12
+    - duration: 100
+      info:
+        column: 18
+        row: 12
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: Processing
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 19
+        row: 12
+    - duration: 100
+      info:
+        column: 20
+        row: 12
+    - duration: 100
+      info:
+        column: 21
+        row: 12
+    - duration: 100
+      info:
+        column: 22
+        row: 12
+    - duration: 100
+      info:
+        column: 23
+        row: 12
+    - duration: 100
+      info:
+        column: 24
+        row: 12
+    - duration: 100
+      info:
+        column: 25
+        row: 12
+    - duration: 100
+      info:
+        column: 26
+        row: 12
+    - duration: 100
+      info:
+        column: 0
+        row: 13
+    - duration: 500
+      info:
+        column: 1
+        row: 13
+    - duration: 100
+      info:
+        column: 2
+        row: 13
+    - duration: 100
+      info:
+        column: 3
+        row: 13
+    - duration: 100
+      info:
+        column: 4
+        row: 13
+    - duration: 100
+      info:
+        column: 5
+        row: 13
+    - duration: 100
+      info:
+        column: 6
+        row: 13
+    - duration: 100
+      info:
+        column: 7
+        row: 13
+    - duration: 100
+      info:
+        column: 8
+        row: 13
+    - duration: 100
+      info:
+        column: 9
+        row: 13
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: Alert
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 2
+        row: 8
+    - duration: 100
+      info:
+        column: 3
+        row: 8
+    - duration: 1200
+      info:
+        column: 4
+        row: 8
+    - duration: 100
+      info:
+        column: 5
+        row: 8
+    - duration: 100
+      info:
+        column: 6
+        row: 8
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: LookUpRight
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 19
+        row: 31
+    - duration: 250
+      info:
+        column: 20
+        row: 31
+    - duration: 100
+      info:
+        column: 21
+        row: 31
+    - duration: 100
+      info:
+        column: 22
+        row: 31
+    - duration: 100
+      info:
+        column: 23
+        row: 31
+    - duration: 100
+      info:
+        column: 24
+        row: 31
+    - duration: 100
+      info:
+        column: 25
+        row: 31
+    - duration: 100
+      info:
+        column: 26
+        row: 31
+    - duration: 100
+      info:
+        column: 0
+        row: 32
+    - duration: 100
+      info:
+        column: 1
+        row: 32
+    - duration: 100
+      info:
+        column: 2
+        row: 32
+    - duration: 100
+      info:
+        column: 3
+        row: 32
+    - duration: 100
+      info:
+        column: 4
+        row: 32
+    - duration: 200
+      info:
+        column: 5
+        row: 32
+    - duration: 200
+      info:
+        column: 6
+        row: 32
+    - duration: 200
+      info:
+        column: 5
+        row: 32
+    - duration: 200
+      info:
+        column: 7
+        row: 32
+    - duration: 100
+      info:
+        column: 8
+        row: 32
+    - duration: 100
+      info:
+        column: 9
+        row: 32
+    - duration: 200
+      info:
+        column: 10
+        row: 32
+    - duration: 100
+      info:
+        column: 11
+        row: 32
+    - duration: 100
+      info:
+        column: 12
+        row: 32
+    - duration: 100
+      info:
+        column: 13
+        row: 32
+    - duration: 100
+      info:
+        column: 14
+        row: 32
+    - duration: 100
+      info:
+        column: 15
+        row: 32
+    - duration: 100
+      info:
+        column: 16
+        row: 32
+    - duration: 100
+      info:
+        column: 17
+        row: 32
+    - duration: 100
+      info:
+        column: 18
+        row: 32
+    - duration: 100
+      info:
+        column: 19
+        row: 32
+    - duration: 100
+      info:
+        column: 20
+        row: 32
+    - duration: 100
+      info:
+        column: 21
+        row: 32
+    - duration: 100
+      info:
+        column: 22
+        row: 32
+    - duration: 100
+      info:
+        column: 23
+        row: 32
+    - duration: 100
+      info:
+        column: 10
+        row: 15
+    - duration: 100
+      info:
+        column: 9
+        row: 15
+    - duration: 100
+      info:
+        column: 8
+        row: 15
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: GoodBye
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 2
+        row: 16
+    - duration: 100
+      info:
+        column: 3
+        row: 16
+    - duration: 1200
+      info:
+        column: 4
+        row: 16
+    - duration: 100
+      info:
+        column: 5
+        row: 16
+    - duration: 100
+      info:
+        column: 6
+        row: 16
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: LookLeft
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 7
+        row: 16
+    - duration: 100
+      info:
+        column: 8
+        row: 16
+    - duration: 1200
+      info:
+        column: 9
+        row: 16
+    - duration: 100
+      info:
+        column: 10
+        row: 16
+    - duration: 100
+      info:
+        column: 11
+        row: 16
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: LookUpLeft
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 12
+        row: 16
+    - duration: 100
+      info:
+        column: 13
+        row: 16
+    - duration: 100
+      info:
+        column: 14
+        row: 16
+    - duration: 100
+      info:
+        column: 15
+        row: 16
+    - duration: 100
+      info:
+        column: 16
+        row: 16
+    - duration: 100
+      info:
+        column: 17
+        row: 16
+    - duration: 100
+      info:
+        column: 18
+        row: 16
+    - duration: 200
+      info:
+        column: 19
+        row: 16
+    - duration: 200
+      info:
+        column: 20
+        row: 16
+    - duration: 200
+      info:
+        column: 21
+        row: 16
+    - duration: 100
+      info:
+        column: 22
+        row: 16
+    - duration: 100
+      info:
+        column: 23
+        row: 16
+    - duration: 140
+      info:
+        column: 24
+        row: 16
+    - duration: 100
+      info:
+        column: 25
+        row: 16
+    - duration: 100
+      info:
+        column: 26
+        row: 16
+    - duration: 100
+      info:
+        column: 0
+        row: 17
+    - duration: 200
+      info:
+        column: 1
+        row: 17
+    - duration: 100
+      info:
+        column: 2
+        row: 17
+    - duration: 100
+      info:
+        column: 3
+        row: 17
+    - duration: 100
+      info:
+        column: 4
+        row: 17
+    - duration: 200
+      info:
+        column: 5
+        row: 17
+    - duration: 100
+      info:
+        column: 6
+        row: 17
+    - duration: 100
+      info:
+        column: 7
+        row: 17
+    - duration: 200
+      info:
+        column: 8
+        row: 17
+    - duration: 100
+      info:
+        column: 9
+        row: 17
+    - duration: 100
+      info:
+        column: 10
+        row: 17
+    - duration: 100
+      info:
+        column: 11
+        row: 17
+    - duration: 200
+      info:
+        column: 12
+        row: 17
+    - duration: 100
+      info:
+        column: 13
+        row: 17
+    - duration: 100
+      info:
+        column: 14
+        row: 17
+    - duration: 200
+      info:
+        column: 15
+        row: 17
+    - duration: 100
+      info:
+        column: 16
+        row: 17
+    - duration: 100
+      info:
+        column: 17
+        row: 17
+    - duration: 100
+      info:
+        column: 18
+        row: 17
+    - duration: 100
+      info:
+        column: 19
+        row: 17
+    - duration: 200
+      info:
+        column: 20
+        row: 17
+    - duration: 100
+      info:
+        column: 21
+        row: 17
+    - duration: 100
+      info:
+        column: 22
+        row: 17
+    - duration: 200
+      info:
+        column: 23
+        row: 17
+    - duration: 100
+      info:
+        column: 24
+        row: 17
+    - duration: 100
+      info:
+        column: 25
+        row: 17
+    - duration: 100
+      info:
+        column: 26
+        row: 17
+    - duration: 100
+      info:
+        column: 0
+        row: 18
+    - duration: 200
+      info:
+        column: 1
+        row: 18
+    - duration: 100
+      info:
+        column: 2
+        row: 18
+    - duration: 100
+      info:
+        column: 3
+        row: 18
+    - duration: 100
+      info:
+        column: 4
+        row: 18
+    - duration: 100
+      info:
+        column: 5
+        row: 18
+    - duration: 100
+      info:
+        column: 6
+        row: 18
+    - duration: 100
+      info:
+        column: 7
+        row: 18
+    - duration: 100
+      info:
+        column: 8
+        row: 18
+    - duration: 100
+      info:
+        column: 9
+        row: 18
+    - duration: 100
+      info:
+        column: 10
+        row: 18
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: CheckingSomething
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 19
+        row: 12
+    - duration: 100
+      info:
+        column: 20
+        row: 12
+    - duration: 100
+      info:
+        column: 21
+        row: 12
+    - duration: 100
+      info:
+        column: 22
+        row: 12
+    - duration: 100
+      info:
+        column: 23
+        row: 12
+    - duration: 100
+      info:
+        column: 24
+        row: 12
+    - duration: 100
+      info:
+        column: 25
+        row: 12
+    - duration: 100
+      info:
+        column: 26
+        row: 12
+    - duration: 100
+      info:
+        column: 0
+        row: 13
+    - duration: 500
+      info:
+        column: 1
+        row: 13
+    - duration: 100
+      info:
+        column: 11
+        row: 18
+    - duration: 100
+      info:
+        column: 24
+        row: 12
+    - duration: 100
+      info:
+        column: 25
+        row: 12
+    - duration: 100
+      info:
+        column: 26
+        row: 12
+    - duration: 100
+      info:
+        column: 0
+        row: 13
+    - duration: 500
+      info:
+        column: 11
+        row: 18
+    - duration: 100
+      info:
+        column: 12
+        row: 18
+    - duration: 100
+      info:
+        column: 13
+        row: 18
+    - duration: 100
+      info:
+        column: 14
+        row: 18
+    - duration: 100
+      info:
+        column: 15
+        row: 18
+    - duration: 400
+      info:
+        column: 16
+        row: 18
+    - duration: 100
+      info:
+        column: 17
+        row: 18
+    - duration: 100
+      info:
+        column: 18
+        row: 18
+    - duration: 100
+      info:
+        column: 19
+        row: 18
+    - duration: 100
+      info:
+        column: 20
+        row: 18
+    - duration: 500
+      info:
+        column: 21
+        row: 18
+    - duration: 100
+      info:
+        column: 22
+        row: 18
+    - duration: 100
+      info:
+        column: 23
+        row: 18
+    - duration: 100
+      info:
+        column: 24
+        row: 18
+    - duration: 100
+      info:
+        column: 2
+        row: 13
+    - duration: 100
+      info:
+        column: 3
+        row: 13
+    - duration: 100
+      info:
+        column: 4
+        row: 13
+    - duration: 100
+      info:
+        column: 5
+        row: 13
+    - duration: 100
+      info:
+        column: 6
+        row: 13
+    - duration: 100
+      info:
+        column: 7
+        row: 13
+    - duration: 100
+      info:
+        column: 8
+        row: 13
+    - duration: 100
+      info:
+        column: 9
+        row: 13
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: Hearing_1
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 10
+      info:
+        column: 1
+        row: 0
+    - duration: 10
+      info:
+        column: 2
+        row: 0
+    - duration: 10
+      info:
+        column: 3
+        row: 0
+    - duration: 10
+      info:
+        column: 4
+        row: 0
+    - duration: 10
+      info:
+        column: 5
+        row: 0
+    - duration: 10
+      info:
+        column: 6
+        row: 0
+    - duration: 10
+      info:
+        column: 7
+        row: 0
+    - duration: 10
+      info:
+        column: 8
+        row: 0
+    - duration: 100
+      info:
+        column: 9
+        row: 0
+    - duration: 100
+      info:
+        column: 10
+        row: 0
+    - duration: 100
+      info:
+        column: 11
+        row: 0
+    - duration: 1200
+      info:
+        column: 12
+        row: 0
+    - duration: 100
+      info:
+        column: 13
+        row: 0
+    - duration: 100
+      info:
+        column: 14
+        row: 0
+    - duration: 1200
+      info:
+        column: 12
+        row: 0
+    - duration: 100
+      info:
+        column: 15
+        row: 0
+    - duration: 100
+      info:
+        column: 16
+        row: 0
+    - duration: 100
+      info:
+        column: 17
+        row: 0
+    - duration: 100
+      info:
+        column: 18
+        row: 0
+    - duration: 100
+      info:
+        column: 19
+        row: 0
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: GetWizardy
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 25
+        row: 18
+    - duration: 100
+      info:
+        column: 26
+        row: 18
+    - duration: 100
+      info:
+        column: 0
+        row: 19
+    - duration: 100
+      info:
+        column: 1
+        row: 19
+    - duration: 100
+      info:
+        column: 2
+        row: 19
+    - duration: 100
+      info:
+        column: 3
+        row: 19
+    - duration: 100
+      info:
+        column: 4
+        row: 19
+    - duration: 100
+      info:
+        column: 5
+        row: 19
+    - duration: 1200
+      info:
+        column: 6
+        row: 19
+    - duration: 100
+      info:
+        column: 7
+        row: 19
+    - duration: 450
+      info:
+        column: 8
+        row: 19
+    - duration: 100
+      info:
+        column: 0
+        row: 19
+    - duration: 100
+      info:
+        column: 26
+        row: 18
+    - duration: 100
+      info:
+        column: 25
+        row: 18
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: GestureLeft
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 9
+        row: 19
+    - duration: 100
+      info:
+        column: 10
+        row: 19
+    - duration: 100
+      info:
+        column: 11
+        row: 19
+    - duration: 100
+      info:
+        column: 12
+        row: 19
+    - duration: 100
+      info:
+        column: 13
+        row: 19
+    - duration: 100
+      info:
+        column: 14
+        row: 19
+    - duration: 100
+      info:
+        column: 15
+        row: 19
+    - duration: 100
+      info:
+        column: 16
+        row: 19
+    - duration: 100
+      info:
+        column: 17
+        row: 19
+    - duration: 100
+      info:
+        column: 18
+        row: 19
+    - duration: 100
+      info:
+        column: 19
+        row: 19
+    - duration: 100
+      info:
+        column: 20
+        row: 19
+    - duration: 100
+      info:
+        column: 21
+        row: 19
+    - duration: 100
+      info:
+        column: 22
+        row: 19
+    - duration: 100
+      info:
+        column: 23
+        row: 19
+    - duration: 100
+      info:
+        column: 24
+        row: 19
+    - duration: 100
+      info:
+        column: 25
+        row: 19
+    - duration: 100
+      info:
+        column: 26
+        row: 19
+    - duration: 100
+      info:
+        column: 0
+        row: 20
+    - duration: 100
+      info:
+        column: 1
+        row: 20
+    - duration: 1200
+      info:
+        column: 2
+        row: 20
+    - duration: 100
+      info:
+        column: 3
+        row: 20
+    - duration: 1300
+      info:
+        column: 2
+        row: 20
+    - duration: 50
+      info:
+        column: 4
+        row: 20
+    - duration: 50
+      info:
+        column: 24
+        row: 19
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: Wave
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 5
+        row: 20
+    - duration: 100
+      info:
+        column: 6
+        row: 20
+    - duration: 100
+      info:
+        column: 7
+        row: 20
+    - duration: 100
+      info:
+        column: 8
+        row: 20
+    - duration: 100
+      info:
+        column: 9
+        row: 20
+    - duration: 100
+      info:
+        column: 10
+        row: 20
+    - duration: 100
+      info:
+        column: 11
+        row: 20
+    - duration: 100
+      info:
+        column: 12
+        row: 20
+    - duration: 1200
+      info:
+        column: 13
+        row: 20
+    - duration: 100
+      info:
+        column: 14
+        row: 20
+    - duration: 550
+      info:
+        column: 9
+        row: 20
+    - duration: 100
+      info:
+        column: 8
+        row: 20
+    - duration: 100
+      info:
+        column: 7
+        row: 20
+    - duration: 100
+      info:
+        column: 6
+        row: 20
+    - duration: 100
+      info:
+        column: 5
+        row: 20
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: GestureRight
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 15
+        row: 20
+    - duration: 100
+      info:
+        column: 16
+        row: 20
+    - duration: 100
+      info:
+        column: 17
+        row: 20
+    - duration: 100
+      info:
+        column: 18
+        row: 20
+    - duration: 100
+      info:
+        column: 19
+        row: 20
+    - duration: 100
+      info:
+        column: 20
+        row: 20
+    - duration: 100
+      info:
+        column: 21
+        row: 20
+    - duration: 100
+      info:
+        column: 22
+        row: 20
+    - duration: 100
+      info:
+        column: 23
+        row: 20
+    - duration: 100
+      info:
+        column: 24
+        row: 20
+    - duration: 100
+      info:
+        column: 25
+        row: 20
+    - duration: 100
+      info:
+        column: 26
+        row: 20
+    - duration: 100
+      info:
+        column: 0
+        row: 21
+    - duration: 100
+      info:
+        column: 1
+        row: 21
+    - duration: 100
+      info:
+        column: 2
+        row: 21
+    - duration: 200
+      info:
+        column: 3
+        row: 21
+    - duration: 200
+      info:
+        column: 4
+        row: 21
+    - duration: 200
+      info:
+        column: 5
+        row: 21
+    - duration: 200
+      info:
+        column: 6
+        row: 21
+    - duration: 200
+      info:
+        column: 7
+        row: 21
+    - duration: 200
+      info:
+        column: 8
+        row: 21
+    - duration: 200
+      info:
+        column: 9
+        row: 21
+    - duration: 200
+      info:
+        column: 10
+        row: 21
+    - duration: 200
+      info:
+        column: 11
+        row: 21
+    - duration: 200
+      info:
+        column: 12
+        row: 21
+    - duration: 100
+      info:
+        column: 13
+        row: 21
+    - duration: 100
+      info:
+        column: 14
+        row: 21
+    - duration: 400
+      info:
+        column: 15
+        row: 21
+    - duration: 100
+      info:
+        column: 16
+        row: 21
+    - duration: 400
+      info:
+        column: 17
+        row: 21
+    - duration: 100
+      info:
+        column: 18
+        row: 21
+    - duration: 100
+      info:
+        column: 19
+        row: 21
+    - duration: 100
+      info:
+        column: 20
+        row: 21
+    - duration: 200
+      info:
+        column: 21
+        row: 21
+    - duration: 200
+      info:
+        column: 22
+        row: 21
+    - duration: 200
+      info:
+        column: 23
+        row: 21
+    - duration: 200
+      info:
+        column: 24
+        row: 21
+    - duration: 100
+      info:
+        column: 25
+        row: 21
+    - duration: 200
+      info:
+        column: 26
+        row: 21
+    - duration: 200
+      info:
+        column: 0
+        row: 22
+    - duration: 200
+      info:
+        column: 1
+        row: 22
+    - duration: 100
+      info:
+        column: 2
+        row: 22
+    - duration: 100
+      info:
+        column: 3
+        row: 22
+    - duration: 100
+      info:
+        column: 4
+        row: 22
+    - duration: 100
+      info:
+        column: 5
+        row: 22
+    - duration: 100
+      info:
+        column: 6
+        row: 22
+    - duration: 100
+      info:
+        column: 7
+        row: 22
+    - duration: 100
+      info:
+        column: 8
+        row: 22
+    - duration: 100
+      info:
+        column: 9
+        row: 22
+    - duration: 100
+      info:
+        column: 10
+        row: 22
+    - duration: 100
+      info:
+        column: 11
+        row: 22
+    - duration: 100
+      info:
+        column: 12
+        row: 22
+    - duration: 100
+      info:
+        column: 13
+        row: 22
+    - duration: 100
+      info:
+        column: 14
+        row: 22
+    - duration: 100
+      info:
+        column: 15
+        row: 22
+    - duration: 100
+      info:
+        column: 16
+        row: 22
+    - duration: 100
+      info:
+        column: 17
+        row: 22
+    - duration: 100
+      info:
+        column: 18
+        row: 22
+    - duration: 100
+      info:
+        column: 19
+        row: 22
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: Writing
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 25
+        row: 25
+    - duration: 100
+      info:
+        column: 26
+        row: 25
+    - duration: 1200
+      info:
+        column: 0
+        row: 26
+    - duration: 100
+      info:
+        column: 1
+        row: 26
+    - duration: 100
+      info:
+        column: 2
+        row: 26
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: LookDownRight
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 3
+        row: 26
+    - duration: 100
+      info:
+        column: 4
+        row: 26
+    - duration: 100
+      info:
+        column: 5
+        row: 26
+    - duration: 100
+      info:
+        column: 6
+        row: 26
+    - duration: 100
+      info:
+        column: 7
+        row: 26
+    - duration: 100
+      info:
+        column: 8
+        row: 26
+    - duration: 100
+      info:
+        column: 9
+        row: 26
+    - duration: 100
+      info:
+        column: 10
+        row: 26
+    - duration: 100
+      info:
+        column: 11
+        row: 26
+    - duration: 100
+      info:
+        column: 12
+        row: 26
+    - duration: 400
+      info:
+        column: 13
+        row: 26
+    - duration: 100
+      info:
+        column: 14
+        row: 26
+    - duration: 100
+      info:
+        column: 15
+        row: 26
+    - duration: 100
+      info:
+        column: 13
+        row: 26
+    - duration: 100
+      info:
+        column: 14
+        row: 26
+    - duration: 100
+      info:
+        column: 15
+        row: 26
+    - duration: 2400
+      info:
+        column: 13
+        row: 26
+    - duration: 100
+      info:
+        column: 6
+        row: 26
+    - duration: 100
+      info:
+        column: 5
+        row: 26
+    - duration: 100
+      info:
+        column: 4
+        row: 26
+    - duration: 100
+      info:
+        column: 3
+        row: 26
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: GetArtsy
+  - frames:
+    - duration: 10
+      info:
+        column: 22
+        row: 0
+    - duration: 10
+      info:
+        column: 21
+        row: 0
+    - duration: 10
+      info:
+        column: 20
+        row: 0
+    - duration: 10
+      info:
+        column: 0
+        row: 0
+    name: Show
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 23
+        row: 0
+    - duration: 100
+      info:
+        column: 24
+        row: 0
+    - duration: 1200
+      info:
+        column: 25
+        row: 0
+    - duration: 100
+      info:
+        column: 26
+        row: 0
+    - duration: 100
+      info:
+        column: 0
+        row: 1
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: LookDown
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 8
+        row: 27
+    - duration: 100
+      info:
+        column: 9
+        row: 27
+    - duration: 100
+      info:
+        column: 10
+        row: 27
+    - duration: 100
+      info:
+        column: 11
+        row: 27
+    - duration: 100
+      info:
+        column: 12
+        row: 27
+    - duration: 100
+      info:
+        column: 13
+        row: 27
+    - duration: 100
+      info:
+        column: 14
+        row: 27
+    - duration: 100
+      info:
+        column: 15
+        row: 27
+    - duration: 100
+      info:
+        column: 16
+        row: 27
+    - duration: 100
+      info:
+        column: 17
+        row: 27
+    - duration: 100
+      info:
+        column: 18
+        row: 27
+    - duration: 100
+      info:
+        column: 19
+        row: 27
+    - duration: 100
+      info:
+        column: 20
+        row: 27
+    - duration: 100
+      info:
+        column: 21
+        row: 27
+    - duration: 100
+      info:
+        column: 22
+        row: 27
+    - duration: 100
+      info:
+        column: 23
+        row: 27
+    - duration: 100
+      info:
+        column: 24
+        row: 27
+    - duration: 100
+      info:
+        column: 25
+        row: 27
+    - duration: 800
+      info:
+        column: 26
+        row: 27
+    - duration: 100
+      info:
+        column: 0
+        row: 28
+    - duration: 100
+      info:
+        column: 26
+        row: 27
+    - duration: 100
+      info:
+        column: 1
+        row: 28
+    - duration: 100
+      info:
+        column: 2
+        row: 28
+    - duration: 100
+      info:
+        column: 3
+        row: 28
+    - duration: 100
+      info:
+        column: 4
+        row: 28
+    - duration: 100
+      info:
+        column: 5
+        row: 28
+    - duration: 1000
+      info:
+        column: 6
+        row: 28
+    - duration: 100
+      info:
+        column: 7
+        row: 28
+    - duration: 100
+      info:
+        column: 8
+        row: 28
+    - duration: 100
+      info:
+        column: 9
+        row: 28
+    - duration: 100
+      info:
+        column: 10
+        row: 28
+    - duration: 500
+      info:
+        column: 11
+        row: 28
+    - duration: 100
+      info:
+        column: 12
+        row: 28
+    - duration: 100
+      info:
+        column: 11
+        row: 28
+    - duration: 100
+      info:
+        column: 13
+        row: 28
+    - duration: 100
+      info:
+        column: 14
+        row: 28
+    - duration: 100
+      info:
+        column: 15
+        row: 28
+    - duration: 100
+      info:
+        column: 16
+        row: 28
+    - duration: 100
+      info:
+        column: 17
+        row: 28
+    - duration: 100
+      info:
+        column: 18
+        row: 28
+    - duration: 100
+      info:
+        column: 19
+        row: 28
+    - duration: 100
+      info:
+        column: 20
+        row: 28
+    - duration: 100
+      info:
+        column: 21
+        row: 28
+    - duration: 100
+      info:
+        column: 22
+        row: 28
+    - duration: 100
+      info:
+        column: 23
+        row: 28
+    - duration: 100
+      info:
+        column: 24
+        row: 28
+    - duration: 100
+      info:
+        column: 25
+        row: 28
+    - duration: 100
+      info:
+        column: 26
+        row: 28
+    - duration: 100
+      info:
+        column: 0
+        row: 29
+    - duration: 100
+      info:
+        column: 1
+        row: 29
+    - duration: 100
+      info:
+        column: 0
+        row: 29
+    - duration: 100
+      info:
+        column: 26
+        row: 28
+    - duration: 100
+      info:
+        column: 2
+        row: 29
+    - duration: 100
+      info:
+        column: 3
+        row: 29
+    - duration: 100
+      info:
+        column: 4
+        row: 29
+    - duration: 100
+      info:
+        column: 5
+        row: 29
+    - duration: 100
+      info:
+        column: 6
+        row: 29
+    - duration: 100
+      info:
+        column: 7
+        row: 29
+    - duration: 100
+      info:
+        column: 8
+        row: 29
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: Searching
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 9
+        row: 29
+    - duration: 100
+      info:
+        column: 10
+        row: 29
+    - duration: 100
+      info:
+        column: 11
+        row: 29
+    - duration: 100
+      info:
+        column: 12
+        row: 29
+    - duration: 100
+      info:
+        column: 13
+        row: 29
+    - duration: 100
+      info:
+        column: 14
+        row: 29
+    - duration: 100
+      info:
+        column: 15
+        row: 29
+    - duration: 100
+      info:
+        column: 16
+        row: 29
+    - duration: 100
+      info:
+        column: 17
+        row: 29
+    - duration: 100
+      info:
+        column: 18
+        row: 29
+    - duration: 100
+      info:
+        column: 19
+        row: 29
+    - duration: 100
+      info:
+        column: 20
+        row: 29
+    - duration: 100
+      info:
+        column: 21
+        row: 29
+    - duration: 100
+      info:
+        column: 22
+        row: 29
+    - duration: 100
+      info:
+        column: 23
+        row: 29
+    - duration: 100
+      info:
+        column: 24
+        row: 29
+    - duration: 100
+      info:
+        column: 25
+        row: 29
+    - duration: 100
+      info:
+        column: 26
+        row: 29
+    - duration: 100
+      info:
+        column: 0
+        row: 30
+    - duration: 100
+      info:
+        column: 1
+        row: 30
+    - duration: 100
+      info:
+        column: 2
+        row: 30
+    - duration: 100
+      info:
+        column: 3
+        row: 30
+    - duration: 100
+      info:
+        column: 4
+        row: 30
+    - duration: 100
+      info:
+        column: 5
+        row: 30
+    - duration: 100
+      info:
+        column: 6
+        row: 30
+    - duration: 100
+      info:
+        column: 7
+        row: 30
+    - duration: 100
+      info:
+        column: 8
+        row: 30
+    - duration: 100
+      info:
+        column: 9
+        row: 30
+    - duration: 100
+      info:
+        column: 10
+        row: 30
+    - duration: 100
+      info:
+        column: 11
+        row: 30
+    - duration: 100
+      info:
+        column: 12
+        row: 30
+    - duration: 100
+      info:
+        column: 8
+        row: 15
+    - duration: 100
+      info:
+        column: 9
+        row: 15
+    - duration: 100
+      info:
+        column: 10
+        row: 15
+    - duration: 100
+      info:
+        column: 11
+        row: 15
+    - duration: 100
+      info:
+        column: 12
+        row: 15
+    - duration: 100
+      info:
+        column: 13
+        row: 15
+    - duration: 100
+      info:
+        column: 14
+        row: 15
+    - duration: 100
+      info:
+        column: 15
+        row: 15
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: EmptyTrash
+  - frames:
+    - duration: 100
+      info:
+        column: 13
+        row: 30
+    - duration: 100
+      info:
+        column: 14
+        row: 30
+    - duration: 100
+      info:
+        column: 15
+        row: 30
+    - duration: 100
+      info:
+        column: 16
+        row: 30
+    - duration: 100
+      info:
+        column: 17
+        row: 30
+    - duration: 100
+      info:
+        column: 18
+        row: 30
+    - duration: 100
+      info:
+        column: 19
+        row: 30
+    - duration: 100
+      info:
+        column: 20
+        row: 30
+    - duration: 100
+      info:
+        column: 21
+        row: 30
+    - duration: 100
+      info:
+        column: 22
+        row: 30
+    - duration: 100
+      info:
+        column: 23
+        row: 30
+    - duration: 100
+      info:
+        column: 24
+        row: 30
+    - duration: 100
+      info:
+        column: 25
+        row: 30
+    - duration: 100
+      info:
+        column: 26
+        row: 30
+    - duration: 100
+      info:
+        column: 0
+        row: 31
+    - duration: 100
+      info:
+        column: 1
+        row: 31
+    - duration: 100
+      info:
+        column: 2
+        row: 31
+    - duration: 300
+      info:
+        column: 3
+        row: 31
+    - duration: 100
+      info:
+        column: 4
+        row: 31
+    - duration: 450
+      info:
+        column: 3
+        row: 31
+    - duration: 100
+      info:
+        column: 5
+        row: 31
+    - duration: 100
+      info:
+        column: 6
+        row: 31
+    - duration: 100
+      info:
+        column: 7
+        row: 31
+    - duration: 100
+      info:
+        column: 8
+        row: 31
+    - duration: 100
+      info:
+        column: 9
+        row: 31
+    - duration: 100
+      info:
+        column: 10
+        row: 31
+    - duration: 100
+      info:
+        column: 11
+        row: 31
+    - duration: 100
+      info:
+        column: 12
+        row: 31
+    - duration: 100
+      info:
+        column: 13
+        row: 31
+    - duration: 100
+      info:
+        column: 8
+        row: 15
+    - duration: 100
+      info:
+        column: 9
+        row: 15
+    - duration: 100
+      info:
+        column: 10
+        row: 15
+    - duration: 100
+      info:
+        column: 11
+        row: 15
+    - duration: 100
+      info:
+        column: 12
+        row: 15
+    - duration: 100
+      info:
+        column: 13
+        row: 15
+    - duration: 100
+      info:
+        column: 14
+        row: 15
+    - duration: 100
+      info:
+        column: 15
+        row: 15
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: Greeting
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 14
+        row: 31
+    - duration: 100
+      info:
+        column: 15
+        row: 31
+    - duration: 1200
+      info:
+        column: 16
+        row: 31
+    - duration: 100
+      info:
+        column: 17
+        row: 31
+    - duration: 100
+      info:
+        column: 18
+        row: 31
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: LookUp
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 16
+        row: 15
+    - duration: 100
+      info:
+        column: 17
+        row: 15
+    - duration: 100
+      info:
+        column: 18
+        row: 15
+    - duration: 100
+      info:
+        column: 19
+        row: 15
+    - duration: 100
+      info:
+        column: 20
+        row: 15
+    - duration: 100
+      info:
+        column: 21
+        row: 15
+    - duration: 100
+      info:
+        column: 22
+        row: 15
+    - duration: 100
+      info:
+        column: 23
+        row: 15
+    - duration: 100
+      info:
+        column: 24
+        row: 15
+    - duration: 100
+      info:
+        column: 25
+        row: 15
+    - duration: 100
+      info:
+        column: 26
+        row: 15
+    - duration: 100
+      info:
+        column: 0
+        row: 16
+    - duration: 450
+      info:
+        column: 1
+        row: 16
+    - duration: 100
+      info:
+        column: 19
+        row: 15
+    - duration: 100
+      info:
+        column: 18
+        row: 15
+    - duration: 100
+      info:
+        column: 17
+        row: 15
+    - duration: 100
+      info:
+        column: 16
+        row: 15
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: GestureDown
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: RestPose
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 6
+        row: 33
+    - duration: 100
+      info:
+        column: 7
+        row: 33
+    - duration: 1200
+      info:
+        column: 8
+        row: 33
+    - duration: 100
+      info:
+        column: 9
+        row: 33
+    - duration: 100
+      info:
+        column: 10
+        row: 33
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: LookDownLeft
   idle:
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 12
-      duration: 100
-      row: 2
-    - column: 13
-      duration: 100
-      row: 2
-    - column: 14
-      duration: 100
-      row: 2
-    - column: 15
-      duration: 100
-      row: 2
-    - column: 16
-      duration: 100
-      row: 2
-    - column: 17
-      duration: 100
-      row: 2
-    - column: 18
-      duration: 100
-      row: 2
-    - column: 19
-      duration: 100
-      row: 2
-    - column: 20
-      duration: 100
-      row: 2
-    - column: 21
-      duration: 100
-      row: 2
-    - column: 22
-      duration: 100
-      row: 2
-    - column: 23
-      duration: 100
-      row: 2
-    - column: 24
-      duration: 100
-      row: 2
-    - column: 25
-      duration: 100
-      row: 2
-    - column: 26
-      duration: 100
-      row: 2
-    - column: 0
-      duration: 100
-      row: 3
-    - column: 1
-      duration: 100
-      row: 3
-    - column: 2
-      duration: 100
-      row: 3
-    - column: 3
-      duration: 100
-      row: 3
-    - column: 4
-      duration: 100
-      row: 3
-    - column: 5
-      duration: 100
-      row: 3
-    - column: 6
-      duration: 100
-      row: 3
-    - column: 7
-      duration: 100
-      row: 3
-    - column: 8
-      duration: 100
-      row: 3
-    - column: 9
-      duration: 100
-      row: 3
-    - column: 10
-      duration: 100
-      row: 3
-    - column: 11
-      duration: 100
-      row: 3
-    - column: 12
-      duration: 100
-      row: 3
-    - column: 13
-      duration: 100
-      row: 3
-    - column: 14
-      duration: 100
-      row: 3
-    - column: 15
-      duration: 100
-      row: 3
-    - column: 16
-      duration: 100
-      row: 3
-    - column: 17
-      duration: 100
-      row: 3
-    - column: 18
-      duration: 100
-      row: 3
-    - column: 19
-      duration: 100
-      row: 3
-    - column: 20
-      duration: 100
-      row: 3
-    - column: 21
-      duration: 100
-      row: 3
-    - column: 22
-      duration: 100
-      row: 3
-    - column: 23
-      duration: 100
-      row: 3
-    - column: 24
-      duration: 100
-      row: 3
-    - column: 25
-      duration: 100
-      row: 3
-    - column: 26
-      duration: 100
-      row: 3
-    - column: 0
-      duration: 100
-      row: 4
-    - column: 1
-      duration: 100
-      row: 4
-    - column: 2
-      duration: 100
-      row: 4
-    - column: 3
-      duration: 100
-      row: 4
-    - column: 4
-      duration: 100
-      row: 4
-    - column: 5
-      duration: 100
-      row: 4
-    - column: 6
-      duration: 100
-      row: 4
-    - column: 7
-      duration: 100
-      row: 4
-    - column: 8
-      duration: 100
-      row: 4
-    - column: 9
-      duration: 100
-      row: 4
-    - column: 10
-      duration: 100
-      row: 4
-    - column: 11
-      duration: 100
-      row: 4
-    - column: 12
-      duration: 100
-      row: 4
-    - column: 13
-      duration: 100
-      row: 4
-    - column: 14
-      duration: 100
-      row: 4
-    - column: 15
-      duration: 100
-      row: 4
-    - column: 16
-      duration: 100
-      row: 4
-    - column: 17
-      duration: 100
-      row: 4
-    - column: 18
-      duration: 100
-      row: 4
-    - column: 19
-      duration: 100
-      row: 4
-    - column: 20
-      duration: 100
-      row: 4
-    - column: 21
-      duration: 100
-      row: 4
-    - column: 22
-      duration: 100
-      row: 4
-    - column: 21
-      duration: 100
-      row: 4
-    - column: 23
-      duration: 100
-      row: 4
-    - column: 21
-      duration: 100
-      row: 4
-    - column: 24
-      duration: 100
-      row: 4
-    - column: 25
-      duration: 100
-      row: 4
-    - column: 26
-      duration: 100
-      row: 4
-    - column: 0
-      duration: 100
-      row: 5
-    - column: 1
-      duration: 100
-      row: 5
-    - column: 0
-      duration: 100
-      row: 0
-    Name: RopePile
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 1
-      duration: 100
-      row: 1
-    - column: 2
-      duration: 100
-      row: 1
-    - column: 3
-      duration: 100
-      row: 1
-    - column: 4
-      duration: 100
-      row: 1
-    - column: 5
-      duration: 100
-      row: 1
-    - column: 6
-      duration: 100
-      row: 1
-    - column: 7
-      duration: 100
-      row: 1
-    - column: 8
-      duration: 100
-      row: 1
-    - column: 9
-      duration: 100
-      row: 1
-    - column: 10
-      duration: 100
-      row: 1
-    - column: 11
-      duration: 100
-      row: 1
-    - column: 12
-      duration: 100
-      row: 1
-    - column: 13
-      duration: 100
-      row: 1
-    - column: 14
-      duration: 100
-      row: 1
-    - column: 15
-      duration: 100
-      row: 1
-    - column: 16
-      duration: 100
-      row: 1
-    - column: 17
-      duration: 100
-      row: 1
-    - column: 18
-      duration: 100
-      row: 1
-    - column: 19
-      duration: 100
-      row: 1
-    - column: 20
-      duration: 100
-      row: 1
-    - column: 21
-      duration: 100
-      row: 1
-    - column: 22
-      duration: 100
-      row: 1
-    - column: 23
-      duration: 100
-      row: 1
-    - column: 24
-      duration: 100
-      row: 1
-    - column: 25
-      duration: 100
-      row: 1
-    - column: 26
-      duration: 100
-      row: 1
-    - column: 0
-      duration: 100
-      row: 2
-    - column: 1
-      duration: 100
-      row: 2
-    - column: 2
-      duration: 100
-      row: 2
-    - column: 3
-      duration: 100
-      row: 2
-    - column: 4
-      duration: 100
-      row: 2
-    - column: 5
-      duration: 100
-      row: 2
-    - column: 6
-      duration: 100
-      row: 2
-    - column: 7
-      duration: 100
-      row: 2
-    - column: 8
-      duration: 100
-      row: 2
-    - column: 8
-      duration: 100
-      row: 1
-    - column: 7
-      duration: 100
-      row: 1
-    - column: 6
-      duration: 100
-      row: 1
-    - column: 5
-      duration: 100
-      row: 1
-    - column: 4
-      duration: 100
-      row: 1
-    - column: 3
-      duration: 100
-      row: 1
-    - column: 2
-      duration: 100
-      row: 1
-    - column: 1
-      duration: 100
-      row: 1
-    - column: 0
-      duration: 100
-      row: 0
-    Name: Atom
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 17
-      duration: 100
-      row: 8
-    - column: 18
-      duration: 100
-      row: 8
-    - column: 19
-      duration: 100
-      row: 8
-    - column: 20
-      duration: 300
-      row: 8
-    - column: 21
-      duration: 100
-      row: 8
-    - column: 22
-      duration: 100
-      row: 8
-    - column: 23
-      duration: 300
-      row: 8
-    - column: 24
-      duration: 100
-      row: 8
-    - column: 25
-      duration: 100
-      row: 8
-    - column: 26
-      duration: 300
-      row: 8
-    - column: 0
-      duration: 100
-      row: 9
-    - column: 1
-      duration: 100
-      row: 9
-    - column: 2
-      duration: 300
-      row: 9
-    - column: 3
-      duration: 100
-      row: 9
-    - column: 4
-      duration: 100
-      row: 9
-    - column: 5
-      duration: 300
-      row: 9
-    - column: 6
-      duration: 100
-      row: 9
-    - column: 7
-      duration: 100
-      row: 9
-    - column: 8
-      duration: 300
-      row: 9
-    - column: 9
-      duration: 100
-      row: 9
-    - column: 10
-      duration: 100
-      row: 9
-    - column: 11
-      duration: 300
-      row: 9
-    - column: 12
-      duration: 100
-      row: 9
-    - column: 13
-      duration: 100
-      row: 9
-    - column: 14
-      duration: 300
-      row: 9
-    - column: 15
-      duration: 100
-      row: 9
-    - column: 16
-      duration: 100
-      row: 9
-    - column: 17
-      duration: 300
-      row: 9
-    - column: 18
-      duration: 100
-      row: 9
-    - column: 19
-      duration: 100
-      row: 9
-    - column: 20
-      duration: 300
-      row: 9
-    - column: 21
-      duration: 100
-      row: 9
-    - column: 22
-      duration: 100
-      row: 9
-    - column: 23
-      duration: 300
-      row: 9
-    - column: 24
-      duration: 100
-      row: 9
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 9
-      duration: 100
-      row: 2
-    - column: 10
-      duration: 100
-      row: 2
-    - column: 11
-      duration: 900
-      row: 2
-    - column: 10
-      duration: 100
-      row: 2
-    - column: 9
-      duration: 100
-      row: 2
-    - column: 0
-      duration: 100
-      row: 0
-    Name: Loiter
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 17
-      duration: 100
-      row: 8
-    - column: 18
-      duration: 100
-      row: 8
-    - column: 19
-      duration: 100
-      row: 8
-    - column: 20
-      duration: 300
-      row: 8
-    - column: 21
-      duration: 100
-      row: 8
-    - column: 22
-      duration: 100
-      row: 8
-    - column: 23
-      duration: 300
-      row: 8
-    - column: 24
-      duration: 100
-      row: 8
-    - column: 25
-      duration: 100
-      row: 8
-    - column: 26
-      duration: 300
-      row: 8
-    - column: 0
-      duration: 100
-      row: 9
-    - column: 1
-      duration: 100
-      row: 9
-    - column: 2
-      duration: 300
-      row: 9
-    - column: 3
-      duration: 100
-      row: 9
-    - column: 4
-      duration: 100
-      row: 9
-    - column: 5
-      duration: 300
-      row: 9
-    - column: 6
-      duration: 100
-      row: 9
-    - column: 7
-      duration: 100
-      row: 9
-    - column: 8
-      duration: 300
-      row: 9
-    - column: 9
-      duration: 100
-      row: 9
-    - column: 10
-      duration: 100
-      row: 9
-    - column: 11
-      duration: 300
-      row: 9
-    - column: 12
-      duration: 100
-      row: 9
-    - column: 13
-      duration: 100
-      row: 9
-    - column: 14
-      duration: 0
-      row: 9
-    - column: 15
-      duration: 100
-      row: 9
-    - column: 16
-      duration: 100
-      row: 9
-    - column: 17
-      duration: 300
-      row: 9
-    - column: 18
-      duration: 100
-      row: 9
-    - column: 19
-      duration: 100
-      row: 9
-    - column: 20
-      duration: 300
-      row: 9
-    - column: 21
-      duration: 100
-      row: 9
-    - column: 22
-      duration: 100
-      row: 9
-    - column: 23
-      duration: 300
-      row: 9
-    - column: 24
-      duration: 100
-      row: 9
-    - column: 0
-      duration: 100
-      row: 0
-    Name: SideToSide
-  - Frames:
-    - column: 16
-      duration: 100
-      row: 26
-    - column: 17
-      duration: 100
-      row: 26
-    - column: 18
-      duration: 100
-      row: 26
-    - column: 19
-      duration: 100
-      row: 26
-    - column: 20
-      duration: 100
-      row: 26
-    - column: 21
-      duration: 100
-      row: 26
-    - column: 22
-      duration: 100
-      row: 26
-    - column: 23
-      duration: 100
-      row: 26
-    - column: 24
-      duration: 100
-      row: 26
-    - column: 25
-      duration: 100
-      row: 26
-    - column: 26
-      duration: 100
-      row: 26
-    - column: 0
-      duration: 100
-      row: 27
-    - column: 1
-      duration: 100
-      row: 27
-    - column: 2
-      duration: 100
-      row: 27
-    - column: 3
-      duration: 100
-      row: 27
-    - column: 4
-      duration: 100
-      row: 27
-    - column: 5
-      duration: 100
-      row: 27
-    - column: 6
-      duration: 100
-      row: 27
-    - column: 7
-      duration: 100
-      row: 27
-    Name: HeadScratch
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 24
-      duration: 100
-      row: 32
-    - column: 25
-      duration: 100
-      row: 32
-    - column: 26
-      duration: 100
-      row: 32
-    - column: 0
-      duration: 100
-      row: 33
-    - column: 1
-      duration: 100
-      row: 33
-    - column: 2
-      duration: 150
-      row: 33
-    - column: 3
-      duration: 100
-      row: 33
-    - column: 4
-      duration: 100
-      row: 33
-    - column: 5
-      duration: 100
-      row: 33
-    - column: 0
-      duration: 100
-      row: 0
-    Name: FingerTap
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 20
-      duration: 100
-      row: 22
-    - column: 21
-      duration: 100
-      row: 22
-    - column: 22
-      duration: 100
-      row: 22
-    - column: 23
-      duration: 100
-      row: 22
-    - column: 24
-      duration: 100
-      row: 22
-    - column: 25
-      duration: 100
-      row: 22
-    - column: 26
-      duration: 100
-      row: 22
-    - column: 0
-      duration: 400
-      row: 23
-    - column: 1
-      duration: 100
-      row: 23
-    - column: 2
-      duration: 100
-      row: 23
-    - column: 3
-      duration: 100
-      row: 23
-    - column: 4
-      duration: 100
-      row: 23
-    - column: 5
-      duration: 100
-      row: 23
-    - column: 6
-      duration: 100
-      row: 23
-    - column: 7
-      duration: 100
-      row: 23
-    - column: 8
-      duration: 100
-      row: 23
-    - column: 9
-      duration: 100
-      row: 23
-    - column: 10
-      duration: 100
-      row: 23
-    - column: 11
-      duration: 100
-      row: 23
-    - column: 12
-      duration: 100
-      row: 23
-    - column: 13
-      duration: 100
-      row: 23
-    - column: 14
-      duration: 100
-      row: 23
-    - column: 15
-      duration: 100
-      row: 23
-    - column: 16
-      duration: 100
-      row: 23
-    - column: 17
-      duration: 100
-      row: 23
-    - column: 18
-      duration: 100
-      row: 23
-    - column: 19
-      duration: 200
-      row: 23
-    - column: 20
-      duration: 200
-      row: 23
-    - column: 21
-      duration: 200
-      row: 23
-    - column: 22
-      duration: 200
-      row: 23
-    - column: 23
-      duration: 200
-      row: 23
-    - column: 24
-      duration: 200
-      row: 23
-    - column: 25
-      duration: 200
-      row: 23
-    - column: 26
-      duration: 200
-      row: 23
-    - column: 0
-      duration: 200
-      row: 24
-    - column: 1
-      duration: 200
-      row: 24
-    - column: 2
-      duration: 200
-      row: 24
-    - column: 3
-      duration: 100
-      row: 24
-    - column: 4
-      duration: 100
-      row: 24
-    - column: 5
-      duration: 100
-      row: 24
-    - column: 6
-      duration: 1200
-      row: 24
-    - column: 7
-      duration: 100
-      row: 24
-    - column: 8
-      duration: 100
-      row: 24
-    - column: 9
-      duration: 100
-      row: 24
-    - column: 10
-      duration: 100
-      row: 24
-    - column: 11
-      duration: 100
-      row: 24
-    - column: 12
-      duration: 100
-      row: 24
-    - column: 13
-      duration: 400
-      row: 24
-    - column: 14
-      duration: 100
-      row: 24
-    - column: 15
-      duration: 100
-      row: 24
-    - column: 16
-      duration: 100
-      row: 24
-    - column: 17
-      duration: 100
-      row: 24
-    - column: 18
-      duration: 100
-      row: 24
-    - column: 19
-      duration: 100
-      row: 24
-    - column: 20
-      duration: 100
-      row: 24
-    - column: 21
-      duration: 600
-      row: 24
-    - column: 22
-      duration: 300
-      row: 24
-    - column: 23
-      duration: 300
-      row: 24
-    - column: 24
-      duration: 300
-      row: 24
-    - column: 25
-      duration: 100
-      row: 24
-    - column: 26
-      duration: 100
-      row: 24
-    - column: 0
-      duration: 100
-      row: 25
-    - column: 1
-      duration: 100
-      row: 25
-    - column: 2
-      duration: 100
-      row: 25
-    - column: 3
-      duration: 100
-      row: 25
-    - column: 4
-      duration: 100
-      row: 25
-    - column: 5
-      duration: 100
-      row: 25
-    - column: 6
-      duration: 200
-      row: 25
-    - column: 7
-      duration: 200
-      row: 25
-    - column: 8
-      duration: 200
-      row: 25
-    - column: 9
-      duration: 200
-      row: 25
-    - column: 10
-      duration: 200
-      row: 25
-    - column: 11
-      duration: 200
-      row: 25
-    - column: 12
-      duration: 200
-      row: 25
-    - column: 13
-      duration: 100
-      row: 25
-    - column: 14
-      duration: 100
-      row: 25
-    - column: 15
-      duration: 100
-      row: 25
-    - column: 16
-      duration: 100
-      row: 25
-    - column: 17
-      duration: 100
-      row: 25
-    - column: 18
-      duration: 100
-      row: 25
-    - column: 19
-      duration: 100
-      row: 25
-    - column: 20
-      duration: 300
-      row: 25
-    - column: 21
-      duration: 100
-      row: 25
-    - column: 22
-      duration: 100
-      row: 25
-    - column: 23
-      duration: 100
-      row: 25
-    - column: 24
-      duration: 100
-      row: 25
-    - column: 0
-      duration: 100
-      row: 0
-    Name: Snooze
-  - Frames:
-    - column: 0
-      duration: 100
-      row: 0
-    - column: 9
-      duration: 100
-      row: 2
-    - column: 10
-      duration: 100
-      row: 2
-    - column: 11
-      duration: 900
-      row: 2
-    - column: 10
-      duration: 100
-      row: 2
-    - column: 9
-      duration: 100
-      row: 2
-    - column: 0
-      duration: 100
-      row: 0
-    Name: EyeBrowRaise
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 12
+        row: 2
+    - duration: 100
+      info:
+        column: 13
+        row: 2
+    - duration: 100
+      info:
+        column: 14
+        row: 2
+    - duration: 100
+      info:
+        column: 15
+        row: 2
+    - duration: 100
+      info:
+        column: 16
+        row: 2
+    - duration: 100
+      info:
+        column: 17
+        row: 2
+    - duration: 100
+      info:
+        column: 18
+        row: 2
+    - duration: 100
+      info:
+        column: 19
+        row: 2
+    - duration: 100
+      info:
+        column: 20
+        row: 2
+    - duration: 100
+      info:
+        column: 21
+        row: 2
+    - duration: 100
+      info:
+        column: 22
+        row: 2
+    - duration: 100
+      info:
+        column: 23
+        row: 2
+    - duration: 100
+      info:
+        column: 24
+        row: 2
+    - duration: 100
+      info:
+        column: 25
+        row: 2
+    - duration: 100
+      info:
+        column: 26
+        row: 2
+    - duration: 100
+      info:
+        column: 0
+        row: 3
+    - duration: 100
+      info:
+        column: 1
+        row: 3
+    - duration: 100
+      info:
+        column: 2
+        row: 3
+    - duration: 100
+      info:
+        column: 3
+        row: 3
+    - duration: 100
+      info:
+        column: 4
+        row: 3
+    - duration: 100
+      info:
+        column: 5
+        row: 3
+    - duration: 100
+      info:
+        column: 6
+        row: 3
+    - duration: 100
+      info:
+        column: 7
+        row: 3
+    - duration: 100
+      info:
+        column: 8
+        row: 3
+    - duration: 100
+      info:
+        column: 9
+        row: 3
+    - duration: 100
+      info:
+        column: 10
+        row: 3
+    - duration: 100
+      info:
+        column: 11
+        row: 3
+    - duration: 100
+      info:
+        column: 12
+        row: 3
+    - duration: 100
+      info:
+        column: 13
+        row: 3
+    - duration: 100
+      info:
+        column: 14
+        row: 3
+    - duration: 100
+      info:
+        column: 15
+        row: 3
+    - duration: 100
+      info:
+        column: 16
+        row: 3
+    - duration: 100
+      info:
+        column: 17
+        row: 3
+    - duration: 100
+      info:
+        column: 18
+        row: 3
+    - duration: 100
+      info:
+        column: 19
+        row: 3
+    - duration: 100
+      info:
+        column: 20
+        row: 3
+    - duration: 100
+      info:
+        column: 21
+        row: 3
+    - duration: 100
+      info:
+        column: 22
+        row: 3
+    - duration: 100
+      info:
+        column: 23
+        row: 3
+    - duration: 100
+      info:
+        column: 24
+        row: 3
+    - duration: 100
+      info:
+        column: 25
+        row: 3
+    - duration: 100
+      info:
+        column: 26
+        row: 3
+    - duration: 100
+      info:
+        column: 0
+        row: 4
+    - duration: 100
+      info:
+        column: 1
+        row: 4
+    - duration: 100
+      info:
+        column: 2
+        row: 4
+    - duration: 100
+      info:
+        column: 3
+        row: 4
+    - duration: 100
+      info:
+        column: 4
+        row: 4
+    - duration: 100
+      info:
+        column: 5
+        row: 4
+    - duration: 100
+      info:
+        column: 6
+        row: 4
+    - duration: 100
+      info:
+        column: 7
+        row: 4
+    - duration: 100
+      info:
+        column: 8
+        row: 4
+    - duration: 100
+      info:
+        column: 9
+        row: 4
+    - duration: 100
+      info:
+        column: 10
+        row: 4
+    - duration: 100
+      info:
+        column: 11
+        row: 4
+    - duration: 100
+      info:
+        column: 12
+        row: 4
+    - duration: 100
+      info:
+        column: 13
+        row: 4
+    - duration: 100
+      info:
+        column: 14
+        row: 4
+    - duration: 100
+      info:
+        column: 15
+        row: 4
+    - duration: 100
+      info:
+        column: 16
+        row: 4
+    - duration: 100
+      info:
+        column: 17
+        row: 4
+    - duration: 100
+      info:
+        column: 18
+        row: 4
+    - duration: 100
+      info:
+        column: 19
+        row: 4
+    - duration: 100
+      info:
+        column: 20
+        row: 4
+    - duration: 100
+      info:
+        column: 21
+        row: 4
+    - duration: 100
+      info:
+        column: 22
+        row: 4
+    - duration: 100
+      info:
+        column: 21
+        row: 4
+    - duration: 100
+      info:
+        column: 23
+        row: 4
+    - duration: 100
+      info:
+        column: 21
+        row: 4
+    - duration: 100
+      info:
+        column: 24
+        row: 4
+    - duration: 100
+      info:
+        column: 25
+        row: 4
+    - duration: 100
+      info:
+        column: 26
+        row: 4
+    - duration: 100
+      info:
+        column: 0
+        row: 5
+    - duration: 100
+      info:
+        column: 1
+        row: 5
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: RopePile
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 1
+        row: 1
+    - duration: 100
+      info:
+        column: 2
+        row: 1
+    - duration: 100
+      info:
+        column: 3
+        row: 1
+    - duration: 100
+      info:
+        column: 4
+        row: 1
+    - duration: 100
+      info:
+        column: 5
+        row: 1
+    - duration: 100
+      info:
+        column: 6
+        row: 1
+    - duration: 100
+      info:
+        column: 7
+        row: 1
+    - duration: 100
+      info:
+        column: 8
+        row: 1
+    - duration: 100
+      info:
+        column: 9
+        row: 1
+    - duration: 100
+      info:
+        column: 10
+        row: 1
+    - duration: 100
+      info:
+        column: 11
+        row: 1
+    - duration: 100
+      info:
+        column: 12
+        row: 1
+    - duration: 100
+      info:
+        column: 13
+        row: 1
+    - duration: 100
+      info:
+        column: 14
+        row: 1
+    - duration: 100
+      info:
+        column: 15
+        row: 1
+    - duration: 100
+      info:
+        column: 16
+        row: 1
+    - duration: 100
+      info:
+        column: 17
+        row: 1
+    - duration: 100
+      info:
+        column: 18
+        row: 1
+    - duration: 100
+      info:
+        column: 19
+        row: 1
+    - duration: 100
+      info:
+        column: 20
+        row: 1
+    - duration: 100
+      info:
+        column: 21
+        row: 1
+    - duration: 100
+      info:
+        column: 22
+        row: 1
+    - duration: 100
+      info:
+        column: 23
+        row: 1
+    - duration: 100
+      info:
+        column: 24
+        row: 1
+    - duration: 100
+      info:
+        column: 25
+        row: 1
+    - duration: 100
+      info:
+        column: 26
+        row: 1
+    - duration: 100
+      info:
+        column: 0
+        row: 2
+    - duration: 100
+      info:
+        column: 1
+        row: 2
+    - duration: 100
+      info:
+        column: 2
+        row: 2
+    - duration: 100
+      info:
+        column: 3
+        row: 2
+    - duration: 100
+      info:
+        column: 4
+        row: 2
+    - duration: 100
+      info:
+        column: 5
+        row: 2
+    - duration: 100
+      info:
+        column: 6
+        row: 2
+    - duration: 100
+      info:
+        column: 7
+        row: 2
+    - duration: 100
+      info:
+        column: 8
+        row: 2
+    - duration: 100
+      info:
+        column: 8
+        row: 1
+    - duration: 100
+      info:
+        column: 7
+        row: 1
+    - duration: 100
+      info:
+        column: 6
+        row: 1
+    - duration: 100
+      info:
+        column: 5
+        row: 1
+    - duration: 100
+      info:
+        column: 4
+        row: 1
+    - duration: 100
+      info:
+        column: 3
+        row: 1
+    - duration: 100
+      info:
+        column: 2
+        row: 1
+    - duration: 100
+      info:
+        column: 1
+        row: 1
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: Atom
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 17
+        row: 8
+    - duration: 100
+      info:
+        column: 18
+        row: 8
+    - duration: 100
+      info:
+        column: 19
+        row: 8
+    - duration: 300
+      info:
+        column: 20
+        row: 8
+    - duration: 100
+      info:
+        column: 21
+        row: 8
+    - duration: 100
+      info:
+        column: 22
+        row: 8
+    - duration: 300
+      info:
+        column: 23
+        row: 8
+    - duration: 100
+      info:
+        column: 24
+        row: 8
+    - duration: 100
+      info:
+        column: 25
+        row: 8
+    - duration: 300
+      info:
+        column: 26
+        row: 8
+    - duration: 100
+      info:
+        column: 0
+        row: 9
+    - duration: 100
+      info:
+        column: 1
+        row: 9
+    - duration: 300
+      info:
+        column: 2
+        row: 9
+    - duration: 100
+      info:
+        column: 3
+        row: 9
+    - duration: 100
+      info:
+        column: 4
+        row: 9
+    - duration: 300
+      info:
+        column: 5
+        row: 9
+    - duration: 100
+      info:
+        column: 6
+        row: 9
+    - duration: 100
+      info:
+        column: 7
+        row: 9
+    - duration: 300
+      info:
+        column: 8
+        row: 9
+    - duration: 100
+      info:
+        column: 9
+        row: 9
+    - duration: 100
+      info:
+        column: 10
+        row: 9
+    - duration: 300
+      info:
+        column: 11
+        row: 9
+    - duration: 100
+      info:
+        column: 12
+        row: 9
+    - duration: 100
+      info:
+        column: 13
+        row: 9
+    - duration: 300
+      info:
+        column: 14
+        row: 9
+    - duration: 100
+      info:
+        column: 15
+        row: 9
+    - duration: 100
+      info:
+        column: 16
+        row: 9
+    - duration: 300
+      info:
+        column: 17
+        row: 9
+    - duration: 100
+      info:
+        column: 18
+        row: 9
+    - duration: 100
+      info:
+        column: 19
+        row: 9
+    - duration: 300
+      info:
+        column: 20
+        row: 9
+    - duration: 100
+      info:
+        column: 21
+        row: 9
+    - duration: 100
+      info:
+        column: 22
+        row: 9
+    - duration: 300
+      info:
+        column: 23
+        row: 9
+    - duration: 100
+      info:
+        column: 24
+        row: 9
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 9
+        row: 2
+    - duration: 100
+      info:
+        column: 10
+        row: 2
+    - duration: 900
+      info:
+        column: 11
+        row: 2
+    - duration: 100
+      info:
+        column: 10
+        row: 2
+    - duration: 100
+      info:
+        column: 9
+        row: 2
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: Loiter
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 17
+        row: 8
+    - duration: 100
+      info:
+        column: 18
+        row: 8
+    - duration: 100
+      info:
+        column: 19
+        row: 8
+    - duration: 300
+      info:
+        column: 20
+        row: 8
+    - duration: 100
+      info:
+        column: 21
+        row: 8
+    - duration: 100
+      info:
+        column: 22
+        row: 8
+    - duration: 300
+      info:
+        column: 23
+        row: 8
+    - duration: 100
+      info:
+        column: 24
+        row: 8
+    - duration: 100
+      info:
+        column: 25
+        row: 8
+    - duration: 300
+      info:
+        column: 26
+        row: 8
+    - duration: 100
+      info:
+        column: 0
+        row: 9
+    - duration: 100
+      info:
+        column: 1
+        row: 9
+    - duration: 300
+      info:
+        column: 2
+        row: 9
+    - duration: 100
+      info:
+        column: 3
+        row: 9
+    - duration: 100
+      info:
+        column: 4
+        row: 9
+    - duration: 300
+      info:
+        column: 5
+        row: 9
+    - duration: 100
+      info:
+        column: 6
+        row: 9
+    - duration: 100
+      info:
+        column: 7
+        row: 9
+    - duration: 300
+      info:
+        column: 8
+        row: 9
+    - duration: 100
+      info:
+        column: 9
+        row: 9
+    - duration: 100
+      info:
+        column: 10
+        row: 9
+    - duration: 300
+      info:
+        column: 11
+        row: 9
+    - duration: 100
+      info:
+        column: 12
+        row: 9
+    - duration: 100
+      info:
+        column: 13
+        row: 9
+    - duration: 0
+      info:
+        column: 14
+        row: 9
+    - duration: 100
+      info:
+        column: 15
+        row: 9
+    - duration: 100
+      info:
+        column: 16
+        row: 9
+    - duration: 300
+      info:
+        column: 17
+        row: 9
+    - duration: 100
+      info:
+        column: 18
+        row: 9
+    - duration: 100
+      info:
+        column: 19
+        row: 9
+    - duration: 300
+      info:
+        column: 20
+        row: 9
+    - duration: 100
+      info:
+        column: 21
+        row: 9
+    - duration: 100
+      info:
+        column: 22
+        row: 9
+    - duration: 300
+      info:
+        column: 23
+        row: 9
+    - duration: 100
+      info:
+        column: 24
+        row: 9
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: SideToSide
+  - frames:
+    - duration: 100
+      info:
+        column: 16
+        row: 26
+    - duration: 100
+      info:
+        column: 17
+        row: 26
+    - duration: 100
+      info:
+        column: 18
+        row: 26
+    - duration: 100
+      info:
+        column: 19
+        row: 26
+    - duration: 100
+      info:
+        column: 20
+        row: 26
+    - duration: 100
+      info:
+        column: 21
+        row: 26
+    - duration: 100
+      info:
+        column: 22
+        row: 26
+    - duration: 100
+      info:
+        column: 23
+        row: 26
+    - duration: 100
+      info:
+        column: 24
+        row: 26
+    - duration: 100
+      info:
+        column: 25
+        row: 26
+    - duration: 100
+      info:
+        column: 26
+        row: 26
+    - duration: 100
+      info:
+        column: 0
+        row: 27
+    - duration: 100
+      info:
+        column: 1
+        row: 27
+    - duration: 100
+      info:
+        column: 2
+        row: 27
+    - duration: 100
+      info:
+        column: 3
+        row: 27
+    - duration: 100
+      info:
+        column: 4
+        row: 27
+    - duration: 100
+      info:
+        column: 5
+        row: 27
+    - duration: 100
+      info:
+        column: 6
+        row: 27
+    - duration: 100
+      info:
+        column: 7
+        row: 27
+    name: HeadScratch
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 24
+        row: 32
+    - duration: 100
+      info:
+        column: 25
+        row: 32
+    - duration: 100
+      info:
+        column: 26
+        row: 32
+    - duration: 100
+      info:
+        column: 0
+        row: 33
+    - duration: 100
+      info:
+        column: 1
+        row: 33
+    - duration: 150
+      info:
+        column: 2
+        row: 33
+    - duration: 100
+      info:
+        column: 3
+        row: 33
+    - duration: 100
+      info:
+        column: 4
+        row: 33
+    - duration: 100
+      info:
+        column: 5
+        row: 33
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: FingerTap
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 20
+        row: 22
+    - duration: 100
+      info:
+        column: 21
+        row: 22
+    - duration: 100
+      info:
+        column: 22
+        row: 22
+    - duration: 100
+      info:
+        column: 23
+        row: 22
+    - duration: 100
+      info:
+        column: 24
+        row: 22
+    - duration: 100
+      info:
+        column: 25
+        row: 22
+    - duration: 100
+      info:
+        column: 26
+        row: 22
+    - duration: 400
+      info:
+        column: 0
+        row: 23
+    - duration: 100
+      info:
+        column: 1
+        row: 23
+    - duration: 100
+      info:
+        column: 2
+        row: 23
+    - duration: 100
+      info:
+        column: 3
+        row: 23
+    - duration: 100
+      info:
+        column: 4
+        row: 23
+    - duration: 100
+      info:
+        column: 5
+        row: 23
+    - duration: 100
+      info:
+        column: 6
+        row: 23
+    - duration: 100
+      info:
+        column: 7
+        row: 23
+    - duration: 100
+      info:
+        column: 8
+        row: 23
+    - duration: 100
+      info:
+        column: 9
+        row: 23
+    - duration: 100
+      info:
+        column: 10
+        row: 23
+    - duration: 100
+      info:
+        column: 11
+        row: 23
+    - duration: 100
+      info:
+        column: 12
+        row: 23
+    - duration: 100
+      info:
+        column: 13
+        row: 23
+    - duration: 100
+      info:
+        column: 14
+        row: 23
+    - duration: 100
+      info:
+        column: 15
+        row: 23
+    - duration: 100
+      info:
+        column: 16
+        row: 23
+    - duration: 100
+      info:
+        column: 17
+        row: 23
+    - duration: 100
+      info:
+        column: 18
+        row: 23
+    - duration: 200
+      info:
+        column: 19
+        row: 23
+    - duration: 200
+      info:
+        column: 20
+        row: 23
+    - duration: 200
+      info:
+        column: 21
+        row: 23
+    - duration: 200
+      info:
+        column: 22
+        row: 23
+    - duration: 200
+      info:
+        column: 23
+        row: 23
+    - duration: 200
+      info:
+        column: 24
+        row: 23
+    - duration: 200
+      info:
+        column: 25
+        row: 23
+    - duration: 200
+      info:
+        column: 26
+        row: 23
+    - duration: 200
+      info:
+        column: 0
+        row: 24
+    - duration: 200
+      info:
+        column: 1
+        row: 24
+    - duration: 200
+      info:
+        column: 2
+        row: 24
+    - duration: 100
+      info:
+        column: 3
+        row: 24
+    - duration: 100
+      info:
+        column: 4
+        row: 24
+    - duration: 100
+      info:
+        column: 5
+        row: 24
+    - duration: 1200
+      info:
+        column: 6
+        row: 24
+    - duration: 100
+      info:
+        column: 7
+        row: 24
+    - duration: 100
+      info:
+        column: 8
+        row: 24
+    - duration: 100
+      info:
+        column: 9
+        row: 24
+    - duration: 100
+      info:
+        column: 10
+        row: 24
+    - duration: 100
+      info:
+        column: 11
+        row: 24
+    - duration: 100
+      info:
+        column: 12
+        row: 24
+    - duration: 400
+      info:
+        column: 13
+        row: 24
+    - duration: 100
+      info:
+        column: 14
+        row: 24
+    - duration: 100
+      info:
+        column: 15
+        row: 24
+    - duration: 100
+      info:
+        column: 16
+        row: 24
+    - duration: 100
+      info:
+        column: 17
+        row: 24
+    - duration: 100
+      info:
+        column: 18
+        row: 24
+    - duration: 100
+      info:
+        column: 19
+        row: 24
+    - duration: 100
+      info:
+        column: 20
+        row: 24
+    - duration: 600
+      info:
+        column: 21
+        row: 24
+    - duration: 300
+      info:
+        column: 22
+        row: 24
+    - duration: 300
+      info:
+        column: 23
+        row: 24
+    - duration: 300
+      info:
+        column: 24
+        row: 24
+    - duration: 100
+      info:
+        column: 25
+        row: 24
+    - duration: 100
+      info:
+        column: 26
+        row: 24
+    - duration: 100
+      info:
+        column: 0
+        row: 25
+    - duration: 100
+      info:
+        column: 1
+        row: 25
+    - duration: 100
+      info:
+        column: 2
+        row: 25
+    - duration: 100
+      info:
+        column: 3
+        row: 25
+    - duration: 100
+      info:
+        column: 4
+        row: 25
+    - duration: 100
+      info:
+        column: 5
+        row: 25
+    - duration: 200
+      info:
+        column: 6
+        row: 25
+    - duration: 200
+      info:
+        column: 7
+        row: 25
+    - duration: 200
+      info:
+        column: 8
+        row: 25
+    - duration: 200
+      info:
+        column: 9
+        row: 25
+    - duration: 200
+      info:
+        column: 10
+        row: 25
+    - duration: 200
+      info:
+        column: 11
+        row: 25
+    - duration: 200
+      info:
+        column: 12
+        row: 25
+    - duration: 100
+      info:
+        column: 13
+        row: 25
+    - duration: 100
+      info:
+        column: 14
+        row: 25
+    - duration: 100
+      info:
+        column: 15
+        row: 25
+    - duration: 100
+      info:
+        column: 16
+        row: 25
+    - duration: 100
+      info:
+        column: 17
+        row: 25
+    - duration: 100
+      info:
+        column: 18
+        row: 25
+    - duration: 100
+      info:
+        column: 19
+        row: 25
+    - duration: 300
+      info:
+        column: 20
+        row: 25
+    - duration: 100
+      info:
+        column: 21
+        row: 25
+    - duration: 100
+      info:
+        column: 22
+        row: 25
+    - duration: 100
+      info:
+        column: 23
+        row: 25
+    - duration: 100
+      info:
+        column: 24
+        row: 25
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: Snooze
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    - duration: 100
+      info:
+        column: 9
+        row: 2
+    - duration: 100
+      info:
+        column: 10
+        row: 2
+    - duration: 900
+      info:
+        column: 11
+        row: 2
+    - duration: 100
+      info:
+        column: 10
+        row: 2
+    - duration: 100
+      info:
+        column: 9
+        row: 2
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: EyeBrowRaise
 sprite_sheet_info:
   columns: 27
   rows: 34
