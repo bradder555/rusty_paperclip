@@ -1,7 +1,7 @@
 use super::models::QuestionResponse;
 
 pub struct GuiState {
-    waiting: bool,
-    current_question: String,
-    past_question_answers: Vec<QuestionResponse>
+    pub waiting: bool,
+    pub current_question: String,
+    pub past_question_answers: Vec<QuestionResponse>
 }

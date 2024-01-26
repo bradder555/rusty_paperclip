@@ -36,7 +36,7 @@ pub struct AnimationConfig{
 
 #[derive(serde::Deserialize, serde::Serialize)]
 pub enum AnimationServiceMode{
-    idle,
-    active
+    Idle,
+    Active
 }
 
