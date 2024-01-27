@@ -932,6 +932,7 @@ dependencies = [
  "env_logger",
  "image",
  "log",
+ "rand",
  "serde",
  "serde_yaml",
  "tokio",

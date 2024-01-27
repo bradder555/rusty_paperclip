@@ -1,11 +1,11 @@
+use std::collections::HashMap;
 use std::ops::DerefMut;
 
-use std::time::{SystemTime, Duration};
+use std::time::{Duration};
 use std::sync::Arc;
 use std::sync::Mutex;
-use egui::{ColorImage, TextureHandle};
 use crate::actions::DispatchActions;
-use crate::animation::models::SpriteSheetInfo;
+use crate::animation::models::AnimationServiceMode;
 use crate::animation::service::AnimationService;
 use tokio::sync::broadcast;
 
@@ -13,25 +13,13 @@ use tokio::sync::broadcast;
 pub struct TemplateAppShared{
     label: String,
     value: f32,
-    sprite_sheet_info: SpriteSheetInfo
+    mode: AnimationServiceMode
 }
 
 pub struct TemplateApp {
     state: Arc<Mutex<TemplateAppShared>>,
-    image: TextureHandle
+    animations: HashMap<String, AnimationService>
 }
-
-fn load_image_as_color_image(filepath:&str) -> ColorImage {
-    let image = image::io::Reader::open(filepath)
-    .expect("problem loading image")
-    .decode()
-    .expect("problem decoding image, panic");
-
-    let im_buff = image.to_rgba8();
-    let pix = im_buff.as_flat_samples();
-    ColorImage::from_rgba_unmultiplied([im_buff.width() as _, im_buff.height() as _], pix.as_slice())
-}
-
 
 
 impl TemplateApp {
@@ -48,12 +36,6 @@ impl TemplateApp {
             }
         );
         
-        let clippit_animation = AnimationService::new(
-            "./assets/animations.yaml", 
-            sndr.subscribe(), 
-            sndr.clone()
-        );
-
         let more_senders = sndr.clone();
         tokio::spawn(
             async move {
@@ -69,21 +51,27 @@ impl TemplateApp {
                 TemplateAppShared {
                     label: "hello is label".to_owned(),
                     value: 3.0,
-                    sprite_sheet_info: SpriteSheetInfo{
-                        columns: 27,
-                        rows: 34
-                    },
+                    mode: AnimationServiceMode::Idle
                 }
             )
         );
 
+        let clippit_animation = AnimationService::new(
+            cc.egui_ctx.clone(),
+            "./assets/animations.yaml", 
+            "./assets/clippy.png",
+            sndr.clone()
+        );
+        clippit_animation.start();
+        let mut ani : HashMap<String, AnimationService> = HashMap::new();
+        ani.insert(
+            "clippit".to_string(),
+            clippit_animation
+        );
+
         let app = TemplateApp{
             state: shared.clone(),
-            image: cc.egui_ctx.load_texture(
-                "clippit_sprite_sheet", 
-                load_image_as_color_image("./assets/clippy.png"), 
-                Default::default()
-            )
+            animations: ani
         };
 
         let ctx_rp = cc.egui_ctx.clone();
@@ -119,7 +107,8 @@ impl eframe::App for TemplateApp {
         // Put your widgets into a `SidePanel`, `TopPanel`, `CentralPanel`, `Window` or `Area`.
         // For inspiration and more examples, go to https://emilk.github.io/egui
 
-        let mut state = self.state.lock().unwrap().deref_mut().clone();
+        //let mut state = self.state.lock().unwrap().deref_mut().clone();
+        let mut state = self.state.lock().unwrap();
         
         egui::TopBottomPanel::top("top_panel").show(ctx, |ui| {
 
@@ -140,39 +129,13 @@ impl eframe::App for TemplateApp {
         });
         
 
-        let increment = std::time::SystemTime::now().duration_since(SystemTime::UNIX_EPOCH).unwrap().as_millis() as usize ;
-        let increment = increment / 100;
-        
-        let im_size = self.image.size_vec2();
-        let total_cycle : usize = increment.rem_euclid(state.sprite_sheet_info.columns * state.sprite_sheet_info.rows);
-        let hoz_pos = increment.rem_euclid(state.sprite_sheet_info.columns);
-        let vert_pos = total_cycle / state.sprite_sheet_info.columns;
-        
         egui::CentralPanel::default().show(ctx, |ui| {
                 
-
-                let clippy_width = (im_size.x as usize) / state.sprite_sheet_info.columns;
-                let clippy_height = (im_size.y as usize) / state.sprite_sheet_info.rows;
-                let vert_scroll_off = 1.0 + (vert_pos * clippy_height) as f32;
-                let hoz_scroll_off = 1.0 + (hoz_pos * clippy_width) as f32;
-                //dbg!(hoz_scroll_off);
-
-                egui::ScrollArea::both()
-                    .max_height((clippy_height - 5) as f32 )
-                    .max_width((clippy_width - 5) as f32 )
-                    .scroll_bar_visibility(egui::scroll_area::ScrollBarVisibility::AlwaysHidden)
-                    .enable_scrolling(false)
-                    .auto_shrink(false)
-                    .vertical_scroll_offset(vert_scroll_off)
-                    .horizontal_scroll_offset(hoz_scroll_off)
-                    .show(ui, |ui|{
-                    ui.add(
-                        egui::Image::from_texture(&self.image)
-                    );
-                });
+            let clippit_animation = self.animations.get("clippit").unwrap();
+            clippit_animation.render_animation(ui);
 
             // The central panel the region left after adding TopPanel's and SidePanel's
-            ui.heading("eframe template");
+            ui.heading(clippit_animation.get_current_animation_name());
 
             ui.horizontal(|ui| {
                 ui.label("Write something: ");
@@ -186,6 +149,16 @@ impl eframe::App for TemplateApp {
                 self.value += 1.0;
             }
             */
+
+            if ui.button("switch_mode").clicked(){
+                state.mode = 
+                    match state.mode {
+                        AnimationServiceMode::Idle => AnimationServiceMode::Active,
+                        AnimationServiceMode::Active => AnimationServiceMode::Idle,
+                    };
+                    dbg!(&state.mode);
+                clippit_animation.set_mode(state.mode.clone());
+            }
 
             ui.separator();
 
