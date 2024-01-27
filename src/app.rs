@@ -1,7 +1,6 @@
 use std::collections::HashMap;
-use std::ops::DerefMut;
 
-use std::time::{Duration};
+use std::time::Duration;
 use std::sync::Arc;
 use std::sync::Mutex;
 use crate::actions::DispatchActions;
@@ -29,23 +28,21 @@ impl TemplateApp {
         let (sndr, _) = broadcast::channel::<DispatchActions>(50);
         let mut receiver = sndr.subscribe();
 
+        let ctx = cc.egui_ctx.clone();
         tokio::spawn(
             async move {
-                let v = receiver.recv().await.unwrap();
-                dbg!(v);
+                loop{
+                    let v = receiver.recv().await.unwrap();
+                    
+                    match v {
+                        DispatchActions::UpdateFrame => ctx.request_repaint(),
+                        DispatchActions::AskQuestion(question) => println!("asked {}", question),
+                        DispatchActions::RespondToQuestion(answer) => println!("{:?}",answer)
+                    }
+                }
             }
         );
         
-        let more_senders = sndr.clone();
-        tokio::spawn(
-            async move {
-                tokio::time::sleep(Duration::from_millis(5000)).await;
-                let _ = more_senders.send(
-                    DispatchActions::AskQuestion("What is my purpose?".to_owned())
-                );
-            }
-        );
-
         let shared = Arc::new(
             Mutex::new(
                 TemplateAppShared {
@@ -73,16 +70,6 @@ impl TemplateApp {
             state: shared.clone(),
             animations: ani
         };
-
-        let ctx_rp = cc.egui_ctx.clone();
-        tokio::spawn(
-            async move {
-                loop {
-                    tokio::time::sleep(Duration::from_millis(50)).await;
-                    ctx_rp.request_repaint();
-                }
-            }
-        );
 
         let ctx_rp = cc.egui_ctx.clone();
         let _shared = shared.clone();
@@ -132,7 +119,11 @@ impl eframe::App for TemplateApp {
         egui::CentralPanel::default().show(ctx, |ui| {
                 
             let clippit_animation = self.animations.get("clippit").unwrap();
-            clippit_animation.render_animation(ui);
+            for i in 0..3 {
+                ui.push_id(i, |ui| {
+                    clippit_animation.render_animation(ui);
+                });
+            }
 
             // The central panel the region left after adding TopPanel's and SidePanel's
             ui.heading(clippit_animation.get_current_animation_name());
