@@ -8,12 +8,18 @@ async fn main() -> eframe::Result<()> {
     let native_options = eframe::NativeOptions {
         viewport: egui::ViewportBuilder::default()
             .with_inner_size([400.0, 300.0])
-            .with_min_inner_size([300.0, 220.0]),
+            .with_min_inner_size([300.0, 220.0])
+            .with_always_on_top()
+            .with_close_button(false)
+            .with_decorations(false)
+            .with_transparent(true)
+            .with_drag_and_drop(true)
+            ,
         ..Default::default()
     };
     eframe::run_native(
-        "eframe template",
+        "Clippit Gpt",
         native_options,
-        Box::new(|cc| Box::new(eframe_template::TemplateApp::new(cc))),
+        Box::new(|cc| Box::new(clippit_gpt::ClippitGptApp::new(cc))),
     )
 }

@@ -1,27 +1,34 @@
 use std::collections::HashMap;
 
+use std::ops::DerefMut;
 use std::time::Duration;
 use std::sync::Arc;
 use std::sync::Mutex;
 use crate::actions::DispatchActions;
 use crate::animation::models::AnimationServiceMode;
 use crate::animation::service::AnimationService;
+use egui::Color32;
+use egui::Id;
+use egui::Sense;
+use egui::Stroke;
+use egui::ViewportCommand;
+use egui::Visuals;
 use tokio::sync::broadcast;
 
 #[derive(Clone)]
-pub struct TemplateAppShared{
+pub struct ClippitGptAppShared{
     label: String,
     value: f32,
     mode: AnimationServiceMode
 }
 
-pub struct TemplateApp {
-    state: Arc<Mutex<TemplateAppShared>>,
+pub struct ClippitGptApp {
+    state: Arc<Mutex<ClippitGptAppShared>>,
     animations: HashMap<String, AnimationService>
 }
 
 
-impl TemplateApp {
+impl ClippitGptApp {
     /// Called once before the first frame.
     pub fn new(cc: &eframe::CreationContext<'_>) -> Self {
 
@@ -45,8 +52,8 @@ impl TemplateApp {
         
         let shared = Arc::new(
             Mutex::new(
-                TemplateAppShared {
-                    label: "hello is label".to_owned(),
+                ClippitGptAppShared {
+                    label: "Ask me something!".to_owned(),
                     value: 3.0,
                     mode: AnimationServiceMode::Idle
                 }
@@ -66,7 +73,7 @@ impl TemplateApp {
             clippit_animation
         );
 
-        let app = TemplateApp{
+        let app = ClippitGptApp{
             state: shared.clone(),
             animations: ani
         };
@@ -88,59 +95,34 @@ impl TemplateApp {
     }
 }
 
-impl eframe::App for TemplateApp {
+impl eframe::App for ClippitGptApp {
+    fn clear_color(&self, _visuals: &egui::Visuals) -> [f32; 4] {
+        egui::Rgba::TRANSPARENT.to_array() // Make sure we don't paint anything behind the rounded corners
+    }
+
     /// Called each time the UI needs repainting, which may be many times per second.
-    fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
+    fn update(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
         // Put your widgets into a `SidePanel`, `TopPanel`, `CentralPanel`, `Window` or `Area`.
         // For inspiration and more examples, go to https://emilk.github.io/egui
 
         //let mut state = self.state.lock().unwrap().deref_mut().clone();
         let mut state = self.state.lock().unwrap();
-        
-        egui::TopBottomPanel::top("top_panel").show(ctx, |ui| {
 
-            egui::menu::bar(ui, |ui| {
-                // NOTE: no File->Quit on web pages!
-                let is_web = cfg!(target_arch = "wasm32");
-                if !is_web {
-                    ui.menu_button("File", |ui| {
-                        if ui.button("Quit").clicked() {
-                            ctx.send_viewport_cmd(egui::ViewportCommand::Close);
-                        }
-                    });
-                    ui.add_space(16.0);
-                }
+        let panel_frame = egui::Frame {
+            fill: Color32::TRANSPARENT,
+            stroke: Stroke::new(10.0, Color32::TRANSPARENT),
+            ..Default::default()
+        };
 
-                egui::widgets::global_dark_light_mode_buttons(ui);
-            });
-        });
-        
-
-        egui::CentralPanel::default().show(ctx, |ui| {
-                
-            let clippit_animation = self.animations.get("clippit").unwrap();
-            for i in 0..3 {
-                ui.push_id(i, |ui| {
-                    clippit_animation.render_animation(ui);
-                });
+        egui::CentralPanel::default().frame(panel_frame).show(ctx, |ui| {
+            if ui.interact(ui.max_rect(), Id::new("window-drag"), Sense::click()).is_pointer_button_down_on() {
+                ui.ctx().send_viewport_cmd(ViewportCommand::StartDrag);
             }
-
-            // The central panel the region left after adding TopPanel's and SidePanel's
-            ui.heading(clippit_animation.get_current_animation_name());
-
-            ui.horizontal(|ui| {
-                ui.label("Write something: ");
-                ui.text_edit_singleline(&mut state.label);
-            });
-
             
-            ui.add(egui::Slider::new(&mut state.value, 0.0..=10.0).text("value"));
-            /*
-            if ui.button("Increment").clicked() {
-                self.value += 1.0;
-            }
-            */
-
+            let clippit_animation = self.animations.get("clippit").unwrap();
+            ui.horizontal_centered(|ui|{
+                clippit_animation.render_animation(ui);
+            });
             if ui.button("switch_mode").clicked(){
                 state.mode = 
                     match state.mode {
@@ -151,33 +133,16 @@ impl eframe::App for TemplateApp {
                 clippit_animation.set_mode(state.mode.clone());
             }
 
-            ui.separator();
+            // The central panel the region left after adding TopPanel's and SidePanel's
+            ui.heading(clippit_animation.get_current_animation_name());
 
-            ui.add(egui::github_link_file!(
-                "https://github.com/emilk/eframe_template/blob/master/",
-                "Source code."
-            ));
-
-            ui.with_layout(egui::Layout::bottom_up(egui::Align::LEFT), |ui| {
-                powered_by_egui_and_eframe(ui);
-                egui::warn_if_debug_build(ui);
+            ui.horizontal(|ui| {
+            
+                ui.text_edit_singleline(&mut state.label);
             });
-            //ui.ctx().request_repaint_after(Duration::from_millis(10));
+
+            egui::warn_if_debug_build(ui);
         });
         
     }
-}
-
-fn powered_by_egui_and_eframe(ui: &mut egui::Ui) {
-    ui.horizontal(|ui| {
-        ui.spacing_mut().item_spacing.x = 0.0;
-        ui.label("Powered by ");
-        ui.hyperlink_to("egui", "https://github.com/emilk/egui");
-        ui.label(" and ");
-        ui.hyperlink_to(
-            "eframe",
-            "https://github.com/emilk/egui/tree/master/crates/eframe",
-        );
-        ui.label(".");
-    });
 }

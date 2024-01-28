@@ -88,9 +88,8 @@ fn run(
         i_s.current_frame_index += 1;
         drop(i_s); // free up mutex then wait for the duration
         let duration = frame_info.duration.clone();
-        thread::sleep(Duration::from_millis(duration as u64));
         let _ = sndr.send(DispatchActions::UpdateFrame);
-        
+        thread::sleep(Duration::from_millis(duration as u64));
     }
 }
 

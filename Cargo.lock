@@ -648,6 +648,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "clippit_gpt"
+version = "0.1.0"
+dependencies = [
+ "eframe",
+ "egui",
+ "egui_extras",
+ "env_logger",
+ "image",
+ "log",
+ "rand",
+ "serde",
+ "serde_yaml",
+ "tokio",
+]
+
+[[package]]
 name = "cocoa"
 version = "0.24.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -920,23 +936,6 @@ dependencies = [
  "web-sys",
  "winapi",
  "winit",
-]
-
-[[package]]
-name = "eframe_template"
-version = "0.1.0"
-dependencies = [
- "eframe",
- "egui",
- "egui_extras",
- "env_logger",
- "image",
- "log",
- "rand",
- "serde",
- "serde_yaml",
- "tokio",
- "wasm-bindgen-futures",
 ]
 
 [[package]]
