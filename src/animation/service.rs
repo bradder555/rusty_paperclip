@@ -191,7 +191,7 @@ impl AnimationService {
             ui.add(
                 egui::Image::from_texture(&self.texture_handle)
             );
-        });        
+        })     
     }
 
 

@@ -9,6 +9,8 @@ use crate::animation::models::AnimationServiceMode;
 use crate::animation::service::AnimationService;
 use egui::Color32;
 use egui::Id;
+use egui::Margin;
+use egui::Rounding;
 use egui::Sense;
 use egui::Stroke;
 use egui::ViewportCommand;
@@ -91,6 +93,8 @@ impl ClippitGptApp {
             }
         );
 
+        cc.egui_ctx.set_visuals(egui::Visuals::dark()); 
+
         app
     }
 }
@@ -109,8 +113,10 @@ impl eframe::App for ClippitGptApp {
         let mut state = self.state.lock().unwrap();
 
         let panel_frame = egui::Frame {
-            fill: Color32::TRANSPARENT,
-            stroke: Stroke::new(10.0, Color32::TRANSPARENT),
+            fill: Color32::from_rgba_premultiplied(0, 0, 0, 100),
+            stroke: Stroke::new(1.0, Color32::BLACK),
+            rounding: Rounding::same(10.0),
+            inner_margin: Margin::same(30.0),
             ..Default::default()
         };
 
@@ -120,9 +126,7 @@ impl eframe::App for ClippitGptApp {
             }
             
             let clippit_animation = self.animations.get("clippit").unwrap();
-            ui.horizontal_centered(|ui|{
-                clippit_animation.render_animation(ui);
-            });
+            clippit_animation.render_animation(ui);
             if ui.button("switch_mode").clicked(){
                 state.mode = 
                     match state.mode {
@@ -140,8 +144,9 @@ impl eframe::App for ClippitGptApp {
             
                 ui.text_edit_singleline(&mut state.label);
             });
-
+            
             egui::warn_if_debug_build(ui);
+            
         });
         
     }
