@@ -1,6 +1,5 @@
 use std::collections::HashMap;
 
-use std::ops::DerefMut;
 use std::time::Duration;
 use std::sync::Arc;
 use std::sync::Mutex;
@@ -14,7 +13,6 @@ use egui::Rounding;
 use egui::Sense;
 use egui::Stroke;
 use egui::ViewportCommand;
-use egui::Visuals;
 use tokio::sync::broadcast;
 
 #[derive(Clone)]

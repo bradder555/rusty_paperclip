@@ -17,6 +17,7 @@ use tokio::sync::broadcast::Sender;
 
 use rand::seq::SliceRandom;
 use rand::thread_rng;
+use egui::scroll_area::ScrollAreaOutput;
 
 
 #[derive(Clone)]
@@ -171,7 +172,7 @@ impl AnimationService {
         state.current_animation.as_ref().unwrap().name.clone()
     }
 
-    pub fn render_animation(&self, ui: &mut Ui){
+    pub fn render_animation(&self, ui: &mut Ui) -> ScrollAreaOutput<()>{
         let state = self.state.lock().unwrap();
         let frame = state.current_frame_info.clone().unwrap_or_default();
         drop(state);
