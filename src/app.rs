@@ -6,19 +6,25 @@ use std::sync::Mutex;
 use crate::actions::DispatchActions;
 use crate::animation::models::AnimationServiceMode;
 use crate::animation::service::AnimationService;
+use egui::text;
 use egui::Color32;
 use egui::Id;
+use egui::Layout;
 use egui::Margin;
 use egui::Rounding;
 use egui::Sense;
+use egui::Separator;
 use egui::Stroke;
+use egui::Ui;
 use egui::ViewportCommand;
+use egui_extras::Size;
+use egui_extras::Strip;
+use egui_extras::StripBuilder;
 use tokio::sync::broadcast;
 
 #[derive(Clone)]
 pub struct ClippitGptAppShared{
-    label: String,
-    value: f32,
+    question_field: String,
     mode: AnimationServiceMode
 }
 
@@ -53,8 +59,7 @@ impl ClippitGptApp {
         let shared = Arc::new(
             Mutex::new(
                 ClippitGptAppShared {
-                    label: "Ask me something!".to_owned(),
-                    value: 3.0,
+                    question_field: "".to_owned(),
                     mode: AnimationServiceMode::Idle
                 }
             )
@@ -85,13 +90,13 @@ impl ClippitGptApp {
                 loop {
                     tokio::time::sleep(Duration::from_millis(2000)).await;
                     let mut _shared = _shared.lock().unwrap();
-                    _shared.value += 1.0;
                     ctx_rp.request_repaint();
                 }
             }
-        );
-
-        cc.egui_ctx.set_visuals(egui::Visuals::dark()); 
+        ); 
+        let mut visuals = egui::Visuals::dark().clone();
+        visuals.override_text_color = Some(Color32::WHITE);
+        cc.egui_ctx.set_visuals(visuals); 
 
         app
     }
@@ -111,10 +116,11 @@ impl eframe::App for ClippitGptApp {
         let mut state = self.state.lock().unwrap();
 
         let panel_frame = egui::Frame {
-            fill: Color32::from_rgba_premultiplied(0, 0, 0, 100),
+            fill: Color32::from_rgba_premultiplied(0, 0, 0, 180),
             stroke: Stroke::new(1.0, Color32::BLACK),
-            rounding: Rounding::same(10.0),
+            rounding: Rounding::same(30.0),
             inner_margin: Margin::same(30.0),
+            outer_margin: Margin::same(10.0),
             ..Default::default()
         };
 
@@ -124,7 +130,28 @@ impl eframe::App for ClippitGptApp {
             }
             
             let clippit_animation = self.animations.get("clippit").unwrap();
-            clippit_animation.render_animation(ui);
+            ui.horizontal(|ui|{
+                StripBuilder::new(ui)
+                    .size(Size::remainder())
+                    .size(Size::exact(100.0))
+                    .horizontal(|mut strip|{
+                        strip.cell(|ui|{
+                            ui.label(clippit_animation.get_current_animation_name());
+                        });
+                        strip.strip(|builder|{
+                            builder
+                                .size(Size::exact(100.0))
+                                .vertical(|mut strip|{
+                                    strip.cell(|ui|{
+                                        clippit_animation.render_animation(ui);
+                                    })
+                                });
+                        });
+                    })
+                
+            });
+            
+            /*
             if ui.button("switch_mode").clicked(){
                 state.mode = 
                     match state.mode {
@@ -134,16 +161,49 @@ impl eframe::App for ClippitGptApp {
                     dbg!(&state.mode);
                 clippit_animation.set_mode(state.mode.clone());
             }
-
-            // The central panel the region left after adding TopPanel's and SidePanel's
-            ui.heading(clippit_animation.get_current_animation_name());
-
-            ui.horizontal(|ui| {
+            */
             
-                ui.text_edit_singleline(&mut state.label);
+            ui.label("Ask ClippitGPT Something:");
+            ui.horizontal(|ui| {
+                ui.add_enabled(
+                    if state.mode == AnimationServiceMode::Idle {true} else {false}, 
+                    |ui: &mut Ui| {
+                        ui.text_edit_singleline(&mut state.question_field  )
+                    }
+                );
+                ui.add_enabled(
+                    if state.mode == AnimationServiceMode::Idle {true} else {false}, 
+                    |ui: &mut Ui| {
+                        ui.button("Ask!")
+                    }
+                );
+            });
+
+            ui.label("Conversation History:");
+            egui::ScrollArea::both()
+            .scroll_bar_visibility(egui::scroll_area::ScrollBarVisibility::AlwaysVisible)
+            .hscroll(false)
+            .enable_scrolling(true)
+            // doesn't seem to make a difference
+            //.min_scrolled_height(10.0)
+            //.auto_shrink(false)
+            .show(ui, |ui|{
+                for i in 1..20  {
+                    //ui.vertical(|ui|{
+                        ui.label(format!("i'm a question {}", i));
+                        ui.with_layout(Layout::right_to_left(egui::Align::Max), |ui|{
+                            ui.colored_label(Color32::RED, format!("i'm a response {}", i));
+                        });
+                        ui.add(Separator::default());
+                        ui.add_space(10.0);
+                    // });
+                }
+                
             });
             
-            egui::warn_if_debug_build(ui);
+            ui.with_layout(Layout::left_to_right(egui::Align::Max), |ui| {
+                egui::warn_if_debug_build(ui);
+            }); 
             
         });
         
