@@ -1,3 +1,4 @@
+use std::io::Cursor;
 use std::sync::Arc;
 use std::sync::Mutex;
 
@@ -9,6 +10,7 @@ use super::models::AnimationFrame;
 use super::models::AnimationInfo;
 use super::models::AnimationServiceMode;
 use crate::actions::DispatchActions;
+use egui::Color32;
 use egui::ColorImage;
 use egui::Context;
 use egui::TextureHandle;
@@ -40,15 +42,24 @@ pub struct AnimationService {
     texture_handle: TextureHandle
 }
 
-fn load_image_as_color_image(filepath:&str) -> ColorImage {
-    let image = image::io::Reader::open(filepath)
-    .expect("problem loading image")
-    .decode()
-    .expect("problem decoding image, panic");
+fn load_image_as_color_image(bytes: &Vec<u8> ) -> ColorImage {
+    let mut c = Cursor::new(bytes);
+    c.set_position(0);
 
-    let im_buff = image.to_rgba8();
+    let im_buff = image::io::Reader::new(
+            &mut c
+        ).with_guessed_format()
+        .expect("can't guess format")
+        .decode()
+        .expect("can't decode image");
+
+    let im_buff = im_buff.to_rgba8();
     let pix = im_buff.as_flat_samples();
-    ColorImage::from_rgba_unmultiplied([im_buff.width() as _, im_buff.height() as _], pix.as_slice())
+    ColorImage::from_rgba_unmultiplied(
+        [im_buff.width() as _, 
+        im_buff.height() as _], 
+        pix.as_slice()
+    )
 }
 
 fn run(
@@ -98,16 +109,16 @@ impl AnimationService {
     /// Called once before the first frame.
     pub fn new(
         ctx: Context,
-        config_file : &str,
-        image_file: &str,
+        config_data :  String,
+        image_data: Vec<u8>,
         sndr : Sender<DispatchActions> 
     ) -> Self {
+        let config: AnimationConfig = serde_yaml::from_str(&config_data)
+            .expect("trouble reading config file");
 
-        let file = std::fs::File::open(config_file).expect("trouble reading config file");
-        let config : AnimationConfig = serde_yaml::from_reader(file).expect("trouble parsing config");
         let texture = ctx.load_texture(
             "clippit_sprite_sheet", 
-            load_image_as_color_image(image_file), 
+            load_image_as_color_image(&image_data), 
             Default::default()
         );
 

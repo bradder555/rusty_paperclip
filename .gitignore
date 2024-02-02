@@ -3,3 +3,5 @@
 
 .vscode
 .venv
+
+app_config.yaml

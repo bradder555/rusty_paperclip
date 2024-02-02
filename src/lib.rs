@@ -7,4 +7,6 @@ pub mod gui_state;
 pub mod state_updater;
 
 mod app;
+
+pub mod assistant;
 pub use app::ClippitGptApp;

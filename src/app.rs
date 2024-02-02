@@ -6,6 +6,7 @@ use std::sync::Mutex;
 use crate::actions::DispatchActions;
 use crate::animation::models::AnimationServiceMode;
 use crate::animation::service::AnimationService;
+use egui::include_image;
 use egui::text;
 use egui::Color32;
 use egui::Id;
@@ -65,10 +66,14 @@ impl ClippitGptApp {
             )
         );
 
+        let config_data = include_str!("../assets/animations.yaml");
+        let image_data = include_bytes!("../assets/clippy.png");
+        let image_data = Vec::from(image_data);
+        
         let clippit_animation = AnimationService::new(
             cc.egui_ctx.clone(),
-            "./assets/animations.yaml", 
-            "./assets/clippy.png",
+            config_data.to_owned(),
+            image_data,
             sndr.clone()
         );
         clippit_animation.start();
