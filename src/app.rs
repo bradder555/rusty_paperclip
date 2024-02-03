@@ -1,11 +1,18 @@
 use std::collections::HashMap;
 
+use std::env::current_dir;
+use std::env::current_exe;
+use std::env::set_current_dir;
+use std::fs;
+use std::path::PathBuf;
 use std::time::Duration;
 use std::sync::Arc;
 use std::sync::Mutex;
 use crate::actions::DispatchActions;
 use crate::animation::models::AnimationServiceMode;
 use crate::animation::service::AnimationService;
+use crate::assistant::AssistantService;
+use crate::models::AppConfig;
 
 
 use egui::Color32;
@@ -21,6 +28,7 @@ use egui::ViewportCommand;
 use egui_extras::Size;
 
 use egui_extras::StripBuilder;
+use image::EncodableLayout;
 use tokio::sync::broadcast;
 
 #[derive(Clone)]
@@ -38,6 +46,11 @@ pub struct ClippitGptApp {
 impl ClippitGptApp {
     /// Called once before the first frame.
     pub fn new(cc: &eframe::CreationContext<'_>) -> Self {
+        let current_exe_path = PathBuf::from(current_exe().unwrap());
+        let exe_folder = current_exe_path.as_path().parent().unwrap();
+        let config_path = exe_folder.join("config.yaml");
+        let config = fs::read_to_string(config_path).expect("config.yaml file not found!");
+        let config: AppConfig = serde_yaml::from_str(&config).expect("unable to parse config file!");
 
         let (sndr, _) = broadcast::channel::<DispatchActions>(50);
         let mut receiver = sndr.subscribe();
@@ -87,6 +100,13 @@ impl ClippitGptApp {
             state: shared.clone(),
             animations: ani
         };
+
+
+        AssistantService::new(
+            &config.open_ai_api_key,
+            &config.assistant_id,
+            sndr.clone()
+        );
 
         let ctx_rp = cc.egui_ctx.clone();
         let _shared = shared.clone();

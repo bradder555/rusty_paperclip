@@ -13,18 +13,14 @@ pub struct AssistantService {
     sender: Sender<DispatchActions>
 }
 
-
-fn get_assistant_id(_client: &Client, _assistant_name: String) -> String{
-    "ima assistant".to_owned()
-}
-
 impl AssistantService {
     /// Called once before the first frame.
-    pub fn new(
-        api_key: String,
+    pub fn new<'a,'b>(
+        api_key: &'a str, 
+        assistant_id: &'b str,
         sndr : Sender<DispatchActions>
-    ) -> Self {
-        let client = Client::new(api_key);
+    ) -> Self {     
+        let client = Client::new(api_key.to_string());
 
         let assistant_service = AssistantService{
             client: client,
