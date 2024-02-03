@@ -68,7 +68,7 @@ impl ClippitGptApp {
 
         let config_data = include_str!("../assets/animations.yaml");
         let image_data = include_bytes!("../assets/clippy.png");
-        let image_data = Vec::from(image_data.clone());
+        let image_data = image_data.to_vec();
         
         let clippit_animation = AnimationService::new(
             cc.egui_ctx.clone(),
@@ -186,22 +186,13 @@ impl eframe::App for ClippitGptApp {
 
             ui.label("Conversation History:");
             egui::ScrollArea::both()
-            .scroll_bar_visibility(egui::scroll_area::ScrollBarVisibility::AlwaysVisible)
             .hscroll(false)
-            .enable_scrolling(true)
-            // doesn't seem to make a difference
-            //.min_scrolled_height(10.0)
-            //.auto_shrink(false)
             .show(ui, |ui|{
                 for i in 1..20  {
-                    //ui.vertical(|ui|{
-                        ui.label(format!("i'm a question {}", i));
-                        ui.with_layout(Layout::right_to_left(egui::Align::Max), |ui|{
-                            ui.colored_label(Color32::RED, format!("i'm a response {}", i));
-                        });
-                        ui.add(Separator::default());
-                        ui.add_space(10.0);
-                    // });
+                    ui.label(format!("i'm a question {}", i));
+                    ui.colored_label(Color32::RED, format!("i'm a response {}", i));
+                    ui.add(Separator::default());
+                    ui.add_space(10.0);
                 }
                 
             });
