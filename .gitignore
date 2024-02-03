@@ -4,4 +4,4 @@
 .vscode
 .venv
 
-app_config.yaml
+config.yaml
