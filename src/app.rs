@@ -6,8 +6,8 @@ use std::sync::Mutex;
 use crate::actions::DispatchActions;
 use crate::animation::models::AnimationServiceMode;
 use crate::animation::service::AnimationService;
-use egui::include_image;
-use egui::text;
+
+
 use egui::Color32;
 use egui::Id;
 use egui::Layout;
@@ -19,7 +19,7 @@ use egui::Stroke;
 use egui::Ui;
 use egui::ViewportCommand;
 use egui_extras::Size;
-use egui_extras::Strip;
+
 use egui_extras::StripBuilder;
 use tokio::sync::broadcast;
 
@@ -68,7 +68,7 @@ impl ClippitGptApp {
 
         let config_data = include_str!("../assets/animations.yaml");
         let image_data = include_bytes!("../assets/clippy.png");
-        let image_data = Vec::from(image_data);
+        let image_data = Vec::from(image_data.clone());
         
         let clippit_animation = AnimationService::new(
             cc.egui_ctx.clone(),
@@ -113,7 +113,7 @@ impl eframe::App for ClippitGptApp {
     }
 
     /// Called each time the UI needs repainting, which may be many times per second.
-    fn update(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
+    fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         // Put your widgets into a `SidePanel`, `TopPanel`, `CentralPanel`, `Window` or `Area`.
         // For inspiration and more examples, go to https://emilk.github.io/egui
 

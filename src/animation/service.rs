@@ -10,7 +10,7 @@ use super::models::AnimationFrame;
 use super::models::AnimationInfo;
 use super::models::AnimationServiceMode;
 use crate::actions::DispatchActions;
-use egui::Color32;
+
 use egui::ColorImage;
 use egui::Context;
 use egui::TextureHandle;

@@ -1,4 +1,4 @@
-use std::{default, env, sync::{Arc, Mutex}};
+
 
 use openai_dive::v1::api::Client;
 use tokio::sync::broadcast::Sender;
@@ -14,7 +14,7 @@ pub struct AssistantService {
 }
 
 
-fn get_assistant_id(client: &Client, assistant_name: String) -> String{
+fn get_assistant_id(_client: &Client, _assistant_name: String) -> String{
     "ima assistant".to_owned()
 }
 
@@ -36,7 +36,7 @@ impl AssistantService {
 
     pub fn start(&self){
 
-        let client = self.client.clone();
+        let _client = self.client.clone();
         let sender = self.sender.clone();
         let mut receiver = self.sender.subscribe();
         tokio::spawn(async move {
