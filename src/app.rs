@@ -1,8 +1,6 @@
 use std::collections::HashMap;
 
-use std::env::current_dir;
 use std::env::current_exe;
-use std::env::set_current_dir;
 use std::fs;
 use std::path::PathBuf;
 use std::time::Duration;
@@ -28,8 +26,8 @@ use egui::ViewportCommand;
 use egui_extras::Size;
 
 use egui_extras::StripBuilder;
-use image::EncodableLayout;
 use tokio::sync::broadcast;
+use tokio::sync::broadcast::Sender;
 
 #[derive(Clone)]
 pub struct ClippitGptAppShared{
@@ -39,7 +37,9 @@ pub struct ClippitGptAppShared{
 
 pub struct ClippitGptApp {
     state: Arc<Mutex<ClippitGptAppShared>>,
-    animations: HashMap<String, AnimationService>
+    animations: HashMap<String, AnimationService>,
+    assistant: AssistantService,
+    mpmc_channel: Sender<DispatchActions>
 }
 
 
@@ -96,17 +96,13 @@ impl ClippitGptApp {
             clippit_animation
         );
 
-        let app = ClippitGptApp{
-            state: shared.clone(),
-            animations: ani
-        };
-
-
-        AssistantService::new(
-            &config.open_ai_api_key,
-            &config.assistant_id,
+        let mut ass_service = AssistantService::new(
+            config.open_ai_api_key.to_owned(),
+            config.assistant_id.to_owned(),
             sndr.clone()
         );
+
+        ass_service.start();
 
         let ctx_rp = cc.egui_ctx.clone();
         let _shared = shared.clone();
@@ -122,6 +118,13 @@ impl ClippitGptApp {
         let mut visuals = egui::Visuals::dark().clone();
         visuals.override_text_color = Some(Color32::WHITE);
         cc.egui_ctx.set_visuals(visuals); 
+
+        let app = ClippitGptApp{
+            state: shared.clone(),
+            animations: ani,
+            assistant: ass_service,
+            mpmc_channel: sndr.clone()
+        };
 
         app
     }
@@ -139,7 +142,8 @@ impl eframe::App for ClippitGptApp {
 
         //let mut state = self.state.lock().unwrap().deref_mut().clone();
         let mut state = self.state.lock().unwrap();
-
+        let sender = &self.mpmc_channel;
+        
         let panel_frame = egui::Frame {
             fill: Color32::from_rgba_premultiplied(0, 0, 0, 180),
             stroke: Stroke::new(1.0, Color32::BLACK),
@@ -175,36 +179,37 @@ impl eframe::App for ClippitGptApp {
                     })
                 
             });
-            
-            /*
-            if ui.button("switch_mode").clicked(){
-                state.mode = 
-                    match state.mode {
-                        AnimationServiceMode::Idle => AnimationServiceMode::Active,
-                        AnimationServiceMode::Active => AnimationServiceMode::Idle,
-                    };
-                    dbg!(&state.mode);
-                clippit_animation.set_mode(state.mode.clone());
-            }
-            */
-            
+                      
             ui.label("Ask ClippitGPT Something:");
             ui.horizontal(|ui| {
                 ui.add_enabled(
                     if state.mode == AnimationServiceMode::Idle {true} else {false}, 
                     |ui: &mut Ui| {
-                        ui.text_edit_singleline(&mut state.question_field  )
+                        let txt = ui.text_edit_singleline(&mut state.question_field  );
+                        txt.ctx.input(|i|{
+                            if i.key_pressed(egui::Key::Enter) {
+                                sender.send(DispatchActions::AskQuestion(state.question_field.to_owned())).expect("couldn't ask question!");
+                            }
+                        });
+                        txt
                     }
                 );
                 ui.add_enabled(
                     if state.mode == AnimationServiceMode::Idle {true} else {false}, 
                     |ui: &mut Ui| {
-                        ui.button("Ask!")
+                        let btn = ui.button("Ask!");
+                        if btn.clicked(){
+                            sender.send(DispatchActions::AskQuestion(state.question_field.to_owned())).expect("couldn't ask question!");
+                        };
+                        btn
                     }
                 );
             });
 
+            ui.add_space(20.0);
             ui.label("Conversation History:");
+            ui.add(Separator::default());
+
             egui::ScrollArea::both()
             .hscroll(false)
             .show(ui, |ui|{
