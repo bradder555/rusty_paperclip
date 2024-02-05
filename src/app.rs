@@ -64,7 +64,8 @@ impl ClippitGptApp {
                     match v {
                         DispatchActions::UpdateFrame => ctx.request_repaint(),
                         DispatchActions::AskQuestion(question) => println!("asked {}", question),
-                        DispatchActions::RespondToQuestion(answer) => println!("{:?}",answer)
+                        DispatchActions::RespondToQuestion(answer) => println!("{:?}",answer),
+                        DispatchActions::QuestionTextChanged(txt) => println!("{}", txt)
                     }
                 }
             }
@@ -140,8 +141,8 @@ impl eframe::App for ClippitGptApp {
         // Put your widgets into a `SidePanel`, `TopPanel`, `CentralPanel`, `Window` or `Area`.
         // For inspiration and more examples, go to https://emilk.github.io/egui
 
-        //let mut state = self.state.lock().unwrap().deref_mut().clone();
-        let mut state = self.state.lock().unwrap();
+        let mut state = self.state.lock().unwrap().clone();
+        //let mut state = self.state.lock().unwrap();
         let sender = &self.mpmc_channel;
         
         let panel_frame = egui::Frame {

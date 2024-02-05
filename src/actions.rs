@@ -4,5 +4,6 @@ use crate::{models::QuestionResponse};
 pub enum DispatchActions {
     AskQuestion(String),
     RespondToQuestion(QuestionResponse),
-    UpdateFrame
+    UpdateFrame,
+    QuestionTextChanged(String)
 }
