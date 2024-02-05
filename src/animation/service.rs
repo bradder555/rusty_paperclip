@@ -2,8 +2,9 @@ use std::io::Cursor;
 use std::sync::Arc;
 use std::sync::Mutex;
 
-use std::thread;
 use std::time::Duration;
+
+use rand::Rng;
 
 use super::models::AnimationConfig;
 use super::models::AnimationFrame;
@@ -17,14 +18,11 @@ use egui::TextureHandle;
 use egui::Ui;
 use tokio::sync::broadcast::Sender;
 
-use rand::seq::SliceRandom;
-use rand::thread_rng;
 use egui::scroll_area::ScrollAreaOutput;
 
 
 #[derive(Clone)]
 struct AnimationState {
-    should_run: bool,
     current_animation: Option<AnimationInfo>,
     current_frame_index: usize,
     current_frame_info: Option<AnimationFrame>,
@@ -39,7 +37,8 @@ pub struct AnimationService {
     state: Arc<Mutex<AnimationState>>,
     sprite_height: usize,
     sprite_width: usize,
-    texture_handle: TextureHandle
+    texture_handle: TextureHandle,
+    should_run: bool
 }
 
 fn load_image_as_color_image(bytes: &Vec<u8> ) -> ColorImage {
@@ -62,56 +61,13 @@ fn load_image_as_color_image(bytes: &Vec<u8> ) -> ColorImage {
     )
 }
 
-fn run(
-    state: Arc<Mutex<AnimationState>>, 
-    config: AnimationConfig,
-    sndr: Sender<DispatchActions>
-){
-    loop{
-        // internal state
-        let mut i_s = state.lock().unwrap();
-
-        // bail if stop is called
-        if !i_s.should_run {break}
-
-        // if no animation selected, pick one at random (depending on the current mode)
-        if i_s.current_animation.is_none() {
-            let mut rng = thread_rng();
-            let animation: Option<AnimationInfo>;
-            if i_s.mode == AnimationServiceMode::Idle{
-                animation = config.animations.idle.choose(&mut rng).cloned();
-            } else {
-                animation = config.animations.action.choose(&mut rng).cloned();
-            }
-            i_s.current_animation = Some(animation.expect("no animation"));
-            i_s.current_frame_index = 0;
-        }
-  
-        let animation = i_s.current_animation.as_ref().unwrap();
-
-        // guard against reading non-existent frame
-        if i_s.current_frame_index > animation.frames.len() - 1 {
-            i_s.current_animation = None;
-            continue;
-        }
-        
-        let frame_info = &animation.frames[i_s.current_frame_index].clone();
-        i_s.current_frame_info = Some(frame_info.clone());
-        i_s.current_frame_index += 1;
-        drop(i_s); // free up mutex then wait for the duration
-        let duration = frame_info.duration.clone();
-        let _ = sndr.send(DispatchActions::UpdateFrame);
-        thread::sleep(Duration::from_millis(duration as u64));
-    }
-}
-
 impl AnimationService {
     /// Called once before the first frame.
     pub fn new(
         ctx: Context,
         config_data :  String,
         image_data: Vec<u8>,
-        sndr : Sender<DispatchActions> 
+        sndr : Sender<DispatchActions>
     ) -> Self {
         let config: AnimationConfig = serde_yaml::from_str(&config_data)
             .expect("trouble reading config file");
@@ -132,10 +88,10 @@ impl AnimationService {
             sprite_width: width,
             sprite_height: height,
             texture_handle: texture,
+            should_run: false,
             state: Arc::from(
                 Mutex::from(
                     AnimationState{
-                        should_run: false,
                         current_animation: None,
                         mode: AnimationServiceMode::Idle,
                         current_frame_index: 0,
@@ -146,47 +102,103 @@ impl AnimationService {
         }
     }
 
-    pub fn start(&self){
-        let mut state = self.state.lock().unwrap();
+    pub fn start(&mut self){
 
-        if state.should_run == true {return}
-        state.should_run = true;
-        drop(state);
-
+        if self.should_run == true {return}
+        self.should_run = true;
         
-        let conf = self.animation_config.clone();
-        let sndr = self.sndr.clone();
         let state = self.state.clone();
+        let config = self.animation_config.clone();
+        let sndr = self.sndr.clone();
 
-        thread::spawn(move || {
-            run(
-                state, 
-                conf,
-                sndr
-            )
+        tokio::spawn(async move {
+            let mut receiver = sndr.subscribe();
+
+            loop{
+                let duration;
+                let mode = match receiver.try_recv() {
+                    Ok(DispatchActions::AskQuestion(_question)) => {
+                        Some(AnimationServiceMode::Active)
+                    },
+                    Ok(DispatchActions::RespondToQuestion(_answer)) => {
+                        Some(AnimationServiceMode::Idle)
+                    },
+                    _ => None
+                };
+
+                {
+                    // internal state
+                    let mut i_s = state.lock().unwrap();
+
+                    match &mode {
+                        Some(x) => {
+                            i_s.mode = x.clone();
+                            // short circuit the animation
+                            i_s.current_animation = None;
+                            continue 
+                        },
+                        _ => ()
+                    }
+            
+                    // if no animation selected, pick one at random (depending on the current mode)
+                    if i_s.current_animation.is_none() {
+                        let animation: Option<AnimationInfo>;
+                        let rand = {
+                            let mut rng = rand::thread_rng();
+                            let r = rng.gen::<u32>() as usize;
+                            drop(rng);
+                            r
+                        };
+                        let ai;
+                        let animation = 
+                            match i_s.mode {
+                                AnimationServiceMode::Idle => {
+                                    ai = rand % config.animations.idle.len();
+                                    config.animations.idle.get(ai).cloned()
+                                },
+                                _ => {
+                                    ai = rand % config.animations.action.len();
+                                    config.animations.action.get(ai).cloned()
+                                }
+                            };
+
+                        let _ = sndr.send(
+                            DispatchActions::NewAnimationStarted(
+                                animation.clone().unwrap().name
+                            )
+                        ).unwrap_or_default(); // needs to be expect
+
+                        i_s.current_animation = animation;
+                        i_s.current_frame_index = 0;
+                    }
+            
+                    let animation = i_s.current_animation.clone().unwrap();
+            
+                    // guard against reading non-existent frame
+                    if i_s.current_frame_index > animation.frames.len() - 1 {
+                        i_s.current_animation = None;
+                        continue;
+                    }
+                    
+                    let frame_info = &animation.frames[i_s.current_frame_index].clone();
+                    i_s.current_frame_info = Some(frame_info.clone());
+                    i_s.current_frame_index += 1;
+                    drop(i_s); // free up mutex then wait for the duration
+                    duration = frame_info.duration.clone();
+                }
+                let _ = sndr.send(DispatchActions::NewFrameToRender);
+                tokio::time::sleep(Duration::from_millis(duration as u64)).await;
+            }
         });
         
     }
 
-    pub fn stop(&self){
-        let mut state = self.state.lock().unwrap();
-        state.should_run = false;
-    }
-
-    pub fn set_mode(&self, mode: AnimationServiceMode){
-        let mut state = self.state.lock().unwrap();
-        state.mode = mode;
-    }
-
-    pub fn get_current_animation_name(&self) -> String{
-        let state = self.state.lock().unwrap();
-        state.current_animation.as_ref().unwrap().name.clone()
-    }
-
     pub fn render_animation(&self, ui: &mut Ui) -> ScrollAreaOutput<()>{
-        let state = self.state.lock().unwrap();
-        let frame = state.current_frame_info.clone().unwrap_or_default();
-        drop(state);
+        let frame;
+        {
+        let state_ = self.state.lock().unwrap();
+        frame = state_.current_frame_info.clone().unwrap_or_default();
+        }
 
         let vert_scroll_off = 1.0 + (frame.info.row * self.sprite_height) as f32;
         let hoz_scroll_off = 1.0 + (frame.info.column * self.sprite_width) as f32;

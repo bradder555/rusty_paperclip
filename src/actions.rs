@@ -4,6 +4,7 @@ use crate::models::QuestionResponse;
 pub enum DispatchActions {
     AskQuestion(String),
     RespondToQuestion(QuestionResponse),
-    UpdateFrame,
-    QuestionTextChanged(String)
+    QuestionTextChanged(String),
+    NewAnimationStarted(String),
+    NewFrameToRender
 }

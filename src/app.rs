@@ -11,6 +11,7 @@ use crate::animation::models::AnimationServiceMode;
 use crate::animation::service::AnimationService;
 use crate::assistant::AssistantService;
 use crate::models::AppConfig;
+use crate::models::QuestionResponse;
 use crate::state_updater::StateUpdater;
 
 
@@ -33,16 +34,16 @@ use tokio::sync::broadcast::Sender;
 #[derive(Clone)]
 pub struct ClippitGptAppShared{
     pub question_field: String,
-    pub mode: AnimationServiceMode
+    pub mode: AnimationServiceMode,
+    pub answers: Vec<QuestionResponse>,
+    pub current_animation: String 
 }
 
 pub struct ClippitGptApp {
     state: Arc<Mutex<ClippitGptAppShared>>,
     animations: HashMap<String, AnimationService>,
-    assistant: AssistantService,
     mpmc_channel: Sender<DispatchActions>
 }
-
 
 impl ClippitGptApp {
     /// Called once before the first frame.
@@ -54,29 +55,14 @@ impl ClippitGptApp {
         let config: AppConfig = serde_yaml::from_str(&config).expect("unable to parse config file!");
 
         let (sndr, _) = broadcast::channel::<DispatchActions>(50);
-        let mut receiver = sndr.subscribe();
-
-        let ctx = cc.egui_ctx.clone();
-        tokio::spawn(
-            async move {
-                loop{
-                    let v = receiver.recv().await.unwrap();
-                    
-                    match v {
-                        DispatchActions::UpdateFrame => ctx.request_repaint(),
-                        DispatchActions::AskQuestion(question) => println!("asked {}", question),
-                        DispatchActions::RespondToQuestion(answer) => println!("{:?}",answer),
-                        DispatchActions::QuestionTextChanged(txt) => println!("{}", txt)
-                    }
-                }
-            }
-        );
         
         let shared = Arc::new(
             Mutex::new(
                 ClippitGptAppShared {
                     question_field: "".to_owned(),
-                    mode: AnimationServiceMode::Idle
+                    mode: AnimationServiceMode::Idle,
+                    answers: Vec::new(),
+                    current_animation: "".to_owned()
                 }
             )
         );
@@ -85,7 +71,7 @@ impl ClippitGptApp {
         let image_data = include_bytes!("../assets/clippy.png");
         let image_data = image_data.to_vec();
         
-        let clippit_animation = AnimationService::new(
+        let mut clippit_animation = AnimationService::new(
             cc.egui_ctx.clone(),
             config_data.to_owned(),
             image_data,
@@ -124,13 +110,13 @@ impl ClippitGptApp {
         let app = ClippitGptApp{
             state: shared.clone(),
             animations: ani,
-            assistant: ass_service,
             mpmc_channel: sndr.clone()
         };
 
         StateUpdater::new(
             app.state.clone(),
-            sndr.clone()
+            sndr.clone(),
+            cc.egui_ctx.clone()
         ).start();
 
         app
@@ -146,8 +132,13 @@ impl eframe::App for ClippitGptApp {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
         // Put your widgets into a `SidePanel`, `TopPanel`, `CentralPanel`, `Window` or `Area`.
         // For inspiration and more examples, go to https://emilk.github.io/egui
-
-        let mut state = self.state.lock().unwrap().clone();
+        let mut state;
+        {
+            let state_ = self.state.lock().unwrap();
+            state = state_.clone();
+            drop(state_);
+        }
+        
         //let mut state = self.state.lock().unwrap();
         let sender = &self.mpmc_channel;
         
@@ -172,7 +163,16 @@ impl eframe::App for ClippitGptApp {
                     .size(Size::exact(100.0))
                     .horizontal(|mut strip|{
                         strip.cell(|ui|{
-                            ui.label(clippit_animation.get_current_animation_name());
+                            ui.vertical(|ui|{
+                                ui.label(state.current_animation.to_owned());
+                                ui.label(
+                                    if state.mode == AnimationServiceMode::Idle {
+                                        "Clippy Idle".to_owned() 
+                                    } else {
+                                        "Clippy Active".to_owned() 
+                                    });
+                            });
+                            
                         });
                         strip.strip(|builder|{
                             builder
@@ -223,9 +223,9 @@ impl eframe::App for ClippitGptApp {
             egui::ScrollArea::both()
             .hscroll(false)
             .show(ui, |ui|{
-                for i in 1..20  {
-                    ui.label(format!("i'm a question {}", i));
-                    ui.colored_label(Color32::RED, format!("i'm a response {}", i));
+                for qr in state.answers.iter().rev(){
+                    ui.label(&qr.question);
+                    ui.colored_label(Color32::RED, &qr.answer);
                     ui.add(Separator::default());
                     ui.add_space(10.0);
                 }

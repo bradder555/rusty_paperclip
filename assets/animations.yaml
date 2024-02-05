@@ -5,6 +5,188 @@ animations:
       info:
         column: 0
         row: 0
+    - duration: 100
+      info:
+        column: 1
+        row: 1
+    - duration: 100
+      info:
+        column: 2
+        row: 1
+    - duration: 100
+      info:
+        column: 3
+        row: 1
+    - duration: 100
+      info:
+        column: 4
+        row: 1
+    - duration: 100
+      info:
+        column: 5
+        row: 1
+    - duration: 100
+      info:
+        column: 6
+        row: 1
+    - duration: 100
+      info:
+        column: 7
+        row: 1
+    - duration: 100
+      info:
+        column: 8
+        row: 1
+    - duration: 100
+      info:
+        column: 9
+        row: 1
+    - duration: 100
+      info:
+        column: 10
+        row: 1
+    - duration: 100
+      info:
+        column: 11
+        row: 1
+    - duration: 100
+      info:
+        column: 12
+        row: 1
+    - duration: 100
+      info:
+        column: 13
+        row: 1
+    - duration: 100
+      info:
+        column: 14
+        row: 1
+    - duration: 100
+      info:
+        column: 15
+        row: 1
+    - duration: 100
+      info:
+        column: 16
+        row: 1
+    - duration: 100
+      info:
+        column: 17
+        row: 1
+    - duration: 100
+      info:
+        column: 18
+        row: 1
+    - duration: 100
+      info:
+        column: 19
+        row: 1
+    - duration: 100
+      info:
+        column: 20
+        row: 1
+    - duration: 100
+      info:
+        column: 21
+        row: 1
+    - duration: 100
+      info:
+        column: 22
+        row: 1
+    - duration: 100
+      info:
+        column: 23
+        row: 1
+    - duration: 100
+      info:
+        column: 24
+        row: 1
+    - duration: 100
+      info:
+        column: 25
+        row: 1
+    - duration: 100
+      info:
+        column: 26
+        row: 1
+    - duration: 100
+      info:
+        column: 0
+        row: 2
+    - duration: 100
+      info:
+        column: 1
+        row: 2
+    - duration: 100
+      info:
+        column: 2
+        row: 2
+    - duration: 100
+      info:
+        column: 3
+        row: 2
+    - duration: 100
+      info:
+        column: 4
+        row: 2
+    - duration: 100
+      info:
+        column: 5
+        row: 2
+    - duration: 100
+      info:
+        column: 6
+        row: 2
+    - duration: 100
+      info:
+        column: 7
+        row: 2
+    - duration: 100
+      info:
+        column: 8
+        row: 2
+    - duration: 100
+      info:
+        column: 8
+        row: 1
+    - duration: 100
+      info:
+        column: 7
+        row: 1
+    - duration: 100
+      info:
+        column: 6
+        row: 1
+    - duration: 100
+      info:
+        column: 5
+        row: 1
+    - duration: 100
+      info:
+        column: 4
+        row: 1
+    - duration: 100
+      info:
+        column: 3
+        row: 1
+    - duration: 100
+      info:
+        column: 2
+        row: 1
+    - duration: 100
+      info:
+        column: 1
+        row: 1
+    - duration: 100
+      info:
+        column: 0
+        row: 0
+    name: Atom
+  - frames:
+    - duration: 100
+      info:
+        column: 0
+        row: 0
     - duration: 10
       info:
         column: 1
@@ -3989,188 +4171,6 @@ animations:
         column: 0
         row: 0
     name: RopePile
-  - frames:
-    - duration: 100
-      info:
-        column: 0
-        row: 0
-    - duration: 100
-      info:
-        column: 1
-        row: 1
-    - duration: 100
-      info:
-        column: 2
-        row: 1
-    - duration: 100
-      info:
-        column: 3
-        row: 1
-    - duration: 100
-      info:
-        column: 4
-        row: 1
-    - duration: 100
-      info:
-        column: 5
-        row: 1
-    - duration: 100
-      info:
-        column: 6
-        row: 1
-    - duration: 100
-      info:
-        column: 7
-        row: 1
-    - duration: 100
-      info:
-        column: 8
-        row: 1
-    - duration: 100
-      info:
-        column: 9
-        row: 1
-    - duration: 100
-      info:
-        column: 10
-        row: 1
-    - duration: 100
-      info:
-        column: 11
-        row: 1
-    - duration: 100
-      info:
-        column: 12
-        row: 1
-    - duration: 100
-      info:
-        column: 13
-        row: 1
-    - duration: 100
-      info:
-        column: 14
-        row: 1
-    - duration: 100
-      info:
-        column: 15
-        row: 1
-    - duration: 100
-      info:
-        column: 16
-        row: 1
-    - duration: 100
-      info:
-        column: 17
-        row: 1
-    - duration: 100
-      info:
-        column: 18
-        row: 1
-    - duration: 100
-      info:
-        column: 19
-        row: 1
-    - duration: 100
-      info:
-        column: 20
-        row: 1
-    - duration: 100
-      info:
-        column: 21
-        row: 1
-    - duration: 100
-      info:
-        column: 22
-        row: 1
-    - duration: 100
-      info:
-        column: 23
-        row: 1
-    - duration: 100
-      info:
-        column: 24
-        row: 1
-    - duration: 100
-      info:
-        column: 25
-        row: 1
-    - duration: 100
-      info:
-        column: 26
-        row: 1
-    - duration: 100
-      info:
-        column: 0
-        row: 2
-    - duration: 100
-      info:
-        column: 1
-        row: 2
-    - duration: 100
-      info:
-        column: 2
-        row: 2
-    - duration: 100
-      info:
-        column: 3
-        row: 2
-    - duration: 100
-      info:
-        column: 4
-        row: 2
-    - duration: 100
-      info:
-        column: 5
-        row: 2
-    - duration: 100
-      info:
-        column: 6
-        row: 2
-    - duration: 100
-      info:
-        column: 7
-        row: 2
-    - duration: 100
-      info:
-        column: 8
-        row: 2
-    - duration: 100
-      info:
-        column: 8
-        row: 1
-    - duration: 100
-      info:
-        column: 7
-        row: 1
-    - duration: 100
-      info:
-        column: 6
-        row: 1
-    - duration: 100
-      info:
-        column: 5
-        row: 1
-    - duration: 100
-      info:
-        column: 4
-        row: 1
-    - duration: 100
-      info:
-        column: 3
-        row: 1
-    - duration: 100
-      info:
-        column: 2
-        row: 1
-    - duration: 100
-      info:
-        column: 1
-        row: 1
-    - duration: 100
-      info:
-        column: 0
-        row: 0
-    name: Atom
   - frames:
     - duration: 100
       info:
