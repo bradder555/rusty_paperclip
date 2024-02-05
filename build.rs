@@ -16,7 +16,7 @@ const COPY_FILES: &'static [&'static str] = &[
 
 fn copy_file(from: &Path, to: &Path) {
     let path_str = from.as_os_str().to_str().unwrap_or_default();
-    fs::copy(from, to).expect(&format!("couldn't move file {}", path_str));
+    fs::copy(from, to).expect(&format!("couldn't move file {}, cwd {:?}", path_str, std::env::current_dir()));
 }
 
 /// A helper function for recursively copying a directory.

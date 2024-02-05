@@ -11,6 +11,7 @@ use crate::animation::models::AnimationServiceMode;
 use crate::animation::service::AnimationService;
 use crate::assistant::AssistantService;
 use crate::models::AppConfig;
+use crate::state_updater::StateUpdater;
 
 
 use egui::Color32;
@@ -31,8 +32,8 @@ use tokio::sync::broadcast::Sender;
 
 #[derive(Clone)]
 pub struct ClippitGptAppShared{
-    question_field: String,
-    mode: AnimationServiceMode
+    pub question_field: String,
+    pub mode: AnimationServiceMode
 }
 
 pub struct ClippitGptApp {
@@ -127,6 +128,11 @@ impl ClippitGptApp {
             mpmc_channel: sndr.clone()
         };
 
+        StateUpdater::new(
+            app.state.clone(),
+            sndr.clone()
+        ).start();
+
         app
     }
 }
@@ -192,6 +198,9 @@ impl eframe::App for ClippitGptApp {
                                 sender.send(DispatchActions::AskQuestion(state.question_field.to_owned())).expect("couldn't ask question!");
                             }
                         });
+                        if txt.changed(){
+                            sender.send(DispatchActions::QuestionTextChanged(state.question_field.clone())).expect("couldn't update text");
+                        }
                         txt
                     }
                 );

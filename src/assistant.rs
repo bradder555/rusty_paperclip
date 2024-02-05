@@ -1,8 +1,8 @@
 
 
-use std::{borrow::BorrowMut, clone, time::Duration};
+use std::{time::Duration};
 
-use openai_dive::v1::{api::Client, endpoints::assistants::messages::Messages, resources::{assistant::{assistant::Assistant, message::{CreateMessageParameters, MessageContent, MessageRole}, run::{CreateRunParameters, RunStatus}, thread::CreateThreadParameters}, shared::ListParameters}};
+use openai_dive::v1::{api::Client, resources::{assistant::{message::{CreateMessageParameters, MessageContent, MessageRole}, run::{CreateRunParameters, RunStatus}, thread::CreateThreadParameters}, shared::ListParameters}};
 use tokio::sync::broadcast::Sender;
 
 use crate::{actions::DispatchActions, models::QuestionResponse};
@@ -22,7 +22,7 @@ impl AssistantService {
         sndr : Sender<DispatchActions>
     ) -> Self {
 
-        let mut client = Client::new(api_key.to_string());
+        let client = Client::new(api_key.to_string());
 
         let assistant_service = AssistantService{
             client: client.to_owned(),
@@ -149,7 +149,7 @@ impl AssistantService {
                     tokio::time::sleep(Duration::from_secs(1)).await;
                 }
 
-                let mut msgs;
+                let msgs;
                 loop {
                     let ret = 
                         client

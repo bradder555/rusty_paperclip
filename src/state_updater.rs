@@ -4,9 +4,9 @@ use std::sync::Mutex;
 use tokio::sync::broadcast::Sender;
 use tokio::sync::broadcast::Receiver;
 
-use crate::app;
+
 use crate::app::ClippitGptAppShared;
-use crate::{actions::DispatchActions, models::QuestionResponse};
+use crate::{actions::DispatchActions};
 
 pub struct StateUpdater{
     app_state: Arc<Mutex<ClippitGptAppShared>>,
@@ -34,12 +34,13 @@ impl StateUpdater{
         tokio::spawn(async move {
             loop {
                 let v = receiver.recv().await.unwrap();
-                let state = app_state.
+                let mut state = app_state.lock().unwrap();
+                
                 match v {
                     DispatchActions::UpdateFrame => () , 
-                    DispatchActions::AskQuestion(question) => (),
+                    DispatchActions::AskQuestion(_question) => (),
                     DispatchActions::RespondToQuestion(answer) => println!("{:?}",answer),
-                    DispatchActions::QuestionTextChanged(txt) => app_state.
+                    DispatchActions::QuestionTextChanged(txt) => state.question_field = txt
                 }
             }
 
